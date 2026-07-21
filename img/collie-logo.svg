@@ -1,0 +1,20 @@
+<svg width="760" height="220" viewBox="0 0 760 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Collie AI Engineering logo</title>
+  <desc id="desc">Abstract border collie guardian with network nodes and Collie AI Engineering wordmark.</desc>
+  <rect width="760" height="220" rx="16" fill="white"/>
+  <g transform="translate(50 24)">
+    <path d="M80 18C53 33 37 60 36 94c0 35 18 66 47 83-8-23-3-44 12-61-3 25 8 49 30 67 36-19 59-53 59-91 0-12-2-24-7-35l-26 24-9-62-28 30L80 18Z" fill="#0B1220"/>
+    <path d="M107 73c21 6 35 21 43 41l47 7-44 19c-10 23-29 39-52 47 18-20 24-49 10-75-10-19-27-32-49-38 15-7 30-8 45-1Z" fill="#1A1F2B"/>
+    <path d="M74 149c18-10 32-26 41-47 3 30-9 57-34 76-5-10-7-19-7-29Z" fill="#2563EB" opacity=".92"/>
+    <circle cx="35" cy="82" r="7" fill="white" stroke="#2563EB" stroke-width="4"/>
+    <circle cx="180" cy="30" r="6" fill="white" stroke="#2563EB" stroke-width="4"/>
+    <circle cx="198" cy="102" r="5" fill="white" stroke="#2563EB" stroke-width="4"/>
+    <path d="M42 81h-22v32m0 0c0 0 2 13 16 25m-16-25h-9m135-84c0 0 27-11 34 1m-7 78h24m-33 25h30" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(290 64)">
+    <text x="0" y="58" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="8" fill="#0B1220">COLLIE</text>
+    <text x="3" y="100" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="600" letter-spacing="6" fill="#64748B">AI ENGINEERING</text>
+    <path d="M0 120h340" stroke="#E2E8F0" stroke-width="1.5"/>
+    <path d="M0 120h60" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
