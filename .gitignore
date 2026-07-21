@@ -1,28 +1,18 @@
-# Angular specific
-/dist/
-/out-tsc/
-/tmp/
-/coverage/
-/e2e/test-output/
-/.angular/
-.angular/
+# OS
+.DS_Store
+Thumbs.db
 
-# Node modules and dependency files
-/node_modules/
-/package-lock.json
-/yarn.lock
+# Editores
+.idea/
+.vscode/
 
-# Environment files
-/.env
-
-# Angular CLI and build artefacts
-/.angular-cli.json
-/.ng/
-
-# TypeScript cache
-*.tsbuildinfo
+# Ambiente
+.env
+.env.*
 
 # Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+*.log
+
+# Skills locais do Cursor (não versionar)
+.agents/
+skills-lock.json
