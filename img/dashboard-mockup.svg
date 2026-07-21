@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" fill="none">
+  <defs>
+    <!-- Fade masks for content edges -->
+    <linearGradient id="fadeBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="white" stop-opacity="1"/>
+      <stop offset="70%" stop-color="white" stop-opacity="1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fadeRight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="1"/>
+      <stop offset="80%" stop-color="white" stop-opacity="1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="contentFade">
+      <rect x="0" y="0" width="1200" height="820" fill="url(#fadeBottom)"/>
+    </mask>
+    <mask id="chartFade">
+      <rect x="220" y="100" width="720" height="660" fill="url(#fadeBottom)"/>
+    </mask>
+    <!-- Subtle glow for chart lines -->
+    <filter id="lineGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========== OUTER FRAME ========== -->
+  <rect width="1200" height="820" rx="18" fill="#0B1220"/>
+
+  <!-- ========== TOP BAR ========== -->
+  <rect x="0" y="0" width="1200" height="52" rx="18" fill="#0B1220"/>
+  <!-- Clip bottom corners of top bar -->
+  <rect x="0" y="18" width="1200" height="34" fill="#0B1220"/>
+  <!-- Traffic light dots -->
+  <circle cx="28" cy="26" r="6" fill="#22C55E"/>
+  <circle cx="50" cy="26" r="6" fill="#2563EB"/>
+  <circle cx="72" cy="26" r="6" fill="#475569"/>
+  <!-- Title -->
+  <text x="104" y="30" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#94A3B8">Collie OpsMesh</text>
+  <!-- Separator line -->
+  <line x1="0" y1="52" x2="1200" y2="52" stroke="#1A1F2B" stroke-width="1"/>
+
+  <!-- ========== SIDEBAR ========== -->
+  <rect x="0" y="52" width="200" height="768" fill="#111827"/>
+  <!-- Clip bottom-left corner -->
+  <rect x="0" y="52" width="200" height="750" fill="#111827"/>
+  <rect x="0" y="784" width="18" height="36" fill="#111827"/>
+  <path d="M0 802 V820 H18 A18 18 0 0 1 0 802Z" fill="#0B1220"/>
+
+  <!-- Sidebar menu items (abstract colored blocks) -->
+  <!-- Active item -->
+  <rect x="16" y="76" width="168" height="38" rx="8" fill="#1A1F2B"/>
+  <rect x="24" y="86" width="4" height="18" rx="2" fill="#2563EB"/>
+  <rect x="38" y="89" width="80" height="8" rx="4" fill="#2563EB" opacity="0.5"/>
+  <rect x="38" y="89" width="52" height="8" rx="4" fill="#2563EB" opacity="0.8"/>
+
+  <!-- Item 2 -->
+  <rect x="24" y="136" width="4" height="18" rx="2" fill="transparent"/>
+  <rect x="38" y="139" width="60" height="8" rx="4" fill="#475569" opacity="0.35"/>
+
+  <!-- Item 3 -->
+  <rect x="24" y="176" width="4" height="18" rx="2" fill="transparent"/>
+  <rect x="38" y="179" width="72" height="8" rx="4" fill="#475569" opacity="0.35"/>
+
+  <!-- Item 4 -->
+  <rect x="24" y="216" width="4" height="18" rx="2" fill="transparent"/>
+  <rect x="38" y="219" width="48" height="8" rx="4" fill="#475569" opacity="0.35"/>
+
+  <!-- Sidebar divider -->
+  <line x1="16" y1="260" x2="184" y2="260" stroke="#1A1F2B" stroke-width="1"/>
+
+  <!-- Sidebar separator from main -->
+  <line x1="200" y1="52" x2="200" y2="820" stroke="#1A1F2B" stroke-width="1"/>
+
+  <!-- ========== MAIN CONTENT AREA ========== -->
+  <rect x="200" y="52" width="1000" height="768" fill="#111827"/>
+  <!-- Clip bottom-right corner -->
+  <rect x="200" y="52" width="1000" height="750" fill="#111827"/>
+  <rect x="1182" y="784" width="18" height="36" fill="#111827"/>
+  <path d="M1200 802 V820 H1182 A18 18 0 0 0 1200 802Z" fill="#0B1220"/>
+
+  <!-- ========== CHART REGION ========== -->
+  <g mask="url(#contentFade)">
+    <!-- Chart area background -->
+    <rect x="230" y="80" width="670" height="460" rx="12" fill="#0B1220" opacity="0.5"/>
+
+    <!-- Subtle grid lines -->
+    <g stroke="#1A1F2B" stroke-width="1" opacity="0.7">
+      <line x1="260" y1="160" x2="870" y2="160"/>
+      <line x1="260" y1="230" x2="870" y2="230"/>
+      <line x1="260" y1="300" x2="870" y2="300"/>
+      <line x1="260" y1="370" x2="870" y2="370"/>
+      <line x1="260" y1="440" x2="870" y2="440"/>
+    </g>
+
+    <!-- Y-axis tick marks (subtle) -->
+    <g fill="#475569" font-family="Inter, Arial, sans-serif" font-size="10" opacity="0.5">
+      <text x="250" y="164" text-anchor="end">—</text>
+      <text x="250" y="234" text-anchor="end">—</text>
+      <text x="250" y="304" text-anchor="end">—</text>
+      <text x="250" y="374" text-anchor="end">—</text>
+      <text x="250" y="444" text-anchor="end">—</text>
+    </g>
+
+    <!-- Chart line 1: Royal Blue — organic curve -->
+    <polyline
+      points="270,380 310,370 350,340 390,355 430,310 470,280 510,290 550,250 590,230 630,260 670,240 710,210 750,230 790,200 830,180 860,170"
+      stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"
+      filter="url(#lineGlow)" opacity="0.9"/>
+    <!-- Blue area fill -->
+    <polygon
+      points="270,380 310,370 350,340 390,355 430,310 470,280 510,290 550,250 590,230 630,260 670,240 710,210 750,230 790,200 830,180 860,170 860,460 270,460"
+      fill="#2563EB" opacity="0.06"/>
+
+    <!-- Chart line 2: Clover Green — organic curve -->
+    <polyline
+      points="270,420 310,400 350,390 390,380 430,360 470,350 510,340 550,320 590,310 630,330 670,300 710,280 750,290 790,260 830,250 860,235"
+      stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"
+      filter="url(#lineGlow)" opacity="0.9"/>
+    <!-- Green area fill -->
+    <polygon
+      points="270,420 310,400 350,390 390,380 430,360 470,350 510,340 550,320 590,310 630,330 670,300 710,280 750,290 790,260 830,250 860,235 860,460 270,460"
+      fill="#22C55E" opacity="0.05"/>
+
+    <!-- Chart legend -->
+    <g transform="translate(280, 498)">
+      <circle cx="0" cy="0" r="4" fill="#2563EB"/>
+      <rect x="12" y="-4" width="40" height="8" rx="4" fill="#475569" opacity="0.3"/>
+      <circle cx="80" cy="0" r="4" fill="#22C55E"/>
+      <rect x="92" y="-4" width="40" height="8" rx="4" fill="#475569" opacity="0.3"/>
+    </g>
+  </g>
+
+  <!-- ========== RIGHT PANEL: RECOMMENDATION CARDS ========== -->
+  <g mask="url(#contentFade)">
+    <!-- Panel background -->
+    <rect x="930" y="80" width="240" height="460" rx="12" fill="#0B1220" opacity="0.5"/>
+
+    <!-- Section header placeholder -->
+    <rect x="950" y="100" width="100" height="10" rx="5" fill="#475569" opacity="0.35"/>
+
+    <!-- Card 1 -->
+    <rect x="950" y="130" width="200" height="110" rx="10" fill="#1A1F2B"/>
+    <rect x="966" y="148" width="60" height="8" rx="4" fill="#2563EB" opacity="0.6"/>
+    <rect x="966" y="168" width="168" height="6" rx="3" fill="#475569" opacity="0.2"/>
+    <rect x="966" y="182" width="140" height="6" rx="3" fill="#475569" opacity="0.2"/>
+    <rect x="966" y="196" width="120" height="6" rx="3" fill="#475569" opacity="0.15"/>
+    <circle cx="1138" cy="148" r="4" fill="#22C55E" opacity="0.7"/>
+
+    <!-- Card 2 -->
+    <rect x="950" y="258" width="200" height="110" rx="10" fill="#1A1F2B"/>
+    <rect x="966" y="276" width="72" height="8" rx="4" fill="#22C55E" opacity="0.6"/>
+    <rect x="966" y="296" width="168" height="6" rx="3" fill="#475569" opacity="0.2"/>
+    <rect x="966" y="310" width="150" height="6" rx="3" fill="#475569" opacity="0.2"/>
+    <rect x="966" y="324" width="108" height="6" rx="3" fill="#475569" opacity="0.15"/>
+    <circle cx="1138" cy="276" r="4" fill="#2563EB" opacity="0.7"/>
+
+    <!-- Card 3 -->
+    <rect x="950" y="386" width="200" height="110" rx="10" fill="#1A1F2B"/>
+    <rect x="966" y="404" width="56" height="8" rx="4" fill="#2563EB" opacity="0.6"/>
+    <rect x="966" y="424" width="168" height="6" rx="3" fill="#475569" opacity="0.2"/>
+    <rect x="966" y="438" width="132" height="6" rx="3" fill="#475569" opacity="0.2"/>
+    <rect x="966" y="452" width="96" height="6" rx="3" fill="#475569" opacity="0.15"/>
+    <circle cx="1138" cy="404" r="4" fill="#22C55E" opacity="0.7"/>
+  </g>
+
+  <!-- ========== BOTTOM AREA: Abstract status bar ========== -->
+  <g mask="url(#contentFade)">
+    <rect x="230" y="560" width="940" height="50" rx="10" fill="#0B1220" opacity="0.3"/>
+    <rect x="250" y="578" width="80" height="8" rx="4" fill="#475569" opacity="0.2"/>
+    <rect x="350" y="578" width="60" height="8" rx="4" fill="#475569" opacity="0.15"/>
+    <circle cx="440" cy="582" r="4" fill="#22C55E" opacity="0.4"/>
+    <rect x="456" y="578" width="40" height="8" rx="4" fill="#475569" opacity="0.15"/>
+  </g>
+</svg>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collie OpsMesh | IA na operação, com controle</title>
+  <meta name="description" content="Collie OpsMesh governa o que Cursor, Claude Code, Antigravity e outros clientes de IA podem pedir na sua infra: identidade, política, aprovação e auditoria — antes da execução." />
+  <meta name="theme-color" content="#0B1220" />
+  <meta property="og:title" content="Collie OpsMesh — IA na operação, com controle" />
+  <meta property="og:description" content="Ferramentas de IA pedem. OpsMesh governa. MeshAgents executam ações tipadas — sem entregar o cluster à IA." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/collie-lockup.png" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="apple-touch-icon" href="img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#top" class="brand" aria-label="Início da Collie AI Engineering">
+        <img src="img/collie-mark.png" width="52" height="48" alt="Collie AI Engineering" />
+      </a>
+
+      <button class="mobile-menu-btn" type="button" aria-label="Abrir menu de navegação" aria-controls="primary-navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="primary-navigation" aria-label="Navegação principal">
+        <a href="#opsmesh" class="nav-link">OpsMesh</a>
+        <a href="#platform" class="nav-link">Plataforma</a>
+        <a href="#workflow" class="nav-link">Workflow</a>
+        <a href="#integrations" class="nav-link">Integrações</a>
+      </nav>
+
+      <div class="nav-actions" aria-label="Ações do cabeçalho">
+        <a href="#docs" class="btn btn-ghost">Documentação</a>
+        <a href="#demo" class="btn btn-primary">Agendar discovery</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img src="img/hero-topology.svg" width="1800" height="1100" alt="" />
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-content fade-in-up">
+          <p class="eyebrow">Collie OpsMesh</p>
+          <h1 id="hero-title">Controle o que a IA<br /><span>pode fazer na sua infra.</span></h1>
+          <p class="hero-subtitle">Cursor, Claude Code e Antigravity pedem ações. O OpsMesh autentica, autoriza, aprova e audita. MeshAgents executam só o permitido — sem entregar o cluster à IA.</p>
+          <div class="hero-actions">
+            <a href="#demo" class="btn btn-primary btn-lg">Agendar discovery técnico</a>
+            <a href="#opsmesh" class="btn btn-outline btn-lg">Ver a arquitetura</a>
+          </div>
+        </div>
+        <div class="hero-visual fade-in-up" aria-hidden="false">
+          <img
+            class="hero-architecture"
+            src="img/hero-architecture.svg"
+            width="920"
+            height="740"
+            alt="Ferramentas de IA pedem ao Collie OpsMesh, que governa identidade, política, aprovação e auditoria antes que MeshAgents operem a infraestrutura."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="trust-strip" aria-label="Sinais de confiança">
+      <div class="container trust-grid">
+        <span>IA pede · OpsMesh governa · Agents executam</span>
+        <span>Zero inbound no ambiente do cliente</span>
+        <span>Ações tipadas — sem shell livre</span>
+        <span>Audit trail em cada operação</span>
+      </div>
+    </section>
+
+    <!-- A lacuna operacional -->
+    <section class="section problem" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <p class="section-kicker">A lacuna operacional</p>
+          <h2 id="problem-title">Dashboards e IA não bastam. Falta a ação com controle.</h2>
+          <p>O time já tem alerta, métrica e assistente de engenharia. O buraco é levar o pedido até a infra sem abrir o cluster.</p>
+        </div>
+        <div class="comparison-grid">
+          <article class="comparison-card fade-in-up">
+            <span class="card-tag danger">O gap</span>
+            <h3>IA perto da infra, governança longe.</h3>
+            <p>Plugue Cursor ou Claude Code direto em kubectl, SSH ou API interna e o risco sobe: credencial exposta, comando livre, zero auditoria.</p>
+            <ul>
+              <li>Acesso inbound improvisado</li>
+              <li>Shell e scripts genéricos</li>
+              <li>Sem FGAC nem aprovação humana</li>
+            </ul>
+          </article>
+          <article class="comparison-card accent fade-in-up">
+            <span class="card-tag success">A abordagem Collie</span>
+            <h3>O pedido de um lado. A execução tipada do outro.</h3>
+            <p>Cursor, Claude Code, Antigravity e o Cockpit pedem. O OpsMesh decide. MeshAgents rodam o permitido — pull-based, tipado e auditável.</p>
+            <ul>
+              <li>Bridge MCP projetado no Control Plane</li>
+              <li>Identity · Policy · Approval · Audit</li>
+              <li>Agents outbound-only no perímetro</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OpsMesh -->
+    <section class="section opsmesh" id="opsmesh" aria-labelledby="opsmesh-title">
+      <div class="container opsmesh-grid">
+        <div class="section-header align-left fade-in-up">
+          <p class="section-kicker">Collie OpsMesh</p>
+          <h2 id="opsmesh-title">Ferramentas de IA pedem. A infraestrutura responde com controle.</h2>
+          <p>O OpsMesh é a camada operacional distribuída: Control Plane multi-tenant, Gateway opaco, MeshAgents e Edge Redactor. Conecta clientes MCP sem entregar o cluster.</p>
+          <ul class="opsmesh-pillars">
+            <li><strong>Pedidos</strong> — Cockpit hoje; clientes MCP na visão do produto</li>
+            <li><strong>Governança</strong> — FGAC, approvals, audit</li>
+            <li><strong>Execução</strong> — ações tipadas via MeshAgent</li>
+          </ul>
+          <a href="#workflow" class="text-link">Ver o fluxo de trabalho</a>
+        </div>
+        <div class="opsmesh-visual fade-in-up">
+          <img src="img/opsmesh-flow.svg" width="1300" height="560" loading="lazy" alt="Fluxo de trabalho de quatro etapas do Collie OpsMesh: observar, diagnosticar, recomendar e executar com aprovação humana." />
+        </div>
+      </div>
+    </section>
+
+    <!-- Capacidades da plataforma -->
+    <section class="section platform" id="platform" aria-labelledby="platform-title">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <p class="section-kicker">Capacidades da plataforma</p>
+          <h2 id="platform-title">Controle fino onde a operação não tolera erro.</h2>
+          <p>FGAC, aprovação humana e auditoria em cada pedido — do Cockpit ou de um cliente de IA.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card fade-in-up">
+            <div class="feature-icon blue" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M4.93 19.07l1.41-1.41"/><path d="M17.66 6.34l1.41-1.41"/></svg>
+            </div>
+            <h3>Camada para clientes de IA</h3>
+            <p>Cursor, Claude Code, Antigravity e outros hosts MCP pedem operações tipadas pelo Control Plane — sem acesso direto à infraestrutura.</p>
+          </article>
+          <article class="feature-card fade-in-up">
+            <div class="feature-icon green" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Automação com humano no circuito</h3>
+            <p>Recomenda e executa ações tipadas com aprovação, limites por role, logs de auditoria e caminho de rollback.</p>
+          </article>
+          <article class="feature-card card-wide fade-in-up">
+            <div class="feature-icon blue" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <div>
+              <h3>Operações híbridas outbound-only</h3>
+              <p>Uma visão só: Kubernetes, cloud, middleware, frotas Linux e legado. MeshAgents saem por HTTPS — zero inbound no perímetro do cliente.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Para quem é -->
+    <section class="section personas" aria-labelledby="personas-title">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <p class="section-kicker">Para quem é</p>
+          <h2 id="personas-title">Para quem opera infraestrutura de verdade.</h2>
+        </div>
+        <div class="personas-grid">
+          <article class="persona-card fade-in-up">
+            <div class="persona-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Engenharia SRE</h3>
+            <p>Menos MTTR: diagnósticos correlacionados e ações tipadas — pelo Cockpit ou pela ferramenta de IA do time.</p>
+          </article>
+          <article class="persona-card fade-in-up">
+            <div class="persona-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Platform engineering</h3>
+            <p>Automações multi-cluster com permissão, auditoria e execução assíncrona — sem abrir o cluster a clientes de IA.</p>
+          </article>
+          <article class="persona-card card-wide fade-in-up">
+            <div class="persona-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Gestão de ops e liderança</h3>
+            <p>Dashboards auditáveis e prontos para compliance: cada pedido deixa trilha. Você define o que pode rodar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow showcase -->
+    <section class="section section--lg showcase" id="workflow" aria-labelledby="workflow-title">
+      <div class="container showcase-grid">
+        <div class="showcase-copy fade-in-up">
+          <p class="section-kicker">Fluxo operacional</p>
+          <h2 id="workflow-title">Do pedido de IA à execução com controle.</h2>
+          <p>O OpsMesh transforma intenção — humana ou assistida por IA — em ação tipada, aprovada e auditada.</p>
+          <ul class="check-list">
+            <li><strong>Pedir:</strong> Cockpit (e, na visão do produto, clientes MCP) solicita uma ação tipada.</li>
+            <li><strong>Governar:</strong> identidade, política, aprovação e auditoria no Control Plane.</li>
+            <li><strong>Entregar:</strong> envelope cifrado via Gateway.</li>
+            <li><strong>Executar:</strong> MeshAgent outbound-only no perímetro do cliente.</li>
+          </ul>
+        </div>
+        <div class="dashboard-card fade-in-up">
+          <img src="img/dashboard-mockup.svg" width="1200" height="820" loading="lazy" alt="Dashboard Collie OpsMesh mostrando correlação de incidentes e recomendações de IA." />
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrações -->
+    <section class="section integrations" id="integrations" aria-labelledby="integrations-title">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <p class="section-kicker">Integrações</p>
+          <h2 id="integrations-title">Feito para sua stack — e para as ferramentas do time.</h2>
+          <p>Comece pela observabilidade e pela infra. O OpsMesh coloca governança no fluxo e interface para clientes de engenharia com IA.</p>
+        </div>
+        <div class="integration-groups fade-in-up">
+          <div class="integration-group">
+            <h4>Clientes de IA</h4>
+            <div class="integration-group-badges">
+              <span>Cursor</span>
+              <span>Claude Code</span>
+              <span>Antigravity</span>
+              <span>MCP clients</span>
+            </div>
+          </div>
+          <div class="integration-group">
+            <h4>Observabilidade</h4>
+            <div class="integration-group-badges">
+              <span>Prometheus</span>
+              <span>Grafana</span>
+              <span>Loki</span>
+              <span>OpenSearch</span>
+            </div>
+          </div>
+          <div class="integration-group">
+            <h4>Cloud &amp; Infra</h4>
+            <div class="integration-group-badges">
+              <span>AWS</span>
+              <span>Azure</span>
+              <span>GCP</span>
+              <span>OCI</span>
+              <span>Linux</span>
+            </div>
+          </div>
+          <div class="integration-group">
+            <h4>Orquestração</h4>
+            <div class="integration-group-badges">
+              <span>Kubernetes</span>
+              <span>GitLab</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section" id="demo" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-card fade-in-up">
+          <div class="cta-content">
+            <p class="section-kicker">Próximo passo</p>
+            <h2 id="cta-title">Quer conectar IA à operação — com controle?</h2>
+            <p>Agende um discovery técnico. Mapeamos sua stack e mostramos onde o OpsMesh entra entre as ferramentas do time e a infra.</p>
+          </div>
+          <div class="cta-actions-col">
+            <a href="mailto:contato@collie.ia.br?subject=Discovery%20t%C3%A9cnico%20Collie%20OpsMesh" class="btn btn-primary btn-lg">Falar com a engenharia</a>
+            <a href="https://wa.me/5561982505951?text=Ol%C3%A1%2C%20quero%20agendar%20um%20discovery%20t%C3%A9cnico%20do%20Collie%20OpsMesh." class="btn btn-outline btn-lg" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+            <a href="#workflow" class="btn btn-outline btn-lg">Ver o fluxo</a>
+            <p class="cta-note">Sem compromisso. Conversa técnica de 30 min.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="docs">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="img/collie-lockup.png" width="150" height="148" loading="lazy" alt="Collie AI Engineering" />
+        <p>OpsMesh decide o que a IA e o time podem executar na infra — com identidade, política e auditoria.</p>
+      </div>
+      <nav aria-label="Links da plataforma no rodapé">
+        <h3>Plataforma</h3>
+        <a href="#opsmesh">OpsMesh</a>
+        <a href="#workflow">Fluxo operacional</a>
+        <a href="#platform">Capacidades</a>
+        <a href="#integrations">Integrações</a>
+      </nav>
+      <nav aria-label="Links da empresa no rodapé">
+        <h3>Empresa</h3>
+        <a href="#demo">Discovery técnico</a>
+        <a href="mailto:contato@collie.ia.br">Contato</a>
+        <a href="https://wa.me/5561982505951" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="tel:+5561982505951">+55 61 98250-5951</a>
+      </nav>
+      <nav aria-label="Links de recursos no rodapé">
+        <h3>Recursos</h3>
+        <a href="#opsmesh">Arquitetura</a>
+        <a href="#demo">Documentação sob demanda</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Collie AI Engineering. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
