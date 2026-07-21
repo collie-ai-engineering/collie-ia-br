@@ -1,0 +1,118 @@
+<svg width="1300" height="560" viewBox="0 0 1300 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Fluxo do Collie OpsMesh em quatro etapas</title>
+<desc id="desc">Observar, Diagnosticar, Recomendar e Executar — fluxo operacional com aprovação humana.</desc>
+
+<defs>
+  <linearGradient id="flowBg" x1="0" y1="0" x2="1300" y2="560" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#F8FAFC"/>
+    <stop offset="100%" stop-color="#EEF2FF"/>
+  </linearGradient>
+  <filter id="s" x="-20%" y="-20%" width="140%" height="160%">
+    <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#0B1220" flood-opacity="0.07"/>
+  </filter>
+  <pattern id="flowDots" width="26" height="26" patternUnits="userSpaceOnUse">
+    <circle cx="1.2" cy="1.2" r="1" fill="#94A3B8" opacity="0.2"/>
+  </pattern>
+</defs>
+
+<rect width="1300" height="560" rx="20" fill="url(#flowBg)"/>
+<rect width="1300" height="560" rx="20" fill="url(#flowDots)"/>
+
+<!-- Mesh arc under steps -->
+<path d="M80 360c180-40 360-60 570-60s390 20 570 60" stroke="#93C5FD" stroke-width="1.5" stroke-dasharray="6 10" fill="none" opacity="0.45"/>
+
+<text x="650" y="42" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="700" fill="#64748B" text-anchor="middle" letter-spacing="2.2">COLLIE OPSMESH — FLUXO OPERACIONAL</text>
+
+<!-- CARD 1 -->
+<g transform="translate(24 66)" filter="url(#s)">
+  <rect width="270" height="280" rx="18" fill="white" stroke="#E2E8F0"/>
+  <rect x="0" y="0" width="270" height="6" rx="3" fill="#2563EB"/>
+  <text x="24" y="52" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#94A3B8">01</text>
+  <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Observar</text>
+  <text font-family="Inter,Arial,sans-serif" font-size="14" fill="#64748B">
+    <tspan x="24" y="136">Coleta sinais e telemetria de</tspan>
+    <tspan x="24" y="156">Kubernetes, infraestrutura,</tspan>
+    <tspan x="24" y="176">middleware e ferramentas de</tspan>
+    <tspan x="24" y="196">observabilidade existentes.</tspan>
+  </text>
+  <rect x="24" y="224" width="128" height="28" rx="8" fill="#EFF6FF"/>
+  <text x="88" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">Coleta de Sinais</text>
+</g>
+
+<path d="M318 206h32" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+<path d="M344 198l12 8-12 8" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+<!-- CARD 2 -->
+<g transform="translate(380 66)" filter="url(#s)">
+  <rect width="270" height="280" rx="18" fill="white" stroke="#E2E8F0"/>
+  <rect x="0" y="0" width="270" height="6" rx="3" fill="#22C55E"/>
+  <text x="24" y="52" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#94A3B8">02</text>
+  <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Diagnosticar</text>
+  <text font-family="Inter,Arial,sans-serif" font-size="14" fill="#64748B">
+    <tspan x="24" y="136">Correlaciona eventos, logs,</tspan>
+    <tspan x="24" y="156">métricas e padrões operacionais</tspan>
+    <tspan x="24" y="176">usando IA híbrida para</tspan>
+    <tspan x="24" y="196">identificar a causa raiz.</tspan>
+  </text>
+  <rect x="24" y="224" width="146" height="28" rx="8" fill="#F0FDF4"/>
+  <text x="97" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#16A34A" text-anchor="middle">Correlação por IA</text>
+</g>
+
+<path d="M674 206h32" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+<path d="M700 198l12 8-12 8" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+<!-- CARD 3 -->
+<g transform="translate(736 66)" filter="url(#s)">
+  <rect width="270" height="280" rx="18" fill="white" stroke="#E2E8F0"/>
+  <rect x="0" y="0" width="270" height="6" rx="3" fill="#2563EB"/>
+  <text x="24" y="52" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#94A3B8">03</text>
+  <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Recomendar</text>
+  <text font-family="Inter,Arial,sans-serif" font-size="14" fill="#64748B">
+    <tspan x="24" y="136">Gera ações de remediação</tspan>
+    <tspan x="24" y="156">seguras, explicáveis e cientes</tspan>
+    <tspan x="24" y="176">do contexto para revisão</tspan>
+    <tspan x="24" y="196">pela equipe de engenharia.</tspan>
+  </text>
+  <rect x="24" y="224" width="140" height="28" rx="8" fill="#EFF6FF"/>
+  <text x="94" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">Ação Explicável</text>
+</g>
+
+<path d="M1030 206h32" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+<path d="M1056 198l12 8-12 8" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+<!-- CARD 4 -->
+<g transform="translate(1092 66)" filter="url(#s)">
+  <rect width="184" height="280" rx="18" fill="white" stroke="#22C55E" stroke-width="1.75"/>
+  <rect x="0" y="0" width="184" height="6" rx="3" fill="#22C55E"/>
+  <text x="24" y="52" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#94A3B8">04</text>
+  <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Executar</text>
+  <text font-family="Inter,Arial,sans-serif" font-size="13" fill="#64748B">
+    <tspan x="24" y="136">Workflows</tspan>
+    <tspan x="24" y="154">controlados com</tspan>
+    <tspan x="24" y="172">aprovação humana,</tspan>
+    <tspan x="24" y="190">auditoria estrita</tspan>
+    <tspan x="24" y="208">e rollback.</tspan>
+  </text>
+</g>
+
+<!-- HUMAN APPROVAL GATE -->
+<g transform="translate(380 412)" filter="url(#s)">
+  <rect width="280" height="52" rx="26" fill="#0B1220"/>
+  <circle cx="36" cy="26" r="11" fill="#22C55E"/>
+  <path d="M32 26l3.5 3.5 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="62" y="32" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="white">Aprovação Humana</text>
+</g>
+
+<path d="M660 438 L1184 438 L1184 350" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5 5" stroke-linecap="round" fill="none" opacity="0.7"/>
+
+<g transform="translate(1020 490)">
+  <rect width="240" height="34" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="120" y="23" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#64748B" text-anchor="middle">Trilha de auditoria completa</text>
+</g>
+
+<g transform="translate(40 490)">
+  <rect width="240" height="34" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="120" y="23" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#64748B" text-anchor="middle">Pull-based · Zero Trust</text>
+</g>
+
+</svg>
