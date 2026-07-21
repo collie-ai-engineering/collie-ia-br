@@ -50,7 +50,11 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* Fluid base: stays 16px up to ~1450px, scales up to 22px on large monitors */
+  font-size: clamp(16px, 8px + 0.55vw, 22px);
+}
 
 body {
   margin: 0;
@@ -91,6 +95,11 @@ a { color: inherit; }
   margin-inline: auto;
 }
 
+/* Wider content band on large monitors (e.g. 27"+) */
+@media (min-width: 1600px) { :root { --container: 1440px; } }
+@media (min-width: 1920px) { :root { --container: 1600px; } }
+@media (min-width: 2400px) { :root { --container: 1780px; } }
+
 
 /* Navbar */
 
@@ -128,7 +137,7 @@ body.menu-open .navbar {
   text-decoration: none;
   flex: 0 0 auto;
 }
-.brand img { width: 180px; height: auto; }
+.brand img { height: 48px; width: auto; }
 
 .nav-links {
   display: flex;
@@ -828,9 +837,9 @@ h1 span {
 }
 
 .footer-brand img {
-  width: 180px;
+  width: 148px;
   height: auto;
-  padding: 6px;
+  padding: 10px;
   border-radius: var(--radius-sm);
   background: var(--color-white);
 }
@@ -942,7 +951,7 @@ h1 span {
 }
 
 @media (max-width: 520px) {
-  .brand img { width: 150px; }
+  .brand img { height: 40px; width: auto; }
   h1 { font-size: 2.4rem; }
   .hero-actions .btn { width: 100%; }
   .comparison-card,
