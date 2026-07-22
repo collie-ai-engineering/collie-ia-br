@@ -15,6 +15,7 @@ img/          logos e ilustrações
 CNAME         domínio canônico (www)
 robots.txt    regras para crawlers
 sitemap.xml   sitemap da home
+llms.txt      mapa Markdown para agentes de IA
 serve.sh      servidor local de desenvolvimento
 ```
 
@@ -47,8 +48,18 @@ GitHub Pages com domínio canônico **`www.collie.ia.br`**.
    - Apex `collie.ia.br` → A/ALIAS do GitHub Pages **ou** redirect para `www`
 3. **Smoke**
    - `https://www.collie.ia.br/` → 200
-   - `/img/*`, `/robots.txt`, `/sitemap.xml` → 200
+   - `/img/*`, `/robots.txt`, `/sitemap.xml`, `/llms.txt` → 200
    - `https://collie.ia.br` → redirect para www
+4. **Search Console** — propriedade `https://www.collie.ia.br/`; enviar `sitemap.xml`
+5. **Plausible** — domínio `www.collie.ia.br` no painel; goal no CTA `#demo`
+
+### Campanhas (UTM)
+
+Use na URL ao compartilhar:
+
+`https://www.collie.ia.br/?utm_source=linkedin&utm_medium=organic&utm_campaign=nome`
+
+Troque `utm_source` / `utm_medium` (`organic` | `paid` | `cpc`) e `utm_campaign` por campanha.
 
 O site não depende da infraestrutura de demonstração na OCI.
 
