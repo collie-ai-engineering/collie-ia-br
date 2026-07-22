@@ -1,0 +1,32 @@
+# Collie
+
+> Collie OpsMesh governa o que Cursor, Claude Code, Antigravity e outros clientes de IA podem pedir na sua infra: identidade, política, aprovação e auditoria — antes da execução. MeshAgents executam só ações tipadas, outbound-only, com audit trail.
+
+Collie AI Engineering. Site institucional em português do Brasil.
+
+## Produto
+
+- [Home](https://www.collie.ia.br/): landing do Collie OpsMesh
+- [OpsMesh](https://www.collie.ia.br/#opsmesh): o que o mesh governa (identidade, política, aprovação, auditoria)
+- [Plataforma](https://www.collie.ia.br/#platform): Control Plane, bridge MCP e perímetro dos agents
+- [Workflow](https://www.collie.ia.br/#workflow): pedido da IA → decisão → execução tipada
+- [Integrações](https://www.collie.ia.br/#integrations): clientes de IA e superfície de pedido
+
+## Contato
+
+- [Agendar discovery](https://www.collie.ia.br/#demo): discovery técnico com a engenharia
+- [E-mail](mailto:contato@collie.ia.br): contato@collie.ia.br
+- [WhatsApp](https://wa.me/5561982505951): +55 61 98250-5951
+
+## O que não é
+
+- Não é um IDE nem substitui Cursor, Claude Code ou Antigravity
+- Não abre acesso inbound ao cluster do cliente
+- Não entrega shell livre nem credencial ampla à IA
+- Não é documentação de API pública neste domínio (landing única)
+
+## Mapa do site
+
+- [llms.txt](https://www.collie.ia.br/llms.txt): este arquivo
+- [robots.txt](https://www.collie.ia.br/robots.txt): regras de crawlers
+- [sitemap.xml](https://www.collie.ia.br/sitemap.xml): URLs para indexação
