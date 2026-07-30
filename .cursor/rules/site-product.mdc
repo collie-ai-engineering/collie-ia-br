@@ -1,0 +1,12 @@
+---
+description: Regras do site institucional Collie
+alwaysApply: true
+---
+
+# collie-ia-br
+
+- Domínio canônico: `https://www.collie.ia.br/`
+- HTML/CSS/JS estático; GitHub Pages.
+- Sempre aplicar copy PT-BR (regra `portal-copywriting`).
+- Após editar o site, rodar a skill `validate-collie-site`.
+- Docs de instalação OpsMesh não moram aqui (ainda); quando houver HTML gerado, publicar a partir de `collie-opsmesh/docs/install/`.
