@@ -70,3 +70,10 @@ Conteúdo migrado de `collie-ai-engineering/assets/brand/website/`.
 ## Licença
 
 Proprietária — All Rights Reserved. Ver [LICENSE](LICENSE).
+
+## Validação e copy
+
+- Skill: [skills/validate-collie-site/](skills/validate-collie-site/) (também em `.cursor/skills/`)
+- Regra de copy PT-BR: [`.cursor/rules/portal-copywriting.mdc`](.cursor/rules/portal-copywriting.mdc)
+
+Docs de uso do OpsMesh (install) serão publicadas em HTML aqui no futuro; fonte Markdown em **collie-opsmesh**.
