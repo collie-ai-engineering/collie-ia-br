@@ -35,7 +35,7 @@ Complemento de [SKILL.md](SKILL.md). Use item a item; não pule Critical.
 
 ## C. GitHub Pages (repo `collie-ia-br`)
 
-Clone local oficial (pode mudar — ver SKILL.md): `/Users/mvasconcelos/code/mvs-eng/collie-ia-br`
+Clone local oficial (pode mudar — ver SKILL.md): `/Users/mvasconcelos/code/mvs-eng/collie-code/collie-ia-br`
 
 - [ ] `CNAME` = `www.collie.ia.br`
 - [ ] Source Pages = branch `main` / root
@@ -71,7 +71,7 @@ Clone local oficial (pode mudar — ver SKILL.md): `/Users/mvasconcelos/code/mvs
 
 Quando ambos existirem:
 
-| Artefato | `assets/brand/website` | `/Users/mvasconcelos/code/mvs-eng/collie-ia-br` |
+| Artefato | `assets/brand/website` | `/Users/mvasconcelos/code/mvs-eng/collie-code/collie-ia-br` |
 |----------|------------------------|--------------------------------------------------|
 | `index.html` | ? | ? |
 | `style.css` | ? | ? |

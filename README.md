@@ -73,7 +73,8 @@ Proprietária — All Rights Reserved. Ver [LICENSE](LICENSE).
 
 ## Validação e copy
 
-- Skill: [skills/validate-collie-site/](skills/validate-collie-site/) (também em `.cursor/skills/`)
+- Validação: [`.cursor/skills/validate-collie-site/`](.cursor/skills/validate-collie-site/)
+- Copy executiva / GEO: [`.cursor/skills/copywriting-clevel-geo/`](.cursor/skills/copywriting-clevel-geo/)
 - Regra de copy PT-BR: [`.cursor/rules/portal-copywriting.mdc`](.cursor/rules/portal-copywriting.mdc)
 
 Docs de uso do OpsMesh (install) serão publicadas em HTML aqui no futuro; fonte Markdown em **collie-opsmesh**.
