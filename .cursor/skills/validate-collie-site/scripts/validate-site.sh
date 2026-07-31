@@ -115,6 +115,23 @@ check_local_tree() {
     else
       ok "sem CTA Documentação enganoso"
     fi
+    if [[ -f "$root/docs/index.html" && -f "$root/docs.css" ]]; then
+      ok "docs/ hub + docs.css"
+    else
+      fail "docs/ ausente (esperado hub público)"
+    fi
+    for doc_page in como-funciona.html instalar.html cenarios.html topologias.html; do
+      if [[ -f "$root/docs/$doc_page" ]]; then
+        ok "docs/$doc_page"
+      else
+        fail "docs/$doc_page ausente"
+      fi
+    done
+    if grep -q 'href="docs/"' <<<"$html" || grep -q 'href="/docs/"' <<<"$html"; then
+      ok "home linka /docs/"
+    else
+      warn "home sem link para docs/"
+    fi
     if grep -q 'application/ld+json' <<<"$html" && grep -q '"@type": "Organization"' <<<"$html"; then
       ok "JSON-LD Organization"
     else
@@ -134,10 +151,14 @@ check_local_tree() {
       [[ "$ref" == mailto:* || "$ref" == tel:* || "$ref" == \#* ]] && continue
       if [[ -f "$root/$ref" ]]; then
         ok "ref $ref"
+      elif [[ "$ref" == */ || "$ref" == */. ]] && [[ -f "$root/${ref%/}/index.html" ]]; then
+        ok "ref $ref → index.html"
+      elif [[ -d "$root/$ref" && -f "$root/$ref/index.html" ]]; then
+        ok "ref $ref/ → index.html"
       else
         fail "ref quebrada $ref"
       fi
-    done < <(grep -oE '(src|href)="[^"]+"' "$root/index.html" | sed -E 's/^(src|href)=//' | tr -d '"' | grep -E '^(img/|style\.css|script\.js)')
+    done < <(grep -oE '(src|href)="[^"]+"' "$root/index.html" | sed -E 's/^(src|href)=//' | tr -d '"' | grep -E '^(img/|style\.css|script\.js|docs\.css|docs/)')
   fi
 }
 

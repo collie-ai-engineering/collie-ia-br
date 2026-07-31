@@ -8,7 +8,12 @@ Site institucional Collie (`www.collie.ia.br`).
 - Validar após mudanças: `.cursor/skills/validate-collie-site/`
 - Copy executiva / GEO: `.cursor/skills/copywriting-clevel-geo/`
 
+## Documentação pública
+
+- HTML em `docs/` (uso/instalação OpsMesh).
+- Fonte canônica de conteúdo: `collie-opsmesh/docs/install/` (+ SVGs em `collie-opsmesh/docs/img/install/` → espelho `img/docs/`).
+- Não publicar aqui arquitetura, API contracts nem runbooks de desenvolvimento (Google Workspace).
+
 ## Não fazer
 
-- Misturar docs de produto OpsMesh aqui (fonte em `collie-opsmesh/docs/install/`; HTML futuro sim).
 - Brandbook PDF / masters → Google Workspace.

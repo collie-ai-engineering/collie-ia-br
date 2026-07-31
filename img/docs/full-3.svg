@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="520" viewBox="0 0 1100 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">3 — Full sem LLM</title>
+  <desc id="d">Operacao com Cockpit + agents · AI Policy blocked · sem Router/Ollama</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1100" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="cpGrad" x1="0" y1="0" x2="500" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141B2D"/>
+      <stop offset="100%" stop-color="#0B1220"/>
+    </linearGradient>
+    <linearGradient id="zoneCollie" x1="0" y1="0" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DBEAFE" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#DBEAFE" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="zoneClient" x1="0" y1="0" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DCFCE7" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#DCFCE7" stop-opacity="0.12"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0B1220" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0l6 3-6 3" fill="none" stroke="#2563EB" stroke-width="1.5"/>
+    </marker>
+    <marker id="arrG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0l6 3-6 3" fill="none" stroke="#16A34A" stroke-width="1.5"/>
+    </marker>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1" fill="#94A3B8" opacity="0.22"/>
+    </pattern>
+  </defs>
+
+  <rect width="1100" height="520" rx="28" fill="url(#bg)"/>
+  <rect width="1100" height="520" rx="28" fill="url(#dots)"/>
+  <text x="550.0" y="36" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#64748B" text-anchor="middle" letter-spacing="2.4">COLLIE OPSMESH</text>
+  <text x="550.0" y="64" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#0B1220" text-anchor="middle">3 — Full sem LLM</text>
+  <text x="550.0" y="88" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Operacao com Cockpit + agents · AI Policy blocked · sem Router/Ollama</text>
+
+  <rect x="40" y="110" width="1020" height="360" rx="20" fill="url(#zoneClient)"/>
+  <text x="64" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#16A34A" letter-spacing="1.6">INSTALACAO FULL NO CLIENTE</text>
+  
+    <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
+      <rect x="64" y="160" width="480" height="100" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+      <text x="304.0" y="206.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">CP · Cockpit · GW · RMQ · Postgres</text>
+      <text x="304.0" y="246" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">jobs · approval · audit</text>
+    </g>
+
+    <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
+      <rect x="564" y="160" width="460" height="100" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+      <text x="794.0" y="206.0" font-size="13" font-weight="800" fill="#64748B" text-anchor="middle">AI Policy / Router / Ollama</text>
+      <text x="794.0" y="246" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">nao instalados ou blocked</text>
+    </g>
+
+    <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
+      <rect x="64" y="290" width="480" height="100" rx="14" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
+      <text x="304.0" y="336.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">MeshAgent</text>
+      <text x="304.0" y="376" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">collect · remediacao HITL</text>
+    </g>
+
+    <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
+      <rect x="564" y="290" width="460" height="100" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <text x="794.0" y="336.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Evidence Processor (opcional)</text>
+      <text x="794.0" y="376" font-size="11" font-weight="600" fill="#64748B" text-anchor="middle">DLP sem caminho de chat AI</text>
+    </g>
+
+    <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
+      <rect x="64" y="420" width="960" height="40" rx="14" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+      <text x="544.0" y="445.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Engenheiros operam pelo Cockpit — sem inferencia</text>
+      
+    </g>
+  
+
+</svg>
