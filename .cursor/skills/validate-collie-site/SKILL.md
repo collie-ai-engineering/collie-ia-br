@@ -54,11 +54,11 @@ Validação Collie Site
 ### 2. Smoke HTTP
 
 ```bash
-bash skills/validate-collie-site/scripts/validate-site.sh
+bash .cursor/skills/validate-collie-site/scripts/validate-site.sh
 # opcional:
-BASE_URL=https://www.collie.ia.br bash skills/validate-collie-site/scripts/validate-site.sh
+BASE_URL=https://www.collie.ia.br bash .cursor/skills/validate-collie-site/scripts/validate-site.sh
 # path oficial do clone Pages (atualizar na skill se mudar):
-SITE_ROOT=/Users/mvasconcelos/code/mvs-eng/collie-ia-br bash skills/validate-collie-site/scripts/validate-site.sh --local-only
+SITE_ROOT=/Users/mvasconcelos/code/mvs-eng/collie-code/collie-ia-br bash .cursor/skills/validate-collie-site/scripts/validate-site.sh --local-only
 ```
 
 O script falha (exit ≠ 0) se houver Critical. Interprete a saída; não invente status HTTP.
