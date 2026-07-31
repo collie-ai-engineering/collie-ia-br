@@ -12,6 +12,14 @@ Collie AI Engineering. Site institucional em português do Brasil.
 - [Workflow](https://www.collie.ia.br/#workflow): pedido da IA → decisão → execução tipada
 - [Integrações](https://www.collie.ia.br/#integrations): clientes de IA e superfície de pedido
 
+## Documentação de uso
+
+- [Documentação](https://www.collie.ia.br/docs/): o que o OpsMesh resolve, arquitetura de uso, instalação e cenários
+- [Como funciona](https://www.collie.ia.br/docs/como-funciona.html): camadas operacionais e componentes
+- [Como instalar](https://www.collie.ia.br/docs/instalar.html): fluxo em quatro passos e pré-requisitos
+- [Cenários](https://www.collie.ia.br/docs/cenarios.html): SaaS 1.1–1.4 e Full 2–4 — quando escolher cada um. Nota: 1.2 e 1.4 (Gateway no cliente) são topologia alvo; PoC imediata suportada = 1.1
+- [Topologias](https://www.collie.ia.br/docs/topologias.html): Docker, Kubernetes e VMs
+
 ## Contato
 
 - [Agendar discovery](https://www.collie.ia.br/#demo): discovery técnico com a engenharia
@@ -23,7 +31,7 @@ Collie AI Engineering. Site institucional em português do Brasil.
 - Não é um IDE nem substitui Cursor, Claude Code ou Antigravity
 - Não abre acesso inbound ao cluster do cliente
 - Não entrega shell livre nem credencial ampla à IA
-- Não é documentação de API pública neste domínio (landing única)
+- Não publica contratos de API nem arquitetura interna de desenvolvimento neste domínio
 
 ## Mapa do site
 

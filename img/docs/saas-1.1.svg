@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="520" viewBox="0 0 1100 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">1.1 — LLM Collie + Gateway Collie</title>
+  <desc id="d">Cliente instala apenas MeshAgent · LLM e Gateway na Collie</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1100" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="cpGrad" x1="0" y1="0" x2="500" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141B2D"/>
+      <stop offset="100%" stop-color="#0B1220"/>
+    </linearGradient>
+    <linearGradient id="zoneCollie" x1="0" y1="0" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DBEAFE" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#DBEAFE" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="zoneClient" x1="0" y1="0" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DCFCE7" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#DCFCE7" stop-opacity="0.12"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0B1220" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0l6 3-6 3" fill="none" stroke="#2563EB" stroke-width="1.5"/>
+    </marker>
+    <marker id="arrG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0l6 3-6 3" fill="none" stroke="#16A34A" stroke-width="1.5"/>
+    </marker>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1" fill="#94A3B8" opacity="0.22"/>
+    </pattern>
+  </defs>
+
+  <rect width="1100" height="520" rx="28" fill="url(#bg)"/>
+  <rect width="1100" height="520" rx="28" fill="url(#dots)"/>
+  <text x="550.0" y="36" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#64748B" text-anchor="middle" letter-spacing="2.4">COLLIE OPSMESH</text>
+  <text x="550.0" y="64" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#0B1220" text-anchor="middle">1.1 — LLM Collie + Gateway Collie</text>
+  <text x="550.0" y="88" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Cliente instala apenas MeshAgent · LLM e Gateway na Collie</text>
+
+  <rect x="40" y="110" width="500" height="360" rx="20" fill="url(#zoneCollie)"/>
+  <rect x="560" y="110" width="500" height="360" rx="20" fill="url(#zoneClient)"/>
+  <text x="64" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#2563EB" letter-spacing="1.6">COLLIE (SAAS / CONTROL PLANE)</text>
+  <text x="584" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#16A34A" letter-spacing="1.6">PERIMETRO DO CLIENTE</text>
+  
+    <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
+      <rect x="64" y="170" width="436" height="64" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+      <text x="282.0" y="207.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">Cockpit · CP · RMQ · Postgres</text>
+      
+    </g>
+
+    <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
+      <rect x="64" y="250" width="210" height="64" rx="14" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+      <text x="169.0" y="278.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Gateway</text>
+      <text x="169.0" y="300" font-size="11" font-weight="600" fill="#2563EB" text-anchor="middle">HTTPS opaco</text>
+    </g>
+
+    <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
+      <rect x="290" y="250" width="210" height="64" rx="14" fill="#FFFBEB" stroke="#FCD34D" stroke-width="1.5"/>
+      <text x="395.0" y="278.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">AI Router → LLM Collie</text>
+      <text x="395.0" y="300" font-size="11" font-weight="600" fill="#D97706" text-anchor="middle">após Privacy · Policy</text>
+    </g>
+
+    <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
+      <rect x="64" y="330" width="436" height="64" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+      <text x="282.0" y="367.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">Evidence · Privacy Gate · Policy</text>
+      
+    </g>
+  
+    <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
+      <rect x="584" y="200" width="446" height="100" rx="14" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
+      <text x="807.0" y="246.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">MeshAgent + Edge Redactor</text>
+      <text x="807.0" y="286" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">HTTPS lifecycle → CP · pull/ack/result → Gateway</text>
+    </g>
+
+    <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
+      <rect x="584" y="330" width="446" height="70" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <text x="807.0" y="361.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Cluster / hosts do cliente</text>
+      <text x="807.0" y="386" font-size="11" font-weight="600" fill="#64748B" text-anchor="middle">zero inbound</text>
+    </g>
+  <text x="550" y="500" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Agent puxa jobs no Gateway Collie · evidencia raw nao sobe ao SaaS.</text>
+
+</svg>

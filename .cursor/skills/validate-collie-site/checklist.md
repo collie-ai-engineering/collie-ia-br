@@ -16,6 +16,10 @@ Complemento de [SKILL.md](SKILL.md). Use item a item; não pule Critical.
   - `/img/hero-architecture.svg`
   - `/img/opsmesh-flow.svg`
   - `/img/dashboard-mockup.svg`
+  - `/docs/` → 200
+  - `/docs.css` → 200
+  - `/docs/cenarios.html` → 200
+  - `/img/docs/saas-overview.svg` → 200
 - [ ] `/robots.txt` → 200, aponta Sitemap
 - [ ] `/sitemap.xml` → 200, inclui home canônica
 - [ ] `/llms.txt` → 200, mapa Markdown para agentes (H1 Collie)
@@ -45,7 +49,7 @@ Clone local oficial (pode mudar — ver SKILL.md): `/Users/mvasconcelos/code/mvs
 ## D. Navegação e CTAs
 
 - [ ] Header: Contato / discovery → `#demo` (ou destino real)
-- [ ] Sem label “Documentação” sem docs públicas
+- [ ] Documentação → `/docs/` (páginas reais; sem `#docs` vazio)
 - [ ] Footer: links de seção válidos; Recursos honestos
 - [ ] `mailto:contato@collie.ia.br`
 - [ ] WhatsApp `https://wa.me/5561982505951`
@@ -65,7 +69,7 @@ Clone local oficial (pode mudar — ver SKILL.md): `/Users/mvasconcelos/code/mvs
 - [ ] Vocabulário BR (não PT-PT: ecrã, ficheiro, telemóvel…)
 - [ ] Sem blacklist do portal-copywriting
 - [ ] Claims alinhados: IA pede → OpsMesh governa → MeshAgents executam
-- [ ] Sem prometer docs/produto que não existem na página
+- [ ] Docs públicas em `/docs/` alinhadas a uso/instalação (não arquitetura interna)
 
 ## G. Paridade fonte ↔ publicado
 

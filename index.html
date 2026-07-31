@@ -67,6 +67,7 @@
 
       <nav class="nav-links" id="primary-navigation" aria-label="Navegação principal">
         <a href="#opsmesh" class="nav-link">OpsMesh</a>
+        <a href="docs/" class="nav-link">Documentação</a>
         <a href="#platform" class="nav-link">Plataforma</a>
         <a href="#workflow" class="nav-link">Workflow</a>
         <a href="#integrations" class="nav-link">Integrações</a>
@@ -92,7 +93,7 @@
           <p class="hero-subtitle">Cursor, Claude Code e Antigravity pedem ações. O OpsMesh autentica, autoriza, aprova e audita. MeshAgents executam só o permitido — sem entregar o cluster à IA.</p>
           <div class="hero-actions">
             <a href="#demo" class="btn btn-primary btn-lg">Agendar discovery técnico</a>
-            <a href="#opsmesh" class="btn btn-outline btn-lg">Ver a arquitetura</a>
+            <a href="docs/" class="btn btn-outline btn-lg">Ver documentação</a>
           </div>
         </div>
         <div class="hero-visual fade-in-up" aria-hidden="false">
@@ -122,14 +123,14 @@
       <div class="container">
         <div class="section-header fade-in-up">
           <p class="section-kicker">A lacuna operacional</p>
-          <h2 id="problem-title">Dashboards e IA não bastam. Falta a ação com controle.</h2>
-          <p>O time já tem alerta, métrica e assistente de engenharia. O buraco é levar o pedido até a infra sem abrir o cluster.</p>
+          <h2 id="problem-title">Ver o incidente não basta. Falta executar com controle.</h2>
+          <p>Alerta, métrica e assistente de engenharia o time já tem. O gap é levar o pedido até a infra com identidade, aprovação e auditoria — sem abrir o cluster à IA.</p>
         </div>
         <div class="comparison-grid">
           <article class="comparison-card fade-in-up">
             <span class="card-tag danger">O gap</span>
             <h3>IA perto da infra, governança longe.</h3>
-            <p>Plugue Cursor ou Claude Code direto em kubectl, SSH ou API interna e o risco sobe: credencial exposta, comando livre, zero auditoria.</p>
+            <p>Conectar Cursor ou Claude Code direto em kubectl, SSH ou API interna sobe o risco: credencial exposta, comando livre, zero auditoria.</p>
             <ul>
               <li>Acesso inbound improvisado</li>
               <li>Shell e scripts genéricos</li>
@@ -139,7 +140,7 @@
           <article class="comparison-card accent fade-in-up">
             <span class="card-tag success">A abordagem Collie</span>
             <h3>O pedido de um lado. A execução tipada do outro.</h3>
-            <p>Cursor, Claude Code, Antigravity e o Cockpit pedem. O OpsMesh decide. MeshAgents rodam o permitido — pull-based, tipado e auditável.</p>
+            <p>Cursor, Claude Code, Antigravity e o Cockpit pedem. O OpsMesh decide. MeshAgents rodam só o permitido — pull-based, tipado e auditável.</p>
             <ul>
               <li>Bridge MCP projetado no Control Plane</li>
               <li>Identity · Policy · Approval · Audit</li>
@@ -162,7 +163,7 @@
             <li><strong>Governança</strong> — FGAC, approvals, audit</li>
             <li><strong>Execução</strong> — ações tipadas via MeshAgent</li>
           </ul>
-          <a href="#workflow" class="text-link">Ver o fluxo de trabalho</a>
+          <a href="docs/como-funciona.html" class="text-link">Como o OpsMesh funciona</a>
         </div>
         <div class="opsmesh-visual fade-in-up">
           <img src="img/opsmesh-flow.svg" width="1300" height="560" loading="lazy" alt="Fluxo de trabalho de quatro etapas do Collie OpsMesh: observar, diagnosticar, recomendar e executar com aprovação humana." />
@@ -198,8 +199,8 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
             </div>
             <div>
-              <h3>Operações híbridas outbound-only</h3>
-              <p>Uma visão só: Kubernetes, cloud, middleware, frotas Linux e legado. MeshAgents saem por HTTPS — zero inbound no perímetro do cliente.</p>
+              <h3>Execução sem abrir a porta</h3>
+              <p>MeshAgents ficam no perímetro do cliente e iniciam a requisição por TLS. Depois do cleanup na borda, enviam o resultado — a IA não ganha caminho de entrada para o cluster.</p>
             </div>
           </article>
         </div>
@@ -319,7 +320,7 @@
           <div class="cta-actions-col">
             <a href="mailto:contato@collie.ia.br?subject=Discovery%20t%C3%A9cnico%20Collie%20OpsMesh" class="btn btn-primary btn-lg">Falar com a engenharia</a>
             <a href="https://wa.me/5561982505951?text=Ol%C3%A1%2C%20quero%20agendar%20um%20discovery%20t%C3%A9cnico%20do%20Collie%20OpsMesh." class="btn btn-outline btn-lg" target="_blank" rel="noopener">Chamar no WhatsApp</a>
-            <a href="#workflow" class="btn btn-outline btn-lg">Ver o fluxo</a>
+            <a href="docs/" class="btn btn-outline btn-lg">Ver documentação</a>
             <p class="cta-note">Sem compromisso. Conversa técnica de 30 min.</p>
           </div>
         </div>
@@ -337,6 +338,7 @@
       <nav aria-label="Links da plataforma no rodapé">
         <h3>Plataforma</h3>
         <a href="#opsmesh">OpsMesh</a>
+        <a href="docs/">Documentação</a>
         <a href="#workflow">Fluxo operacional</a>
         <a href="#platform">Capacidades</a>
         <a href="#integrations">Integrações</a>
@@ -350,7 +352,8 @@
       </nav>
       <nav aria-label="Links de recursos no rodapé">
         <h3>Recursos</h3>
-        <a href="#opsmesh">Arquitetura</a>
+        <a href="docs/">Documentação</a>
+        <a href="docs/cenarios.html">Cenários de instalação</a>
         <a href="#demo">Discovery técnico</a>
       </nav>
     </div>

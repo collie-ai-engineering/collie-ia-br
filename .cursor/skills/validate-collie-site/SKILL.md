@@ -71,7 +71,7 @@ No `index.html` (e CSS/JS tocados):
 2. Head: `canonical`, `og:url`, `og:image` **absolutos** em `https://www.collie.ia.br/...`
 3. `CNAME` = `www.collie.ia.br`; existem `robots.txt`, `sitemap.xml`, `404.html`, `llms.txt` no repo Pages
 4. Head: JSON-LD Organization/WebSite; snippet Plausible (`data-domain="www.collie.ia.br"`)
-5. CTAs honestos: sem “Documentação” apontando para footer vazio; Contato/Discovery → `#demo` ou destino real
+5. CTAs honestos: Documentação → `/docs/` (páginas reais); Contato/Discovery → `#demo` ou destino real. Bloquear `Documentação` → `#docs` vazio.
 6. Contatos: `mailto:contato@collie.ia.br`, WhatsApp `wa.me/5561982505951`
 7. A11y: `lang="pt-BR"`, skip-link, `aria-*` no menu, alts em imagens de conteúdo
 8. `script.js`: menu mobile, Escape, `prefers-reduced-motion`
@@ -118,7 +118,7 @@ Formato obrigatório:
 ## Fora de escopo
 
 - Redesign visual completo
-- Docs de produto / Cockpit
+- Cockpit UI / runtime OpsMesh
 - DNS no registrador (apenas listar no “Próximo passo” se bloquear apex/HTTPS)
 
 ## Recursos

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentação OpsMesh | Collie</title>
+  <meta name="description" content="O que o Collie OpsMesh resolve, como encaixa entre IA e infra, e como instalar: cenários SaaS e Full, topologias Docker, Kubernetes e VMs." />
+  <meta name="theme-color" content="#0B1220" />
+  <link rel="canonical" href="https://www.collie.ia.br/docs/" />
+  <meta property="og:title" content="Documentação OpsMesh — Collie" />
+  <meta property="og:description" content="Como funciona, como instalar e qual cenário escolher: SaaS ou Full, com ou sem LLM." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.collie.ia.br/docs/" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:image" content="https://www.collie.ia.br/img/collie-lockup.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Documentação OpsMesh — Collie" />
+  <meta name="twitter:description" content="Como funciona, como instalar e qual cenário escolher: SaaS ou Full, com ou sem LLM." />
+  <meta name="twitter:image" content="https://www.collie.ia.br/img/collie-lockup.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Collie AI Engineering",
+        "url": "https://www.collie.ia.br/",
+        "logo": "https://www.collie.ia.br/img/collie-lockup.png",
+        "email": "contato@collie.ia.br"
+      },
+      {
+        "@type": "WebPage",
+        "name": "Documentação OpsMesh",
+        "url": "https://www.collie.ia.br/docs/",
+        "description": "Guia de uso do Collie OpsMesh: funcionamento, instalação, cenários e topologias.",
+        "inLanguage": "pt-BR",
+        "isPartOf": { "@type": "WebSite", "name": "Collie OpsMesh", "url": "https://www.collie.ia.br/" }
+      }
+    ]
+  }
+  </script>
+  <script defer data-domain="www.collie.ia.br" src="https://plausible.io/js/script.js"></script>
+  <link rel="icon" type="image/png" href="/img/favicon.png" />
+  <link rel="apple-touch-icon" href="/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/docs.css" />
+</head>
+<body class="docs-page">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <header class="navbar scrolled" id="navbar">
+    <div class="container nav-container">
+      <a href="/" class="brand" aria-label="Início da Collie AI Engineering">
+        <img src="/img/collie-mark.png" width="52" height="48" alt="Collie AI Engineering" />
+      </a>
+      <button class="mobile-menu-btn" type="button" aria-label="Abrir menu de navegação" aria-controls="primary-navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="primary-navigation" aria-label="Navegação principal">
+        <a href="/#opsmesh" class="nav-link">OpsMesh</a>
+        <a href="/docs/" class="nav-link" aria-current="page">Documentação</a>
+        <a href="/#platform" class="nav-link">Plataforma</a>
+        <a href="/#demo" class="nav-link">Contato</a>
+      </nav>
+      <div class="nav-actions" aria-label="Ações do cabeçalho">
+        <a href="/#demo" class="btn btn-ghost">Contato</a>
+        <a href="/#demo" class="btn btn-primary">Agendar discovery</a>
+      </div>
+    </div>
+  </header>
+
+  <header class="docs-hero">
+    <div class="container">
+      <p class="eyebrow">Collie OpsMesh</p>
+      <h1>Documentação de uso e instalação</h1>
+      <p class="lede">O que o OpsMesh resolve, como encaixa na sua stack e como instalar — SaaS ou Full, com ou sem LLM — sem misturar com arquitetura interna de desenvolvimento.</p>
+    </div>
+  </header>
+
+  <main id="main" class="container docs-layout">
+    <aside class="docs-nav" aria-label="Índice da documentação">
+      <h2>Índice</h2>
+      <ul>
+        <li><a href="/docs/" aria-current="page">Visão geral</a></li>
+        <li><a href="/docs/como-funciona.html">Como funciona</a></li>
+        <li><a href="/docs/instalar.html">Como instalar</a></li>
+        <li><a href="/docs/cenarios.html">Cenários</a></li>
+        <li><a href="/docs/topologias.html">Topologias</a></li>
+      </ul>
+    </aside>
+
+    <div class="docs-content">
+      <section aria-labelledby="what-title">
+        <h2 id="what-title">O que o OpsMesh é — e o que resolve</h2>
+        <p>Ferramentas de IA pedem ações na infra. O OpsMesh autentica, autoriza, aprova e audita. MeshAgents executam só o permitido — sem entregar o cluster à IA.</p>
+        <div class="docs-cards">
+          <article class="docs-card">
+            <span class="card-kicker">Resolve</span>
+            <h3>Governança entre IA e infra</h3>
+            <ul>
+              <li>Pedido tipado (Cockpit ou clientes MCP) com identidade e FGAC</li>
+              <li>Aprovação humana (HITL) e Privacy Gate antes de caminho de LLM</li>
+              <li>Execução outbound-only via MeshAgent — pull, não inbound</li>
+              <li>Evidência sanitizada na borda; audit trail de ponta a ponta</li>
+            </ul>
+          </article>
+          <article class="docs-card docs-card--warn">
+            <span class="card-kicker">Não é</span>
+            <h3>Nem IDE, nem shell livre</h3>
+            <ul>
+              <li>Não substitui Cursor, Claude Code ou Antigravity</li>
+              <li>Não abre acesso inbound ao cluster do cliente</li>
+              <li>Não entrega shell livre nem credencial ampla à IA</li>
+              <li>Não publica raw log no SaaS nem no portal</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="arch-title">
+        <h2 id="arch-title">Como encaixa</h2>
+        <p>Fluxo resumido: pedido → Control Plane → Gateway opaco → MeshAgent no perímetro. Detalhe por camada em <a href="/docs/como-funciona.html">como funciona</a>.</p>
+        <figure class="docs-figure">
+          <img src="/img/docs/opsmesh-architecture.svg" width="1100" height="640" loading="eager" alt="Arquitetura Collie OpsMesh: clientes de IA e Cockpit pedem ações tipadas; Control Plane governa identidade, aprovação, AI Policy e auditoria; Gateway HTTPS opaco entrega envelope cifrado; MeshAgent outbound-only executa com Edge Redactor na borda." />
+          <figcaption>Pedido → governança → transporte → execução no perímetro do cliente.</figcaption>
+        </figure>
+        <div class="docs-callouts-row" aria-label="Alertas e facilidades">
+          <p class="docs-mini-callout docs-mini-callout--ok">
+            <strong>Facilidade</strong>
+            Privacy Gate: approve/reject só sobre evidência sanitizada — sem raw no browser.
+          </p>
+          <p class="docs-mini-callout docs-mini-callout--warn">
+            <strong>Alerta</strong>
+            Evidence raw não sobe ao SaaS nem ao Gateway. Edge Redactor na borda primeiro.
+          </p>
+          <p class="docs-mini-callout docs-mini-callout--alert">
+            <strong>Alerta</strong>
+            AI fail-closed: Policy <code>blocked</code> ou Provider fora = sem inferência e sem downgrade.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="path-title">
+        <h2 id="path-title">Caminho de leitura</h2>
+        <p>Comece pelo funcionamento. Depois escolha o cenário comercial. Só então empacote (Docker, Kubernetes ou VMs) e valide.</p>
+        <div class="docs-cards">
+          <a class="docs-card" href="/docs/como-funciona.html">
+            <span class="card-kicker">01</span>
+            <h3>Como funciona</h3>
+            <p>Pedido, governança, transporte e execução. O que cada peça faz no dia a dia.</p>
+            <span class="card-cta">Abrir →</span>
+          </a>
+          <a class="docs-card" href="/docs/instalar.html">
+            <span class="card-kicker">02</span>
+            <h3>Como instalar</h3>
+            <p>Fluxo em quatro passos e pré-requisitos comuns a SaaS e Full.</p>
+            <span class="card-cta">Abrir →</span>
+          </a>
+          <a class="docs-card" href="/docs/cenarios.html">
+            <span class="card-kicker">03</span>
+            <h3>Cenários</h3>
+            <p>SaaS 1.1–1.4 e Full 2–4. Quando escolher cada um e o que fica no seu perímetro.</p>
+            <span class="card-cta">Abrir →</span>
+          </a>
+          <a class="docs-card" href="/docs/topologias.html">
+            <span class="card-kicker">04</span>
+            <h3>Topologias</h3>
+            <p>Docker Compose, Kubernetes ou VMs — ortogonal ao cenário comercial.</p>
+            <span class="card-cta">Abrir →</span>
+          </a>
+        </div>
+      </section>
+
+      <section aria-labelledby="models-title">
+        <h2 id="models-title">Dois modelos de implantação</h2>
+        <p>A pergunta que define o footprint: <strong>onde roda o Control Plane?</strong></p>
+        <div class="docs-cards">
+          <a class="docs-card" href="/docs/cenarios.html#saas-title">
+            <span class="card-kicker">SaaS</span>
+            <h3>Control Plane na Collie</h3>
+            <p>Você instala MeshAgents (e, em alguns cenários, o Gateway). Cockpit, banco, filas e AI ficam na Collie.</p>
+            <span class="card-cta">Ver cenários SaaS →</span>
+          </a>
+          <a class="docs-card" href="/docs/cenarios.html#full-title">
+            <span class="card-kicker">Full</span>
+            <h3>Stack no cliente</h3>
+            <p>Cockpit, Control Plane, Postgres, RabbitMQ, Gateway e agents no seu ambiente. LLM conforme o cenário 2, 3 ou 4.</p>
+            <span class="card-cta">Ver cenários Full →</span>
+          </a>
+        </div>
+        <figure class="docs-figure">
+          <img src="/img/docs/saas-overview.svg" width="1100" height="520" loading="lazy" alt="Footprint SaaS: Control Plane na Collie; no cliente, MeshAgents e, conforme o cenário, Gateway." />
+          <figcaption>SaaS — o que fica na Collie e o que entra no perímetro do cliente.</figcaption>
+        </figure>
+        <figure class="docs-figure">
+          <img src="/img/docs/full-overview.svg" width="1100" height="520" loading="lazy" alt="Footprint Full: stack OpsMesh completa no ambiente do cliente." />
+          <figcaption>Full — stack completa no ambiente do cliente.</figcaption>
+        </figure>
+      </section>
+
+      <section aria-labelledby="principles-title">
+        <h2 id="principles-title">Princípios que não mudam</h2>
+        <ul class="docs-principles">
+          <li><strong>MeshAgent outbound-only</strong> — HTTPS sainte para Gateway e lifecycle no Control Plane. Zero inbound no agent.</li>
+          <li><strong>Gateway opaco</strong> — não lê ciphertext; sem Postgres de negócio.</li>
+          <li><strong>Evidence raw não sobe</strong> — raw log não vai para o SaaS nem para o Gateway.</li>
+          <li><strong>AI fail-closed</strong> — Policy decide; Router só executa; sem downgrade implícito.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="out-of-scope-title">
+        <h2 id="out-of-scope-title">Este guia não cobre</h2>
+        <ul>
+          <li>Arquitetura interna, API contracts e MVP histórico (Google Workspace / onboarding)</li>
+          <li>Dump de variáveis de ambiente, Terraform e runbooks de lab/demo</li>
+          <li>Deploy de ambiente demo Collie</li>
+        </ul>
+        <p>Para implantar de verdade, <a class="text-link" href="/#demo">agende o discovery técnico</a>.</p>
+      </section>
+
+      <div class="docs-cta-strip">
+        <h2>Pronto para mapear o seu cenário?</h2>
+        <p>No discovery técnico cruzamos compliance, rede e LLM com a matriz oficial de cenários.</p>
+        <div class="cta-row">
+          <a href="/docs/cenarios.html" class="btn btn-primary">Ver cenários</a>
+          <a href="/#demo" class="btn btn-outline">Agendar discovery</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" id="empresa">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="/img/collie-lockup.png" width="150" height="148" loading="lazy" alt="Collie AI Engineering" />
+        <p>OpsMesh decide o que a IA e o time podem executar na infra — com identidade, política e auditoria.</p>
+      </div>
+      <nav aria-label="Links da documentação no rodapé">
+        <h3>Documentação</h3>
+        <a href="/docs/">Visão geral</a>
+        <a href="/docs/como-funciona.html">Como funciona</a>
+        <a href="/docs/instalar.html">Como instalar</a>
+        <a href="/docs/cenarios.html">Cenários</a>
+        <a href="/docs/topologias.html">Topologias</a>
+      </nav>
+      <nav aria-label="Links da plataforma no rodapé">
+        <h3>Plataforma</h3>
+        <a href="/#opsmesh">OpsMesh</a>
+        <a href="/#workflow">Fluxo operacional</a>
+        <a href="/#integrations">Integrações</a>
+      </nav>
+      <nav aria-label="Links da empresa no rodapé">
+        <h3>Empresa</h3>
+        <a href="/#demo">Discovery técnico</a>
+        <a href="mailto:contato@collie.ia.br">Contato</a>
+        <a href="https://wa.me/5561982505951" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Collie AI Engineering. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
