@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1100" height="520" viewBox="0 0 1100 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
-  <title id="t">1.3 — Agent para operacao de engenheiros</title>
-  <desc id="d">Sem caminho de LLM · collect, logs e remediacao HITL</desc>
+  <title id="t">1.3 — MeshAgent para operação sem LLM</title>
+  <desc id="d">Sem inferência por LLM; coleta, registros e remediação com aprovação humana</desc>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1100" y2="520" gradientUnits="userSpaceOnUse">
@@ -37,43 +37,43 @@
   <rect width="1100" height="520" rx="28" fill="url(#bg)"/>
   <rect width="1100" height="520" rx="28" fill="url(#dots)"/>
   <text x="550.0" y="36" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#64748B" text-anchor="middle" letter-spacing="2.4">COLLIE OPSMESH</text>
-  <text x="550.0" y="64" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#0B1220" text-anchor="middle">1.3 — Agent para operacao de engenheiros</text>
-  <text x="550.0" y="88" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Sem caminho de LLM · collect, logs e remediacao HITL</text>
+  <text x="550.0" y="64" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#0B1220" text-anchor="middle">1.3 — MeshAgent para operação sem LLM</text>
+  <text x="550.0" y="88" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Sem inferência por LLM · coleta, registros e remediação com aprovação humana</text>
 
   <rect x="40" y="110" width="500" height="360" rx="20" fill="url(#zoneCollie)"/>
   <rect x="560" y="110" width="500" height="360" rx="20" fill="url(#zoneClient)"/>
-  <text x="64" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#2563EB" letter-spacing="1.6">COLLIE (SAAS / CONTROL PLANE)</text>
-  <text x="584" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#16A34A" letter-spacing="1.6">PERIMETRO DO CLIENTE</text>
+  <text x="64" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#2563EB" letter-spacing="1.6">COLLIE (SAAS / PLANO DE CONTROLE)</text>
+  <text x="584" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#16A34A" letter-spacing="1.6">PERÍMETRO DO CLIENTE</text>
   
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="64" y="170" width="436" height="70" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
       <text x="282.0" y="201.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">Cockpit · CP · Gateway Collie</text>
-      <text x="282.0" y="226" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">jobs tipados · approval</text>
+      <text x="282.0" y="226" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">tarefas tipadas · aprovação</text>
     </g>
 
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="64" y="260" width="436" height="70" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
       <text x="282.0" y="291.0" font-size="13" font-weight="800" fill="#64748B" text-anchor="middle">AI Policy = blocked</text>
-      <text x="282.0" y="316" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">Router / Ollama off</text>
+      <text x="282.0" y="316" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">AI Router / Ollama desativados</text>
     </g>
 
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="64" y="350" width="436" height="70" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
-      <text x="282.0" y="381.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">Timeline · Privacy Gate (opcional)</text>
+      <text x="282.0" y="381.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">Histórico · Privacy Gate (opcional)</text>
       <text x="282.0" y="406" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">engenheiro decide</text>
     </g>
   
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="584" y="200" width="446" height="110" rx="14" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
       <text x="807.0" y="251.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">MeshAgent</text>
-      <text x="807.0" y="296" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">read-only ou write-gated · sem ai_local</text>
+      <text x="807.0" y="296" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">somente leitura ou escrita aprovada · sem ai_local</text>
     </g>
 
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="584" y="340" width="446" height="70" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
-      <text x="807.0" y="380.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Infra · logs · kubectl via plugin</text>
+      <text x="807.0" y="380.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Infraestrutura · registros · kubectl por módulo</text>
       
     </g>
-  <text x="550" y="500" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Engenheiros usam o Cockpit; o agent aplica e coleta — sem inferencia de LLM.</text>
+  <text x="550" y="500" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748B" text-anchor="middle">A equipe usa o Cockpit; o MeshAgent executa e coleta — sem inferência por LLM.</text>
 
 </svg>

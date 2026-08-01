@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Como instalar o OpsMesh | Collie</title>
-  <meta name="description" content="Instale o Collie OpsMesh em quatro passos: modelo de compra, playbook do cenário, topologia e validação." />
+  <meta name="description" content="Planeje a instalação do Collie OpsMesh: escolha o modelo, o cenário, a topologia e os controles necessários antes da produção." />
   <meta name="theme-color" content="#0B1220" />
   <link rel="canonical" href="https://www.collie.ia.br/docs/instalar.html" />
   <meta property="og:title" content="Como instalar o OpsMesh — Collie" />
@@ -50,13 +50,14 @@
       </button>
       <nav class="nav-links" id="primary-navigation" aria-label="Navegação principal">
         <a href="/#opsmesh" class="nav-link">OpsMesh</a>
+        <a href="/#consulting" class="nav-link">Consultoria</a>
+        <a href="/#workflow" class="nav-link">Como funciona</a>
+        <a href="/#integrations" class="nav-link">Integrações</a>
         <a href="/docs/" class="nav-link" aria-current="page">Documentação</a>
-        <a href="/#platform" class="nav-link">Plataforma</a>
-        <a href="/#demo" class="nav-link">Contato</a>
       </nav>
       <div class="nav-actions" aria-label="Ações do cabeçalho">
         <a href="/#demo" class="btn btn-ghost">Contato</a>
-        <a href="/#demo" class="btn btn-primary">Agendar discovery</a>
+        <a href="/#demo" class="btn btn-primary">Agendar conversa</a>
       </div>
     </div>
   </header>
@@ -64,8 +65,8 @@
   <header class="docs-hero">
     <div class="container">
       <p class="eyebrow">Como instalar</p>
-      <h1>Quatro passos. Sem atalho de compliance.</h1>
-      <p class="lede">Escolha onde roda o Control Plane, abra o playbook do cenário, empacote na topologia certa e valide. Rede, identidade e política de LLM vêm antes do primeiro agent.</p>
+      <h1>Uma instalação segura começa pelas decisões certas.</h1>
+      <p class="lede">Defina onde será executado o <em>Control Plane</em>, escolha o cenário e a topologia, configure rede e identidade e só então libere o primeiro MeshAgent.</p>
     </div>
   </header>
 
@@ -87,19 +88,19 @@
         <ol class="docs-steps">
           <li>
             <strong>Modelo de compra</strong>
-            SaaS (Control Plane na Collie) ou Full (stack no seu ambiente). Essa decisão define o footprint.
+            SaaS, com o <em>Control Plane</em> na Collie, ou Full, com todos os componentes no seu ambiente. Essa decisão define as responsabilidades de cada parte.
           </li>
           <li>
-            <strong>Playbook do cenário</strong>
-            SaaS 1.1–1.4 ou Full 2–4 — LLM, Gateway e o que instalar no cliente. Ver <a href="/docs/cenarios.html">cenários</a>.
+            <strong>Guia do cenário</strong>
+            Escolha entre SaaS 1.1–1.4 e Full 2–4 conforme a LLM, o Gateway e os componentes que ficarão no cliente. Consulte os <a href="/docs/cenarios.html">cenários</a>.
           </li>
           <li>
             <strong>Topologia</strong>
-            Docker Compose, Kubernetes ou VMs. Ortogonal ao cenário comercial. Ver <a href="/docs/topologias.html">topologias</a>.
+            Defina como executar os componentes: Docker Compose, Kubernetes ou máquinas virtuais. Consulte as <a href="/docs/topologias.html">topologias</a>.
           </li>
           <li>
             <strong>Configuração e validação</strong>
-            Rede/TLS, segredos, enroll do agent, política de LLM. Checklist pós-instalação antes de liberar produção.
+            Configure rede e TLS, proteja os segredos, cadastre o MeshAgent e defina a política de LLM. Valide tudo antes de liberar a produção.
           </li>
         </ol>
       </section>
@@ -116,23 +117,23 @@
 
         <h3>SaaS (1.x)</h3>
         <ul>
-          <li>Tenant Collie provisionado; usuários Cockpit e papéis de aprovação</li>
+          <li>Organização Collie provisionada, com usuários do Cockpit e papéis de aprovação</li>
           <li>URLs <code>CONTROL_PLANE_URL</code> / <code>GATEWAY_URL</code> (1.1 e 1.3) ou plano de Gateway local (1.2 e 1.4)</li>
-          <li>Egress HTTPS liberado do ambiente do agent</li>
-          <li>Bootstrap token / processo de enroll alinhado</li>
-          <li>Em 1.4: endpoint LLM / GPU / VPC acordado</li>
-          <li>Em 1.3: confirmação de AI <code>blocked</code> no contrato</li>
+          <li>Saída HTTPS liberada a partir do ambiente do MeshAgent</li>
+          <li>Token inicial e processo de cadastro definidos</li>
+          <li>No cenário 1.4: endereço da LLM, GPU e VPC definidos</li>
+          <li>No cenário 1.3: AI Policy <code>blocked</code> prevista no contrato</li>
         </ul>
 
         <h3>Full (2–4)</h3>
         <ul>
-          <li>Compute e storage para Control Plane, RabbitMQ e Gateway (+ GPU se 4 local)</li>
-          <li>Postgres: container/in-cluster ou instância externa com backup</li>
+          <li>Processamento e armazenamento para <em>Control Plane</em>, RabbitMQ e Gateway, além de GPU quando o cenário 4 usar modelo local</li>
+          <li>Postgres em contêiner, no cluster ou em instância externa com cópia de segurança</li>
           <li>Estratégia de TLS/DNS para UI, API e Gateway</li>
-          <li>Cenário 2: credencial/endpoint LLM Collie + allowlist de egress</li>
-          <li>Cenário 3: confirmação explícita de stack sem AI</li>
-          <li>Cenário 4: provider LLM, segredos e allowlist de política</li>
-          <li>Plano de MeshAgent (namespace Kubernetes vs systemd)</li>
+          <li>Cenário 2: credencial e endereço da LLM Collie, com saída de rede autorizada</li>
+          <li>Cenário 3: confirmação explícita de instalação sem recursos de Inteligência Artificial</li>
+          <li>Cenário 4: provedor de LLM, segredos e lista de permissões da política</li>
+          <li>Forma de execução do MeshAgent: <em>namespace</em> no Kubernetes ou serviço <code>systemd</code></li>
         </ul>
       </section>
 
@@ -140,65 +141,65 @@
         <h2 id="security-title">Segurança na instalação</h2>
         <ul class="docs-principles">
           <li>Sem exposição pública do RabbitMQ.</li>
-          <li>Segredos fora do Git — env ou secret manager.</li>
-          <li>Edge Redactor habilitado no agent (recomendado).</li>
-          <li>Evidence raw não sobe ao SaaS nem ao Gateway.</li>
+          <li>Segredos fora do Git, fornecidos por variáveis de ambiente ou por um gerenciador de segredos.</li>
+          <li>Edge Redactor habilitado no MeshAgent.</li>
+          <li>Evidências brutas não seguem para o SaaS nem para o Gateway.</li>
         </ul>
         <div class="docs-callout">
-          <p>MeshAgent é sempre outbound-only. Se o desenho pede inbound no agent, o desenho está errado.</p>
+          <p>O MeshAgent sempre inicia a comunicação de dentro para fora. Uma arquitetura que exige conexão de entrada no agente não atende ao modelo de segurança do OpsMesh.</p>
         </div>
       </section>
 
       <section aria-labelledby="agent-title">
-        <h2 id="agent-title">Packaging do MeshAgent</h2>
-        <p>Mesmo protocolo; packaging diferente conforme a topologia:</p>
+        <h2 id="agent-title">Formas de executar o MeshAgent</h2>
+        <p>O protocolo não muda. Apenas a forma de execução varia conforme a topologia:</p>
         <ul>
-          <li><strong>Kubernetes Deployment</strong> — namespace <code>collie-agent</code> (não DaemonSet como path padrão)</li>
-          <li><strong>systemd</strong> — host ou VM Linux</li>
-          <li><strong>Compose</strong> — profile <code>agent</code></li>
+          <li><strong><em>Deployment</em> no Kubernetes</strong> — <em>namespace</em> <code>collie-agent</code>; o caminho padrão não usa <em>DaemonSet</em></li>
+          <li><strong><code>systemd</code></strong> — máquina física ou virtual com Linux</li>
+          <li><strong>Docker Compose</strong> — perfil <code>agent</code></li>
         </ul>
-        <p>No onboarding Collie (SaaS) ou no bootstrap Full, o Cockpit emite o token de enroll. Sem token válido, o agent não entra na malha.</p>
+        <p>Durante a ativação SaaS ou a preparação do ambiente Full, o Cockpit emite o token de cadastro. Sem um token válido, o MeshAgent não entra na malha.</p>
       </section>
 
       <section aria-labelledby="validate-title">
         <h2 id="validate-title">Validação pós-instalação</h2>
-        <p>Definition of done antes de liberar produção. Adapte URLs (Collie vs local).</p>
+        <p>Use estes critérios antes de liberar a produção. Ajuste os endereços conforme os serviços estejam na Collie ou no ambiente local.</p>
         <h3>Saúde</h3>
         <ul>
-          <li>API / Cockpit responde (login OK)</li>
-          <li>Gateway health OK; no Full, também Postgres e RabbitMQ</li>
-          <li>Com AI: Policy + Router healthy; LLM alcançável se aplicável</li>
+          <li>API e Cockpit respondem, inclusive no acesso autenticado</li>
+          <li>Gateway responde; no modelo Full, Postgres e RabbitMQ também estão saudáveis</li>
+          <li>Com Inteligência Artificial: AI Policy e AI Router estão saudáveis, e a LLM está acessível quando aplicável</li>
         </ul>
-        <h3>Agent</h3>
+        <h3>MeshAgent</h3>
         <ul>
-          <li>Enroll concluído; agent <strong>online</strong> no Cockpit</li>
-          <li>Heartbeat recente; pull no Gateway sem 401/403 em loop</li>
+          <li>Cadastro concluído e MeshAgent <strong>online</strong> no Cockpit</li>
+          <li>Sinal de atividade recente e consultas ao Gateway sem erros 401 ou 403 recorrentes</li>
         </ul>
         <h3>Fluxo operacional</h3>
         <ul>
-          <li>Job tipado de smoke (echo ou collect) completa</li>
-          <li>Resultado na timeline do incidente / audit</li>
-          <li>Edge Redactor ativo (campos sensíveis mascarados no upload)</li>
+          <li>Uma tarefa tipada de teste, como <code>echo</code> ou <code>collect</code>, é concluída</li>
+          <li>O resultado aparece no histórico do incidente e na auditoria</li>
+          <li>Edge Redactor ativo, com campos sensíveis protegidos antes do envio</li>
         </ul>
-        <h3>AI</h3>
+        <h3>Inteligência Artificial</h3>
         <ul>
-          <li>Com AI (1.1, 1.2, 1.4, 2, 4): Privacy Gate → approve → Policy → Router → resposta</li>
-          <li>Reject / <code>blocked</code> → sem chamada ao modelo</li>
-          <li>Sem AI (1.3, 3): collect/remediação HITL OK; nenhuma inferência nos logs</li>
+          <li>Nos cenários 1.1, 1.2, 1.4, 2 e 4: Privacy Gate → aprovação → AI Policy → AI Router → resposta</li>
+          <li>Rejeição ou política <code>blocked</code>: nenhuma chamada ao modelo</li>
+          <li>Nos cenários 1.3 e 3: coleta e remediação com aprovação humana, sem inferência nos registros</li>
         </ul>
         <h3>Perímetro</h3>
         <ul>
-          <li>Sem raw evidence no SaaS nem no Gateway</li>
+          <li>Sem evidências brutas no SaaS nem no Gateway</li>
           <li>RabbitMQ sem exposição pública</li>
         </ul>
         <div class="docs-callout">
-          <p>Este guia cobre o <em>quê</em> e o <em>quando</em>. Variáveis de ambiente, manifests e Terraform ficam no onboarding Collie — <a href="/#demo">agende o discovery</a> se for implantar agora.</p>
+          <p>Este guia cobre o <em>quê</em> e o <em>quando</em>. Variáveis de ambiente, <em>manifests</em> e Terraform fazem parte da ativação com a Collie. <a href="/#demo">Agende uma conversa técnica</a> se estiver planejando a implantação.</p>
         </div>
       </section>
 
       <div class="docs-cta-strip">
-        <h2>Escolha o cenário antes do Compose</h2>
-        <p>A matriz SaaS × Full evita instalar Gateway ou LLM no lugar errado.</p>
+        <h2>Escolha o cenário antes da topologia</h2>
+        <p>A matriz SaaS × Full mostra onde executar o Gateway, a LLM e os demais componentes.</p>
         <div class="cta-row">
           <a href="/docs/cenarios.html" class="btn btn-primary">Ver cenários</a>
           <a href="/docs/topologias.html" class="btn btn-outline">Ver topologias</a>
@@ -211,7 +212,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <img src="/img/collie-lockup.png" width="150" height="148" loading="lazy" alt="Collie AI Engineering" />
-        <p>OpsMesh decide o que a IA e o time podem executar na infra — com identidade, política e auditoria.</p>
+        <p>Consultoria e tecnologia para colocar Inteligência Artificial em operação com estratégia, governança e controle.</p>
       </div>
       <nav aria-label="Links da documentação no rodapé">
         <h3>Documentação</h3>
@@ -229,7 +230,8 @@
       </nav>
       <nav aria-label="Links da empresa no rodapé">
         <h3>Empresa</h3>
-        <a href="/#demo">Discovery técnico</a>
+        <a href="/#consulting">Consultoria</a>
+        <a href="/#demo">Agendar conversa</a>
         <a href="mailto:contato@collie.ia.br">Contato</a>
         <a href="https://wa.me/5561982505951" target="_blank" rel="noopener">WhatsApp</a>
       </nav>

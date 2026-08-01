@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Como funciona o OpsMesh | Collie</title>
-  <meta name="description" content="Ferramentas de IA pedem. OpsMesh governa. MeshAgents executam ações tipadas — com Control Plane, Gateway opaco e AI fail-closed." />
+  <meta name="description" content="Entenda como o Collie OpsMesh governa solicitações, transporta conteúdo cifrado e executa ações autorizadas no ambiente do cliente." />
   <meta name="theme-color" content="#0B1220" />
   <link rel="canonical" href="https://www.collie.ia.br/docs/como-funciona.html" />
   <meta property="og:title" content="Como funciona o OpsMesh — Collie" />
-  <meta property="og:description" content="Camadas operacionais: pedido, governança, transporte, execução e caminho de IA." />
+  <meta property="og:description" content="Camadas operacionais do OpsMesh: solicitação, governança, transporte e execução." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.collie.ia.br/docs/como-funciona.html" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:image" content="https://www.collie.ia.br/img/collie-lockup.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Como funciona o OpsMesh — Collie" />
-  <meta name="twitter:description" content="Camadas operacionais: pedido, governança, transporte, execução e caminho de IA." />
+  <meta name="twitter:description" content="Camadas operacionais do OpsMesh: solicitação, governança, transporte e execução." />
   <meta name="twitter:image" content="https://www.collie.ia.br/img/collie-lockup.png" />
   <script type="application/ld+json">
   {
@@ -50,13 +50,14 @@
       </button>
       <nav class="nav-links" id="primary-navigation" aria-label="Navegação principal">
         <a href="/#opsmesh" class="nav-link">OpsMesh</a>
+        <a href="/#consulting" class="nav-link">Consultoria</a>
+        <a href="/#workflow" class="nav-link">Como funciona</a>
+        <a href="/#integrations" class="nav-link">Integrações</a>
         <a href="/docs/" class="nav-link" aria-current="page">Documentação</a>
-        <a href="/#platform" class="nav-link">Plataforma</a>
-        <a href="/#demo" class="nav-link">Contato</a>
       </nav>
       <div class="nav-actions" aria-label="Ações do cabeçalho">
         <a href="/#demo" class="btn btn-ghost">Contato</a>
-        <a href="/#demo" class="btn btn-primary">Agendar discovery</a>
+        <a href="/#demo" class="btn btn-primary">Agendar conversa</a>
       </div>
     </div>
   </header>
@@ -64,8 +65,8 @@
   <header class="docs-hero">
     <div class="container">
       <p class="eyebrow">Como funciona</p>
-      <h1>Pedido de um lado. Execução tipada do outro.</h1>
-      <p class="lede">Clientes de IA e o Cockpit pedem ações. O OpsMesh autentica, autoriza, aprova e audita. MeshAgents rodam só o permitido — pull-based, no perímetro do cliente.</p>
+      <h1>Governança separa a solicitação da execução.</h1>
+      <p class="lede">O Cockpit recebe a solicitação, o OpsMesh aplica as regras e os MeshAgents executam apenas o que foi autorizado, dentro do ambiente do cliente.</p>
     </div>
   </header>
 
@@ -84,27 +85,27 @@
     <div class="docs-content">
       <section aria-labelledby="flow-title">
         <h2 id="flow-title">Fluxo operacional</h2>
-        <p>Em quatro movimentos: pedir, governar, entregar, executar.</p>
+        <p>Toda solicitação percorre quatro etapas. O controle começa antes da execução e permanece registrado até o resultado.</p>
         <figure class="docs-figure">
           <img src="/img/opsmesh-flow.svg" width="1300" height="560" loading="lazy" alt="Fluxo de quatro etapas do Collie OpsMesh: pedir, governar, entregar e executar com aprovação humana." />
-          <figcaption>Pedir → governar → entregar → executar, com humano no circuito.</figcaption>
+          <figcaption>Solicitar → governar → transportar → executar, com aprovação humana quando necessário.</figcaption>
         </figure>
         <ol class="docs-steps">
           <li>
-            <strong>Pedir</strong>
-            Cockpit (e, na visão do produto, clientes MCP) solicita uma ação tipada. A ferramenta de IA não fala com o cluster.
+            <strong>A solicitação entra pelo Cockpit</strong>
+            O operador escolhe uma ação tipada. A integração com clientes MCP faz parte da evolução do produto; ferramentas de Inteligência Artificial não acessam o cluster diretamente.
           </li>
           <li>
-            <strong>Governar</strong>
-            Control Plane aplica identidade, FGAC, aprovação e auditoria. Jobs entram no pipeline só depois da política.
+            <strong>As regras vêm antes da ação</strong>
+            O <em>Control Plane</em> verifica identidade, controle de acesso e políticas. Tarefas sensíveis só avançam depois da aprovação.
           </li>
           <li>
-            <strong>Entregar</strong>
-            Envelope cifrado via RabbitMQ e Gateway HTTPS opaco. O Gateway não lê o conteúdo útil do job.
+            <strong>O conteúdo segue protegido</strong>
+            RabbitMQ e Gateway transportam um envelope cifrado. O Gateway não lê o conteúdo da tarefa.
           </li>
           <li>
-            <strong>Executar</strong>
-            MeshAgent faz pull outbound-only, roda plugin allowlisted e sanitiza evidência na borda (Edge Redactor).
+            <strong>A execução acontece no ambiente do cliente</strong>
+            O MeshAgent inicia a comunicação, executa apenas módulos autorizados e trata a evidência na borda com o Edge Redactor.
           </li>
         </ol>
       </section>
@@ -123,13 +124,13 @@
             <tbody>
               <tr>
                 <td>Pedido</td>
-                <td>Cockpit; clientes MCP (visão)</td>
+                <td>Cockpit; clientes MCP na evolução do produto</td>
                 <td>Solicitam ações tipadas</td>
               </tr>
               <tr>
                 <td>Governança</td>
-                <td>Control Plane, Postgres, Privacy Gate</td>
-                <td>FGAC, jobs, approval, audit, enroll</td>
+                <td><em>Control Plane</em>, Postgres</td>
+                <td>Controle de acesso, tarefas, aprovação, auditoria e cadastro</td>
               </tr>
               <tr>
                 <td>Transporte</td>
@@ -139,17 +140,17 @@
               <tr>
                 <td>Execução</td>
                 <td>MeshAgent, Edge Redactor</td>
-                <td>Pull outbound-only; DLP na borda</td>
+                <td>Comunicação iniciada pelo MeshAgent; proteção de dados na borda</td>
               </tr>
               <tr>
                 <td>Pós-resultado</td>
-                <td>Evidence Processor, AI Policy, AI Router</td>
-                <td>DLP central → HITL → decisão → inferência</td>
+                <td><code>result-worker</code>, Evidence Processor, Privacy Gate, AI Policy, AI Router</td>
+                <td>Proteção central de dados → aprovação humana → decisão → inferência</td>
               </tr>
               <tr>
                 <td>LLM</td>
                 <td>Collie, local ou BYO</td>
-                <td>Só após Policy; fail-closed</td>
+                <td>Somente após a AI Policy; bloqueio por padrão</td>
               </tr>
             </tbody>
           </table>
@@ -170,33 +171,38 @@
             <tbody>
               <tr>
                 <td><strong>Cockpit</strong></td>
-                <td>UI: incidentes, agents, approvals, Privacy Gate</td>
-                <td>Executar no cluster</td>
+                <td>Interface para incidentes, MeshAgents, aprovações e Privacy Gate</td>
+                <td>Executar ações no cluster</td>
               </tr>
               <tr>
-                <td><strong>Control Plane</strong></td>
-                <td>Tenancy, jobs, JWKS, crypto, audit</td>
-                <td>Falar direto com o cluster</td>
+                <td><strong><em>Control Plane</em></strong></td>
+                <td>Organizações, tarefas, JWKS, criptografia e auditoria</td>
+                <td>Acessar o cluster diretamente</td>
+              </tr>
+              <tr>
+                <td><strong><code>result-worker</code></strong></td>
+                <td>Processar resultados e evidências; acionar o caminho de Inteligência Artificial quando permitido</td>
+                <td>Descriptografar conteúdo no Gateway</td>
               </tr>
               <tr>
                 <td><strong>Gateway</strong></td>
-                <td>Pull, ack, status e result opacos</td>
-                <td>Ler ciphertext; guardar Postgres de negócio</td>
+                <td>Transportar solicitações, confirmações, estados e resultados cifrados</td>
+                <td>Ler o conteúdo cifrado ou manter banco de dados de negócio</td>
               </tr>
               <tr>
                 <td><strong>MeshAgent</strong></td>
-                <td>Enroll, pull de jobs, plugins allowlisted</td>
-                <td>Inbound; shell livre</td>
+                <td>Cadastro, busca de tarefas e execução de módulos autorizados</td>
+                <td>Aceitar conexão de entrada ou oferecer <em>shell</em> livre</td>
               </tr>
               <tr>
                 <td><strong>Edge Redactor</strong></td>
-                <td>Primeiro DLP na borda</td>
+                <td>Primeira camada de proteção de dados na borda</td>
                 <td>Substituir o Evidence Processor</td>
               </tr>
               <tr>
                 <td><strong>Privacy Gate</strong></td>
-                <td>HITL sobre evidência sanitizada</td>
-                <td>Expor raw log no SaaS</td>
+                <td>Aprovação humana sobre evidência tratada</td>
+                <td>Expor registros brutos no SaaS</td>
               </tr>
               <tr>
                 <td><strong>AI Policy</strong></td>
@@ -205,20 +211,20 @@
               </tr>
               <tr>
                 <td><strong>AI Router</strong></td>
-                <td>Executa a decisão (adapters)</td>
-                <td>Re-decidir política</td>
+                <td>Executa a decisão por meio dos adaptadores configurados</td>
+                <td>Alterar a decisão da política</td>
               </tr>
             </tbody>
           </table>
         </div>
         <div class="docs-callout">
-          <p><strong>Regra de fronteira:</strong> clientes de IA não falam com Gateway, MeshAgent ou APIs do cluster. Só com o Control Plane.</p>
+          <p><strong>Regra de fronteira:</strong> ferramentas de Inteligência Artificial não se conectam ao Gateway, ao MeshAgent nem às APIs do cluster. Toda solicitação passa pelo <em>Control Plane</em>.</p>
         </div>
       </section>
 
       <section aria-labelledby="saas-full-title">
         <h2 id="saas-full-title">Onde cada peça entra</h2>
-        <p>No SaaS, o cliente quase sempre instala só o agent. No Full, o stack inteiro mora no seu ambiente.</p>
+        <p>No modelo SaaS, o cliente normalmente instala apenas o MeshAgent. No modelo Full, todos os componentes são executados no ambiente do cliente.</p>
         <div class="docs-table-wrap">
           <table class="docs-table">
             <thead>
@@ -251,8 +257,8 @@
               <tr>
                 <td>Evidence / Privacy / Policy / Router</td>
                 <td>—</td>
-                <td>Sim (exceto 1.3 sem AI)</td>
-                <td>2 e 4; no 3 AI off / Policy blocked (EP opcional)</td>
+                <td>Sim, exceto no cenário 1.3 sem Inteligência Artificial</td>
+                <td>2 e 4; no cenário 3, AI Policy bloqueada e Evidence Processor opcional</td>
               </tr>
               <tr>
                 <td>LLM</td>
@@ -263,12 +269,12 @@
             </tbody>
           </table>
         </div>
-        <p>Detalhe por playbook: <a class="text-link" href="/docs/cenarios.html">cenários de instalação</a>.</p>
+        <p>Consulte os <a class="text-link" href="/docs/cenarios.html">cenários de instalação</a> para ver a distribuição de cada componente.</p>
       </section>
 
       <div class="docs-cta-strip">
         <h2>Próximo: instalar</h2>
-        <p>Com o mapa mental pronto, siga o fluxo de instalação e escolha o cenário.</p>
+        <p>Agora escolha o cenário e siga as etapas de instalação.</p>
         <div class="cta-row">
           <a href="/docs/instalar.html" class="btn btn-primary">Como instalar</a>
           <a href="/docs/cenarios.html" class="btn btn-outline">Ver cenários</a>
@@ -281,7 +287,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <img src="/img/collie-lockup.png" width="150" height="148" loading="lazy" alt="Collie AI Engineering" />
-        <p>OpsMesh decide o que a IA e o time podem executar na infra — com identidade, política e auditoria.</p>
+        <p>Consultoria e tecnologia para colocar Inteligência Artificial em operação com estratégia, governança e controle.</p>
       </div>
       <nav aria-label="Links da documentação no rodapé">
         <h3>Documentação</h3>
@@ -299,7 +305,8 @@
       </nav>
       <nav aria-label="Links da empresa no rodapé">
         <h3>Empresa</h3>
-        <a href="/#demo">Discovery técnico</a>
+        <a href="/#consulting">Consultoria</a>
+        <a href="/#demo">Agendar conversa</a>
         <a href="mailto:contato@collie.ia.br">Contato</a>
         <a href="https://wa.me/5561982505951" target="_blank" rel="noopener">WhatsApp</a>
       </nav>

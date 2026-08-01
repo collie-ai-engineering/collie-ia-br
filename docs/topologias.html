@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Topologias de implantação OpsMesh | Collie</title>
-  <meta name="description" content="Empacote o Collie OpsMesh com Docker Compose, Kubernetes ou VMs. Topologia ortogonal ao cenário SaaS ou Full." />
+  <meta name="description" content="Escolha como executar o Collie OpsMesh com Docker Compose, Kubernetes ou máquinas virtuais depois de definir o cenário SaaS ou Full." />
   <meta name="theme-color" content="#0B1220" />
   <link rel="canonical" href="https://www.collie.ia.br/docs/topologias.html" />
   <meta property="og:title" content="Topologias de implantação OpsMesh — Collie" />
@@ -50,13 +50,14 @@
       </button>
       <nav class="nav-links" id="primary-navigation" aria-label="Navegação principal">
         <a href="/#opsmesh" class="nav-link">OpsMesh</a>
+        <a href="/#consulting" class="nav-link">Consultoria</a>
+        <a href="/#workflow" class="nav-link">Como funciona</a>
+        <a href="/#integrations" class="nav-link">Integrações</a>
         <a href="/docs/" class="nav-link" aria-current="page">Documentação</a>
-        <a href="/#platform" class="nav-link">Plataforma</a>
-        <a href="/#demo" class="nav-link">Contato</a>
       </nav>
       <div class="nav-actions" aria-label="Ações do cabeçalho">
         <a href="/#demo" class="btn btn-ghost">Contato</a>
-        <a href="/#demo" class="btn btn-primary">Agendar discovery</a>
+        <a href="/#demo" class="btn btn-primary">Agendar conversa</a>
       </div>
     </div>
   </header>
@@ -64,8 +65,8 @@
   <header class="docs-hero">
     <div class="container">
       <p class="eyebrow">Topologias</p>
-      <h1>Como empacotar — depois de escolher o cenário.</h1>
-      <p class="lede">A topologia é ortogonal ao playbook comercial (1.1–1.4 / 2–4). Define como rodar os componentes que o cenário pediu: Compose, cluster ou hosts.</p>
+      <h1>Escolha a forma de implantação depois de definir o cenário.</h1>
+      <p class="lede">O cenário define quais componentes serão instalados. A topologia define como executá-los: Docker Compose, Kubernetes ou máquinas virtuais.</p>
     </div>
   </header>
 
@@ -96,17 +97,17 @@
             <tbody>
               <tr>
                 <td><strong>Docker Compose</strong></td>
-                <td>Lab, PoC, VM única, QA</td>
-                <td>Container ou Postgres externo</td>
+                <td>Laboratório, prova de conceito, máquina virtual única e QA</td>
+                <td>Contêiner ou Postgres externo</td>
               </tr>
               <tr>
                 <td><strong>Kubernetes</strong></td>
-                <td>Produção / OKE / cluster do cliente</td>
-                <td>In-cluster ou gerenciado</td>
+                <td>Produção, OKE ou cluster do cliente</td>
+                <td>No cluster ou gerenciado</td>
               </tr>
               <tr>
                 <td><strong>VMs</strong></td>
-                <td>Isolamento por host; agent systemd</td>
+                <td>Isolamento por máquina; MeshAgent com <code>systemd</code></td>
                 <td>VM de dados ou gerenciado</td>
               </tr>
             </tbody>
@@ -116,21 +117,21 @@
 
       <section aria-labelledby="docker-title">
         <h2 id="docker-title">Docker Compose</h2>
-        <p><strong>Quando usar:</strong> lab, demo, PoC em uma VM, desenvolvimento e QA de integração. Referência de portas e variáveis do produto.</p>
+        <p><strong>Quando usar:</strong> laboratório, demonstração, prova de conceito em uma máquina virtual, desenvolvimento e QA de integração. É a referência para portas e variáveis do produto.</p>
         <figure class="docs-figure">
-          <img src="/img/docs/topology-docker.svg" width="1100" height="520" loading="lazy" alt="Topologia Docker Compose: API, Gateway, RabbitMQ, Postgres e MeshAgent em um compose." />
-          <figcaption>Compose — stack colocalizada para lab e PoC.</figcaption>
+          <img src="/img/docs/topology-docker.svg" width="1100" height="520" loading="lazy" alt="Topologia Docker Compose: API, Gateway, RabbitMQ, Postgres e MeshAgent no mesmo ambiente." />
+          <figcaption>Docker Compose — componentes reunidos para laboratório e prova de conceito.</figcaption>
         </figure>
         <ul>
-          <li>Profile <code>agent</code> sobe o MeshAgent no mesmo compose.</li>
-          <li>Profile <code>ollama</code> cobre cenários com LLM local (ex.: 4).</li>
-          <li>Postgres pode ser serviço do compose ou <code>DATABASE_URL</code> externo.</li>
+          <li>O perfil <code>agent</code> inicia o MeshAgent no mesmo ambiente.</li>
+          <li>O perfil <code>ollama</code> atende aos cenários com LLM local, como o cenário 4.</li>
+          <li>O Postgres pode ser um serviço do Docker Compose ou usar uma <code>DATABASE_URL</code> externa.</li>
         </ul>
       </section>
 
       <section aria-labelledby="k8s-title">
         <h2 id="k8s-title">Kubernetes</h2>
-        <p><strong>Quando usar:</strong> produção ou pré-produção em cluster. Separação clara entre plano de controle e agents.</p>
+        <p><strong>Quando usar:</strong> produção ou pré-produção em cluster, com separação clara entre o plano de controle e os MeshAgents.</p>
         <figure class="docs-figure">
           <img src="/img/docs/topology-k8s.svg" width="1100" height="520" loading="lazy" alt="Topologia Kubernetes: namespaces collie-system e collie-agent." />
           <figcaption>Kubernetes — <code>collie-system</code> e <code>collie-agent</code>.</figcaption>
@@ -146,7 +147,7 @@
             <tbody>
               <tr>
                 <td><code>collie-system</code></td>
-                <td>API, worker, Gateway, Postgres, RabbitMQ (+ AI/Evidence quando empacotados)</td>
+                <td>API, processador, Gateway, Postgres, RabbitMQ e componentes de Inteligência Artificial e evidências quando disponíveis</td>
               </tr>
               <tr>
                 <td><code>collie-agent</code></td>
@@ -157,21 +158,21 @@
         </div>
         <div class="docs-callout">
           <p>No SaaS 1.1 e 1.3 o cliente materializa só o equivalente a <code>collie-agent</code>. Em 1.2 e 1.4, também o Gateway.</p>
-          <p>Postgres in-cluster serve lab e smoke — não é HA. Manifests de Evidence Processor e AI no Kubernetes ainda evoluem; Full com AI em produção alinhe o empacotamento com a Collie.</p>
+          <p>Postgres no cluster atende a laboratórios e testes básicos, mas não oferece alta disponibilidade. Os <em>manifests</em> do Evidence Processor e dos componentes de Inteligência Artificial para Kubernetes ainda estão em evolução. Para uma implantação Full em produção, valide o empacotamento com a Collie.</p>
         </div>
       </section>
 
       <section aria-labelledby="vms-title">
         <h2 id="vms-title">Máquinas virtuais</h2>
-        <p><strong>Quando usar:</strong> isolamento por host (Control Plane, dados, Gateway, agent); agent em systemd em hosts Linux fora do cluster; ou PoC em uma VM com Compose.</p>
+        <p><strong>Quando usar:</strong> quando o <em>Control Plane</em>, os dados, o Gateway e o MeshAgent precisam de máquinas separadas; quando o MeshAgent usa <code>systemd</code> fora do cluster; ou em uma prova de conceito com Docker Compose.</p>
         <figure class="docs-figure">
           <img src="/img/docs/topology-vms.svg" width="1100" height="520" loading="lazy" alt="Topologia VMs: serviços OpsMesh em hosts separados ou Compose colocalizado." />
           <figcaption>VMs — hosts dedicados ou Compose em uma máquina.</figcaption>
         </figure>
         <ul>
-          <li>Agent via <strong>systemd</strong> quando a frota não está no Kubernetes.</li>
+          <li>MeshAgent por <strong><code>systemd</code></strong> quando a frota não está no Kubernetes.</li>
           <li>Banco em VM de dados ou serviço gerenciado.</li>
-          <li>Mesmos princípios de rede: agent outbound-only; Gateway HTTPS opaco.</li>
+          <li>Os mesmos princípios de rede permanecem: o MeshAgent inicia a comunicação e o Gateway HTTPS transporta conteúdo cifrado sem lê-lo.</li>
         </ul>
       </section>
 
@@ -184,20 +185,20 @@
           </li>
           <li>
             <strong>Escolha a topologia</strong>
-            Lab → Docker. Produção em cluster → Kubernetes. Hosts Linux → VMs/systemd.
+            Laboratório → Docker. Produção em cluster → Kubernetes. Máquinas Linux → máquinas virtuais com <code>systemd</code>.
           </li>
           <li>
             <strong>Aplique pré-requisitos</strong>
-            Rede, TLS, enroll e política — ver <a href="/docs/instalar.html">como instalar</a>.
+            Rede, TLS, cadastro do MeshAgent e política — consulte <a href="/docs/instalar.html">como instalar</a>.
           </li>
         </ol>
       </section>
 
       <div class="docs-cta-strip">
-        <h2>Pronto para o discovery técnico?</h2>
-        <p>Mapeamos stack, compliance e topologia com o time de engenharia.</p>
+        <h2>Quer validar a topologia com a Collie?</h2>
+        <p>Mapeamos os componentes, os requisitos de conformidade e a topologia com sua equipe.</p>
         <div class="cta-row">
-          <a href="/#demo" class="btn btn-primary">Agendar discovery</a>
+          <a href="/#demo" class="btn btn-primary">Agendar conversa</a>
           <a href="/docs/cenarios.html" class="btn btn-outline">Revisar cenários</a>
         </div>
       </div>
@@ -208,7 +209,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <img src="/img/collie-lockup.png" width="150" height="148" loading="lazy" alt="Collie AI Engineering" />
-        <p>OpsMesh decide o que a IA e o time podem executar na infra — com identidade, política e auditoria.</p>
+        <p>Consultoria e tecnologia para colocar Inteligência Artificial em operação com estratégia, governança e controle.</p>
       </div>
       <nav aria-label="Links da documentação no rodapé">
         <h3>Documentação</h3>
@@ -226,7 +227,8 @@
       </nav>
       <nav aria-label="Links da empresa no rodapé">
         <h3>Empresa</h3>
-        <a href="/#demo">Discovery técnico</a>
+        <a href="/#consulting">Consultoria</a>
+        <a href="/#demo">Agendar conversa</a>
         <a href="mailto:contato@collie.ia.br">Contato</a>
         <a href="https://wa.me/5561982505951" target="_blank" rel="noopener">WhatsApp</a>
       </nav>
