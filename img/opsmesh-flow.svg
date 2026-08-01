@@ -32,11 +32,11 @@
   <text font-family="Inter,Arial,sans-serif" font-size="14" fill="#64748B">
     <tspan x="24" y="136">Coleta sinais e telemetria de</tspan>
     <tspan x="24" y="156">Kubernetes, infraestrutura,</tspan>
-    <tspan x="24" y="176">middleware e ferramentas de</tspan>
+    <tspan x="24" y="176">integração e ferramentas de</tspan>
     <tspan x="24" y="196">observabilidade existentes.</tspan>
   </text>
   <rect x="24" y="224" width="128" height="28" rx="8" fill="#EFF6FF"/>
-  <text x="88" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">Coleta de Sinais</text>
+  <text x="88" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">Coleta de sinais</text>
 </g>
 
 <path d="M318 206h32" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
@@ -49,13 +49,13 @@
   <text x="24" y="52" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#94A3B8">02</text>
   <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Diagnosticar</text>
   <text font-family="Inter,Arial,sans-serif" font-size="14" fill="#64748B">
-    <tspan x="24" y="136">Correlaciona eventos, logs,</tspan>
-    <tspan x="24" y="156">métricas e padrões operacionais</tspan>
-    <tspan x="24" y="176">usando IA híbrida para</tspan>
-    <tspan x="24" y="196">identificar a causa raiz.</tspan>
+    <tspan x="24" y="136">Correlaciona eventos, registros,</tspan>
+    <tspan x="24" y="156">métricas e padrões para</tspan>
+    <tspan x="24" y="176">identificar a causa raiz com</tspan>
+    <tspan x="24" y="196">Inteligência Artificial híbrida.</tspan>
   </text>
   <rect x="24" y="224" width="146" height="28" rx="8" fill="#F0FDF4"/>
-  <text x="97" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#16A34A" text-anchor="middle">Correlação por IA</text>
+  <text x="97" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#16A34A" text-anchor="middle">Análise contextual</text>
 </g>
 
 <path d="M674 206h32" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
@@ -68,13 +68,13 @@
   <text x="24" y="52" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#94A3B8">03</text>
   <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Recomendar</text>
   <text font-family="Inter,Arial,sans-serif" font-size="14" fill="#64748B">
-    <tspan x="24" y="136">Gera ações de remediação</tspan>
-    <tspan x="24" y="156">seguras, explicáveis e cientes</tspan>
-    <tspan x="24" y="176">do contexto para revisão</tspan>
-    <tspan x="24" y="196">pela equipe de engenharia.</tspan>
+    <tspan x="24" y="136">Propõe ações de correção</tspan>
+    <tspan x="24" y="156">seguras e explicáveis, com</tspan>
+    <tspan x="24" y="176">o contexto necessário para</tspan>
+    <tspan x="24" y="196">revisão pela engenharia.</tspan>
   </text>
   <rect x="24" y="224" width="140" height="28" rx="8" fill="#EFF6FF"/>
-  <text x="94" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">Ação Explicável</text>
+  <text x="94" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">Ação explicável</text>
 </g>
 
 <path d="M1030 206h32" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
@@ -87,11 +87,10 @@
   <text x="24" y="52" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#94A3B8">04</text>
   <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Executar</text>
   <text font-family="Inter,Arial,sans-serif" font-size="13" fill="#64748B">
-    <tspan x="24" y="136">Workflows</tspan>
-    <tspan x="24" y="154">controlados com</tspan>
-    <tspan x="24" y="172">aprovação humana,</tspan>
-    <tspan x="24" y="190">auditoria estrita</tspan>
-    <tspan x="24" y="208">e rollback.</tspan>
+    <tspan x="24" y="136">Fluxos de trabalho</tspan>
+    <tspan x="24" y="154">com aprovação humana,</tspan>
+    <tspan x="24" y="172">auditoria rigorosa</tspan>
+    <tspan x="24" y="190">e reversão segura.</tspan>
   </text>
 </g>
 
@@ -100,7 +99,7 @@
   <rect width="280" height="52" rx="26" fill="#0B1220"/>
   <circle cx="36" cy="26" r="11" fill="#22C55E"/>
   <path d="M32 26l3.5 3.5 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <text x="62" y="32" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="white">Aprovação Humana</text>
+  <text x="62" y="32" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="white">Aprovação humana</text>
 </g>
 
 <path d="M660 438 L1184 438 L1184 350" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5 5" stroke-linecap="round" fill="none" opacity="0.7"/>
@@ -112,7 +111,7 @@
 
 <g transform="translate(40 490)">
   <rect width="240" height="34" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
-  <text x="120" y="23" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#64748B" text-anchor="middle">Pull-based · Zero Trust</text>
+  <text x="120" y="23" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" font-style="italic" fill="#64748B" text-anchor="middle">Pull-based · Zero Trust</text>
 </g>
 
 </svg>

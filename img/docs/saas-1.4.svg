@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1100" height="520" viewBox="0 0 1100 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
-  <title id="t">1.4 — LLM propria/terceiro + Gateway interno</title>
-  <desc id="d">Gateway e LLM no perimetro · CP na Collie</desc>
+  <title id="t">1.4 — LLM própria ou de terceiro + Gateway interno</title>
+  <desc id="d">Gateway e LLM no perímetro do cliente; plano de controle na Collie</desc>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1100" y2="520" gradientUnits="userSpaceOnUse">
@@ -37,18 +37,18 @@
   <rect width="1100" height="520" rx="28" fill="url(#bg)"/>
   <rect width="1100" height="520" rx="28" fill="url(#dots)"/>
   <text x="550.0" y="36" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#64748B" text-anchor="middle" letter-spacing="2.4">COLLIE OPSMESH</text>
-  <text x="550.0" y="64" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#0B1220" text-anchor="middle">1.4 — LLM propria/terceiro + Gateway interno</text>
-  <text x="550.0" y="88" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Gateway e LLM no perimetro · CP na Collie</text>
+  <text x="550.0" y="64" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#0B1220" text-anchor="middle">1.4 — LLM própria ou de terceiro + Gateway interno</text>
+  <text x="550.0" y="88" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Gateway e LLM no perímetro do cliente · CP na Collie</text>
 
   <rect x="40" y="110" width="500" height="360" rx="20" fill="url(#zoneCollie)"/>
   <rect x="560" y="110" width="500" height="360" rx="20" fill="url(#zoneClient)"/>
-  <text x="64" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#2563EB" letter-spacing="1.6">COLLIE (SAAS / CONTROL PLANE)</text>
-  <text x="584" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#16A34A" letter-spacing="1.6">PERIMETRO DO CLIENTE</text>
+  <text x="64" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#2563EB" letter-spacing="1.6">COLLIE (SAAS / PLANO DE CONTROLE)</text>
+  <text x="584" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#16A34A" letter-spacing="1.6">PERÍMETRO DO CLIENTE</text>
   
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="64" y="180" width="436" height="80" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
       <text x="282.0" y="216.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">Cockpit · CP · RMQ · Postgres</text>
-      <text x="282.0" y="246" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">Policy decide local_only / cloud_*</text>
+      <text x="282.0" y="246" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">AI Policy decide local_only / cloud_*</text>
     </g>
 
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
@@ -77,9 +77,9 @@
 
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="584" y="380" width="446" height="60" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
-      <text x="807.0" y="415.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Infra governada</text>
+      <text x="807.0" y="415.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Infraestrutura governada</text>
       
     </g>
-  <text x="550" y="500" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Raw evidence permanece no perimetro; SaaS recebe apenas sanitizado.</text>
+  <text x="550" y="500" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748B" text-anchor="middle">A evidência bruta permanece no perímetro; o SaaS recebe apenas conteúdo tratado.</text>
 
 </svg>

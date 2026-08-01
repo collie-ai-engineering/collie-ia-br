@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1100" height="640" viewBox="0 0 1100 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
   <title id="t">Arquitetura Collie OpsMesh</title>
-  <desc id="d">Pedido da IA ou Cockpit passa pelo Control Plane (identidade, politica, aprovacao e auditoria), atravessa o Gateway opaco e chega ao MeshAgent outbound-only, que executa acoes tipadas na infra com Edge Redactor.</desc>
+  <desc id="d">Uma solicitação do Cockpit ou de uma ferramenta de Inteligência Artificial passa pelo plano de controle, atravessa o Gateway opaco e chega ao MeshAgent, que executa ações tipadas na infraestrutura com o Edge Redactor.</desc>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1100" y2="640" gradientUnits="userSpaceOnUse">
@@ -38,8 +38,8 @@
   <rect width="1100" height="640" rx="28" fill="url(#dots)"/>
 
   <text x="550" y="34" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#64748B" text-anchor="middle" letter-spacing="2.4">COLLIE OPSMESH</text>
-  <text x="550" y="58" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#0B1220" text-anchor="middle">IA pede / OpsMesh governa / Agents executam</text>
-  <text x="550" y="80" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Mesh segura entre clientes de IA e a infraestrutura - sem entregar o cluster</text>
+  <text x="550" y="58" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#0B1220" text-anchor="middle">Inteligência Artificial solicita · OpsMesh governa · MeshAgents executam</text>
+  <text x="550" y="80" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Malha segura entre as ferramentas e a infraestrutura — sem acesso direto ao cluster</text>
 
   <!-- PEDIDO -->
   <rect x="40" y="100" width="1020" height="110" rx="18" fill="url(#zoneAsk)"/>
@@ -64,29 +64,29 @@
   </g>
   <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
     <rect x="816" y="138" width="220" height="52" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5"/>
-    <text x="926" y="170" font-size="13" font-weight="700" fill="#0B1220" text-anchor="middle">MCP clients</text>
+    <text x="926" y="170" font-size="13" font-weight="700" fill="#0B1220" text-anchor="middle">Clientes MCP</text>
   </g>
 
   <path d="M550 210v24" stroke="#2563EB" stroke-width="2" marker-end="url(#arrB)"/>
-  <text x="568" y="228" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="600" fill="#64748B">acao tipada</text>
+  <text x="568" y="228" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="600" fill="#64748B">ação tipada</text>
 
   <!-- CONTROL PLANE -->
   <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
     <rect x="120" y="244" width="860" height="176" rx="18" fill="url(#cpGrad)" stroke="#334155" stroke-width="1.5"/>
-    <text x="144" y="272" font-size="10" font-weight="700" fill="#93C5FD" letter-spacing="1.6">CONTROL PLANE</text>
+    <text x="144" y="272" font-size="10" font-weight="700" font-style="italic" fill="#93C5FD" letter-spacing="1.6">CONTROL PLANE</text>
     <text x="144" y="294" font-size="16" font-weight="800" fill="#FFFFFF">Governa antes de executar</text>
 
     <rect x="144" y="314" width="185" height="52" rx="10" fill="#1E293B" stroke="#334155"/>
     <text x="236.5" y="336" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Identidade</text>
-    <text x="236.5" y="352" font-size="10" fill="#94A3B8" text-anchor="middle">FGAC / enroll</text>
+    <text x="236.5" y="352" font-size="10" fill="#94A3B8" text-anchor="middle">FGAC / cadastro</text>
 
     <rect x="345" y="314" width="185" height="52" rx="10" fill="#1E293B" stroke="#334155"/>
-    <text x="437.5" y="336" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Aprovacao</text>
+    <text x="437.5" y="336" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Aprovação</text>
     <text x="437.5" y="352" font-size="10" fill="#94A3B8" text-anchor="middle">HITL / Privacy Gate</text>
 
     <rect x="546" y="314" width="185" height="52" rx="10" fill="#1E293B" stroke="#334155"/>
     <text x="638.5" y="336" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">AI Policy</text>
-    <text x="638.5" y="352" font-size="10" fill="#94A3B8" text-anchor="middle">fail-closed</text>
+    <text x="638.5" y="352" font-size="10" font-style="italic" fill="#94A3B8" text-anchor="middle">fail-closed</text>
 
     <rect x="747" y="314" width="209" height="52" rx="10" fill="#1E293B" stroke="#334155"/>
     <text x="851.5" y="336" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Auditoria</text>
@@ -103,18 +103,18 @@
   <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
     <rect x="120" y="452" width="360" height="88" rx="14" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
     <text x="300" y="488" font-size="14" font-weight="800" fill="#0B1220" text-anchor="middle">Gateway HTTPS opaco</text>
-    <text x="300" y="512" font-size="11" font-weight="600" fill="#2563EB" text-anchor="middle">nao le ciphertext / sem Postgres de negocio</text>
+    <text x="300" y="512" font-size="11" font-weight="600" fill="#2563EB" text-anchor="middle">não lê o conteúdo cifrado / sem banco de negócio</text>
   </g>
 
   <path d="M480 496h40" stroke="#16A34A" stroke-width="2" marker-end="url(#arrG)"/>
 
   <rect x="540" y="440" width="440" height="112" rx="18" fill="url(#zoneEdge)"/>
-  <text x="564" y="464" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#16A34A" letter-spacing="1.6">PERIMETRO DO CLIENTE</text>
+  <text x="564" y="464" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#16A34A" letter-spacing="1.6">PERÍMETRO DO CLIENTE</text>
 
   <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
     <rect x="564" y="478" width="188" height="56" rx="12" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1.5"/>
     <text x="658" y="502" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">MeshAgent</text>
-    <text x="658" y="520" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">outbound-only / plugins</text>
+    <text x="658" y="520" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">somente saída / módulos</text>
   </g>
   <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
     <rect x="768" y="478" width="188" height="56" rx="12" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1.5"/>
@@ -124,6 +124,6 @@
 
   <g font-family="Inter,Arial,sans-serif">
     <rect x="120" y="580" width="860" height="36" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
-    <text x="550" y="603" font-size="12" font-weight="600" fill="#64748B" text-anchor="middle">Infra: Kubernetes / VMs / middleware / observabilidade existente</text>
+    <text x="550" y="603" font-size="12" font-weight="600" fill="#64748B" text-anchor="middle">Infraestrutura: Kubernetes / máquinas virtuais / integração / observabilidade existente</text>
   </g>
 </svg>

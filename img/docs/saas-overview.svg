@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1100" height="520" viewBox="0 0 1100 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
-  <title id="t">SaaS — footprint</title>
-  <desc id="d">Control Plane na Collie · no cliente: Agents e, conforme o cenario, Gateway</desc>
+  <title id="t">SaaS — distribuição dos componentes</title>
+  <desc id="d">Plano de controle na Collie; no cliente, MeshAgents e, conforme o cenário, Gateway</desc>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1100" y2="520" gradientUnits="userSpaceOnUse">
@@ -37,18 +37,18 @@
   <rect width="1100" height="520" rx="28" fill="url(#bg)"/>
   <rect width="1100" height="520" rx="28" fill="url(#dots)"/>
   <text x="550.0" y="36" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#64748B" text-anchor="middle" letter-spacing="2.4">COLLIE OPSMESH</text>
-  <text x="550.0" y="64" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#0B1220" text-anchor="middle">SaaS — footprint</text>
-  <text x="550.0" y="88" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Control Plane na Collie · no cliente: Agents e, conforme o cenario, Gateway</text>
+  <text x="550.0" y="64" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#0B1220" text-anchor="middle">SaaS — distribuição dos componentes</text>
+  <text x="550.0" y="88" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Plano de controle na Collie · no cliente: MeshAgents e, conforme o cenário, Gateway</text>
 
   <rect x="40" y="110" width="500" height="360" rx="20" fill="url(#zoneCollie)"/>
   <rect x="560" y="110" width="500" height="360" rx="20" fill="url(#zoneClient)"/>
-  <text x="64" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#2563EB" letter-spacing="1.6">COLLIE (SAAS / CONTROL PLANE)</text>
-  <text x="584" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#16A34A" letter-spacing="1.6">PERIMETRO DO CLIENTE</text>
+  <text x="64" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#2563EB" letter-spacing="1.6">COLLIE (SAAS / PLANO DE CONTROLE)</text>
+  <text x="584" y="138" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#16A34A" letter-spacing="1.6">PERÍMETRO DO CLIENTE</text>
   
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="64" y="160" width="210" height="70" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
       <text x="169.0" y="191.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">Cockpit + API</text>
-      <text x="169.0" y="216" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">Django · FGAC · Audit</text>
+      <text x="169.0" y="216" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">Django · FGAC · Auditoria</text>
     </g>
 
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
@@ -71,27 +71,27 @@
 
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="64" y="340" width="436" height="70" rx="14" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
-      <text x="282.0" y="371.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Gateway (cenarios 1.1 / 1.3)</text>
-      <text x="282.0" y="396" font-size="11" font-weight="600" fill="#2563EB" text-anchor="middle">na Collie quando nao for no cliente</text>
+      <text x="282.0" y="371.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Gateway (cenários 1.1 / 1.3)</text>
+      <text x="282.0" y="396" font-size="11" font-weight="600" fill="#2563EB" text-anchor="middle">na Collie quando não estiver no cliente</text>
     </g>
   
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="584" y="180" width="210" height="90" rx="14" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
       <text x="689.0" y="221.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">MeshAgent</text>
-      <text x="689.0" y="256" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">outbound-only + Edge Redactor</text>
+      <text x="689.0" y="256" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">comunicação de saída + Edge Redactor</text>
     </g>
 
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="820" y="180" width="210" height="90" rx="14" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
       <text x="925.0" y="221.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Gateway</text>
-      <text x="925.0" y="256" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">cenarios 1.2 / 1.4</text>
+      <text x="925.0" y="256" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">cenários 1.2 / 1.4</text>
     </g>
 
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="584" y="300" width="446" height="90" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
-      <text x="807.0" y="341.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Infra governada</text>
-      <text x="807.0" y="376" font-size="11" font-weight="600" fill="#64748B" text-anchor="middle">K8s · Linux · Cloud · DB</text>
+      <text x="807.0" y="341.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Infraestrutura governada</text>
+      <text x="807.0" y="376" font-size="11" font-weight="600" fill="#64748B" text-anchor="middle">K8s · Linux · Nuvem · Bancos de dados</text>
     </g>
-  <text x="550" y="500" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748B" text-anchor="middle">SaaS: cliente instala Agents (+ Gateway nos cenarios 1.2 e 1.4).</text>
+  <text x="550" y="500" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748B" text-anchor="middle">SaaS: o cliente instala MeshAgents e, nos cenários 1.2 e 1.4, o Gateway.</text>
 
 </svg>
