@@ -10,12 +10,16 @@ Site estático, sem build: HTML, CSS e JavaScript puro.
 index.html    estrutura e conteúdo
 style.css     estilos
 script.js     interações
+docs/         documentação pública em HTML
+docs.css      estilos das páginas de docs
 img/          logos e ilustrações
+img/docs/     SVGs das docs (espelho do tier público do repo do produto)
 404.html      página de erro do GitHub Pages
 CNAME         domínio canônico (www)
 robots.txt    regras para crawlers
-sitemap.xml   sitemap da home
+sitemap.xml   sitemap (home + páginas de docs)
 llms.txt      mapa Markdown para agentes de IA
+AGENTS.md     regras para agentes de IA neste repo
 serve.sh      servidor local de desenvolvimento
 ```
 
@@ -30,8 +34,14 @@ Precisa apenas de Python 3 (`python3 -m http.server`).
 
 ## Branches
 
-- `dev-01` — desenvolvimento
+Locais e em `origin` hoje:
+
 - `main` — versão publicada (GitHub Pages)
+- `dev-01` — desenvolvimento (histórico; sem atividade recente)
+- `fix/site-pages-seo` — ajustes de SEO/Pages
+- `marcos/doc-publication` — publicação das docs em HTML
+
+Trabalho novo sai de `main` em branch própria e volta por PR.
 
 ## Hospedagem
 
@@ -44,7 +54,9 @@ GitHub Pages com domínio canônico **`www.collie.ia.br`**.
    - Custom domain: `www.collie.ia.br`
    - Enforce HTTPS: ligado
 2. **DNS**
-   - `www` → CNAME para `collie-ia.github.io` (ou o host indicado pelo Pages)
+   - `www` → CNAME para o host do Pages **confirmado no painel** (Settings → Pages).
+     O repo hoje é `collie-ai-engineering/collie-ia-br`; o host mudou junto com a
+     organização, então não reaproveite valor antigo — copie o que o Pages indicar.
    - Apex `collie.ia.br` → A/ALIAS do GitHub Pages **ou** redirect para `www`
 3. **Smoke**
    - `https://www.collie.ia.br/` → 200
@@ -77,4 +89,18 @@ Proprietária — All Rights Reserved. Ver [LICENSE](LICENSE).
 - Copy executiva / GEO: [`.cursor/skills/copywriting-clevel-geo/`](.cursor/skills/copywriting-clevel-geo/)
 - Regra de copy PT-BR: [`.cursor/rules/portal-copywriting.mdc`](.cursor/rules/portal-copywriting.mdc)
 
-Docs de uso do OpsMesh (install) serão publicadas em HTML aqui no futuro; fonte Markdown em **collie-opsmesh**.
+## Documentação pública
+
+As docs de uso do OpsMesh estão publicadas em HTML em [`docs/`](docs/).
+
+Fonte canônica no repo do produto (**collie-opsmesh**):
+
+- conteúdo: `docs/install/` (Markdown)
+- diagramas: `docs/img/public/` (SVG), espelhados aqui em `img/docs/` byte a byte
+
+O tier público é a versão sanitizada dos diagramas — sem nomes de tecnologia de
+terceiros. Os diagramas de `docs/img/install/` servem a quem instala e **não** são
+publicados aqui.
+
+Os SVGs espelhados devem permanecer idênticos à fonte — não edite as cópias aqui.
+Mudança de conteúdo começa no repo do produto e só depois vira HTML neste repo.

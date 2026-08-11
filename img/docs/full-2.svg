@@ -45,14 +45,14 @@
   
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="64" y="160" width="640" height="90" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
-      <text x="384.0" y="201.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">CP · GW · RMQ · Postgres · EP · Privacy · Policy · Router</text>
-      <text x="384.0" y="236" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">AI_ROUTER aponta LLM Collie</text>
+      <text x="384.0" y="201.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">Control Plane · Gateway · Dados · Filas · Evidence · Privacy · Policy</text>
+      <text x="384.0" y="236" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">AI Router aponta para a LLM Collie</text>
     </g>
 
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="724" y="160" width="300" height="90" rx="14" fill="#FFFBEB" stroke="#FCD34D" stroke-width="1.5"/>
       <text x="874.0" y="201.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">LLM Collie</text>
-      <text x="874.0" y="236" font-size="11" font-weight="600" fill="#D97706" text-anchor="middle">cloud_private / sanitized</text>
+      <text x="874.0" y="236" font-size="11" font-weight="600" fill="#D97706" text-anchor="middle">nuvem privada · conteúdo sanitizado</text>
     </g>
 
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">

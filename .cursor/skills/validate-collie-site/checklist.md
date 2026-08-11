@@ -16,12 +16,19 @@ Complemento de [SKILL.md](SKILL.md). Use item a item; não pule Critical.
   - `/img/hero-architecture.svg`
   - `/img/opsmesh-flow.svg`
   - `/img/dashboard-mockup.svg`
-  - `/docs/` → 200
   - `/docs.css` → 200
-  - `/docs/cenarios.html` → 200
-  - `/img/docs/saas-overview.svg` → 200
+- [ ] Páginas de docs → 200:
+  - `/docs/`
+  - `/docs/como-funciona.html`
+  - `/docs/instalar.html`
+  - `/docs/cenarios.html`
+  - `/docs/topologias.html`
+- [ ] SVGs de `img/docs/` referenciados pelas páginas → 200:
+  - de `/docs/`: `/img/docs/opsmesh-architecture.svg`, `/img/docs/saas-overview.svg`, `/img/docs/full-overview.svg`
+  - de `/docs/cenarios.html`: `/img/docs/saas-overview.svg`, `/img/docs/saas-1.1.svg`, `/img/docs/saas-1.2.svg`, `/img/docs/saas-1.3.svg`, `/img/docs/saas-1.4.svg`, `/img/docs/full-overview.svg`, `/img/docs/full-2.svg`, `/img/docs/full-3.svg`, `/img/docs/full-4.svg`
+  - de `/docs/topologias.html`: `/img/docs/topology-docker.svg`, `/img/docs/topology-k8s.svg`, `/img/docs/topology-vms.svg`
 - [ ] `/robots.txt` → 200, aponta Sitemap
-- [ ] `/sitemap.xml` → 200, inclui home canônica
+- [ ] `/sitemap.xml` → 200, inclui home canônica e as páginas de `/docs/`
 - [ ] `/llms.txt` → 200, mapa Markdown para agentes (H1 Collie)
 - [ ] `/404.html` ou rota inexistente com página de erro útil
 
@@ -71,18 +78,42 @@ Clone local oficial (pode mudar — ver SKILL.md): `/Users/mvasconcelos/code/mvs
 - [ ] Claims alinhados: IA pede → OpsMesh governa → MeshAgents executam
 - [ ] Docs públicas em `/docs/` alinhadas a uso/instalação (não arquitetura interna)
 
-## G. Paridade fonte ↔ publicado
+## G. Paridade docs: produto ↔ site
 
-Quando ambos existirem:
+A fonte canônica das docs públicas é o repo do produto (**collie-opsmesh**):
 
-| Artefato | `assets/brand/website` | `/Users/mvasconcelos/code/mvs-eng/collie-code/collie-ia-br` |
-|----------|------------------------|--------------------------------------------------|
-| `index.html` | ? | ? |
-| `style.css` | ? | ? |
-| `script.js` | ? | ? |
-| `img/*` referenciados | ? | ? |
-| `llms.txt` | ? | ? |
-| `robots.txt` | ? | ? |
-| Pages-only (`CNAME`, sitemap, 404) | n/a ou espelho | obrigatório |
+| Artefato | Fonte (collie-opsmesh) | Publicado (collie-ia-br) |
+|----------|------------------------|--------------------------|
+| Conteúdo das docs | `docs/install/` (Markdown) | `docs/*.html` |
+| Diagramas | `docs/img/public/*.svg` | `img/docs/*.svg` (espelho byte-idêntico) |
+
+Dois tiers de diagrama no repo do produto:
+
+- `docs/img/public/` — versão sanitizada, 13 SVGs (12 de cenário/topologia +
+  `opsmesh-architecture.svg`). É o único tier publicado.
+- `docs/img/install/` — versão detalhada para quem instala. **Nunca** vai para o site.
+
+- [ ] Todo SVG de `docs/img/public/` existe em `img/docs/` e é **byte-idêntico** (13 arquivos):
+
+```bash
+for f in <collie-opsmesh>/docs/img/public/*.svg; do
+  cmp "$f" "img/docs/$(basename "$f")" || echo "DRIFT: $(basename "$f")"
+done
+ls -1 <collie-opsmesh>/docs/img/public/*.svg | wc -l   # esperado: 13
+ls -1 img/docs/*.svg | wc -l                           # esperado: 13
+```
+
+- [ ] Nenhum SVG publicado cita tecnologia de terceiros da nossa stack:
+
+```bash
+grep -liE "postgres|rabbitmq|amqp|django|fastapi|jwks|redis" img/docs/*.svg
+# não deve retornar nada
+```
+
+  Ollama e vLLM são permitidos — são a escolha de LLM do cliente, não a nossa stack.
+
+- [ ] Conteúdo das páginas HTML segue `docs/install/` (sem afirmação que não exista na fonte)
+- [ ] Edição de docs começa no repo do produto; o site nunca é a origem
 
 Drift = Medium (ou Critical se live servir versão errada).
+Nome de tecnologia interna em SVG publicado = Critical.

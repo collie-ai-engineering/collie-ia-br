@@ -98,11 +98,11 @@
               <tr>
                 <td><strong>Docker Compose</strong></td>
                 <td>Laboratório, prova de conceito, máquina virtual única e QA</td>
-                <td>Contêiner ou Postgres externo</td>
+                <td>Contêiner ou instância externa</td>
               </tr>
               <tr>
                 <td><strong>Kubernetes</strong></td>
-                <td>Produção, OKE ou cluster do cliente</td>
+                <td>Produção, cluster gerenciado ou do cliente</td>
                 <td>No cluster ou gerenciado</td>
               </tr>
               <tr>
@@ -119,13 +119,13 @@
         <h2 id="docker-title">Docker Compose</h2>
         <p><strong>Quando usar:</strong> laboratório, demonstração, prova de conceito em uma máquina virtual, desenvolvimento e QA de integração. É a referência para portas e variáveis do produto.</p>
         <figure class="docs-figure">
-          <img src="/img/docs/topology-docker.svg" width="1100" height="520" loading="lazy" alt="Topologia Docker Compose: API, Gateway, RabbitMQ, Postgres e MeshAgent no mesmo ambiente." />
+          <img src="/img/docs/topology-docker.svg" width="1100" height="520" loading="lazy" alt="Topologia Docker Compose: API, Gateway, mensageria, banco de dados e MeshAgent no mesmo ambiente." />
           <figcaption>Docker Compose — componentes reunidos para laboratório e prova de conceito.</figcaption>
         </figure>
         <ul>
           <li>O perfil <code>agent</code> inicia o MeshAgent no mesmo ambiente.</li>
           <li>O perfil <code>ollama</code> atende aos cenários com LLM local, como o cenário 4.</li>
-          <li>O Postgres pode ser um serviço do Docker Compose ou usar uma <code>DATABASE_URL</code> externa.</li>
+          <li>O banco de dados pode ser um serviço do Docker Compose ou uma instância externa.</li>
         </ul>
       </section>
 
@@ -147,7 +147,7 @@
             <tbody>
               <tr>
                 <td><code>collie-system</code></td>
-                <td>API, processador, Gateway, Postgres, RabbitMQ e componentes de Inteligência Artificial e evidências quando disponíveis</td>
+                <td>API, processador, Gateway, banco de dados, mensageria e componentes de Inteligência Artificial e evidências quando disponíveis</td>
               </tr>
               <tr>
                 <td><code>collie-agent</code></td>
@@ -158,7 +158,7 @@
         </div>
         <div class="docs-callout">
           <p>No SaaS 1.1 e 1.3 o cliente materializa só o equivalente a <code>collie-agent</code>. Em 1.2 e 1.4, também o Gateway.</p>
-          <p>Postgres no cluster atende a laboratórios e testes básicos, mas não oferece alta disponibilidade. Os <em>manifests</em> do Evidence Processor e dos componentes de Inteligência Artificial para Kubernetes ainda estão em evolução. Para uma implantação Full em produção, valide o empacotamento com a Collie.</p>
+          <p>O banco de dados no cluster atende a laboratórios e testes básicos, mas não oferece alta disponibilidade. Os <em>manifests</em> do Evidence Processor e dos componentes de Inteligência Artificial para Kubernetes ainda estão em evolução. Para uma implantação Full em produção, valide o empacotamento com a Collie.</p>
         </div>
       </section>
 

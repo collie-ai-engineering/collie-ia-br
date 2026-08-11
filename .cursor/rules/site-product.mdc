@@ -9,4 +9,6 @@ alwaysApply: true
 - HTML/CSS/JS estático; GitHub Pages.
 - Sempre aplicar copy PT-BR (regra `portal-copywriting`).
 - Após editar o site, rodar a skill `validate-collie-site`.
-- Docs de uso OpsMesh: HTML em `docs/`; fonte de conteúdo em `collie-opsmesh/docs/install/` (SVGs em `img/docs/`).
+- Docs de uso OpsMesh: HTML em `docs/`; fonte de conteúdo em `collie-opsmesh/docs/install/`.
+- Diagramas publicados vêm do tier sanitizado `collie-opsmesh/docs/img/public/`, espelhado byte-idêntico em `img/docs/`. Nunca publicar `docs/img/install/`.
+- Publicado é vitrine: sem nome de tecnologia de terceiros, rota, variável de ambiente ou porta.

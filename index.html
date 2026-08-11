@@ -143,7 +143,7 @@
             <p>A consultoria define prioridades, riscos e regras. O OpsMesh aplica esses controles. Os MeshAgents executam somente as ações permitidas no ambiente do cliente.</p>
             <ul>
               <li>Casos de uso ligados a objetivos de negócio</li>
-              <li>Integração MCP governada pelo <em>Control Plane</em></li>
+              <li>Integração MCP governada pelo <em>Control Plane</em>, na evolução do produto</li>
               <li>Identidade, política, aprovação e auditoria</li>
             </ul>
           </article>
@@ -166,7 +166,7 @@
           <a href="docs/como-funciona.html" class="text-link">Como o OpsMesh funciona</a>
         </div>
         <div class="opsmesh-visual fade-in-up">
-          <img src="img/opsmesh-flow.svg" width="1300" height="560" loading="lazy" alt="Fluxo operacional do Collie OpsMesh em quatro etapas: observar, diagnosticar, recomendar e executar com aprovação humana." />
+          <img src="img/opsmesh-flow.svg" width="1300" height="560" loading="lazy" alt="Fluxo operacional do Collie OpsMesh em quatro etapas: solicitar, governar, transportar e executar, com aprovação humana quando necessário." />
         </div>
       </div>
     </section>
@@ -184,7 +184,7 @@
             <div class="feature-icon blue" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M4.93 19.07l1.41-1.41"/><path d="M17.66 6.34l1.41-1.41"/></svg>
             </div>
-            <h3>Conexão governada com ferramentas de Inteligência Artificial</h3>
+            <h3>Conexão governada com ferramentas de Inteligência Artificial — na evolução do produto</h3>
             <p>O Cockpit opera hoje. A arquitetura prepara a conexão de Cursor, Claude Code, Antigravity e outros clientes MCP sem acesso direto à infraestrutura.</p>
           </article>
           <article class="feature-card fade-in-up">
@@ -291,7 +291,7 @@
           </ul>
         </div>
         <div class="dashboard-card fade-in-up">
-          <img src="img/dashboard-mockup.svg" width="1200" height="820" loading="lazy" alt="Painel do Collie OpsMesh com correlação de incidentes e recomendações apoiadas por Inteligência Artificial." />
+          <img src="img/dashboard-mockup.svg" width="1200" height="820" loading="lazy" alt="Ilustração da interface do Collie OpsMesh: representação do painel, sem dados reais." />
         </div>
       </div>
     </section>
@@ -300,44 +300,40 @@
     <section class="section integrations" id="integrations" aria-labelledby="integrations-title">
       <div class="container">
         <div class="section-header fade-in-up">
-          <p class="section-kicker">Integrações</p>
-          <h2 id="integrations-title">Integra-se ao ambiente que sua equipe já opera.</h2>
-          <p>O OpsMesh adiciona governança ao fluxo entre observabilidade, ferramentas de engenharia e infraestrutura, sem substituir o que já funciona.</p>
+          <p class="section-kicker">Ambiente e integrações</p>
+          <h2 id="integrations-title">Encaixa no ambiente que sua equipe já opera.</h2>
+          <p>O OpsMesh governa o caminho entre a decisão e a ação na infraestrutura. Hoje a execução acontece em Kubernetes e em hosts Linux. Sua stack de observabilidade e suas ferramentas de automação seguem como estão: o OpsMesh convive com elas, sem substituí-las.</p>
         </div>
         <div class="integration-groups fade-in-up">
           <div class="integration-group">
-            <h4>Ferramentas de Inteligência Artificial</h4>
+            <h4>Onde a execução acontece</h4>
+            <div class="integration-group-badges">
+              <span>Kubernetes</span>
+              <span>Hosts Linux</span>
+            </div>
+          </div>
+          <div class="integration-group">
+            <h4>Como o OpsMesh é implantado</h4>
+            <div class="integration-group-badges">
+              <span>Docker Compose</span>
+              <span>Kubernetes</span>
+              <span>Máquinas virtuais</span>
+            </div>
+          </div>
+          <div class="integration-group">
+            <h4>Modelos de instalação</h4>
+            <div class="integration-group-badges">
+              <span>SaaS</span>
+              <span>Full</span>
+            </div>
+          </div>
+          <div class="integration-group">
+            <h4>Ferramentas de Inteligência Artificial — evolução do produto</h4>
             <div class="integration-group-badges">
               <span>Cursor</span>
               <span>Claude Code</span>
               <span>Antigravity</span>
               <span>Clientes MCP</span>
-            </div>
-          </div>
-          <div class="integration-group">
-            <h4>Observabilidade</h4>
-            <div class="integration-group-badges">
-              <span>Prometheus</span>
-              <span>Grafana</span>
-              <span>Loki</span>
-              <span>OpenSearch</span>
-            </div>
-          </div>
-          <div class="integration-group">
-            <h4>Nuvem e infraestrutura</h4>
-            <div class="integration-group-badges">
-              <span>AWS</span>
-              <span>Azure</span>
-              <span>GCP</span>
-              <span>OCI</span>
-              <span>Linux</span>
-            </div>
-          </div>
-          <div class="integration-group">
-            <h4>Orquestração</h4>
-            <div class="integration-group-badges">
-              <span>Kubernetes</span>
-              <span>GitLab</span>
             </div>
           </div>
         </div>

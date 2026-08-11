@@ -11,7 +11,9 @@ Site institucional Collie (`www.collie.ia.br`).
 ## Documentação pública
 
 - HTML em `docs/` (uso/instalação OpsMesh).
-- Fonte canônica de conteúdo: `collie-opsmesh/docs/install/` (+ SVGs em `collie-opsmesh/docs/img/install/` → espelho `img/docs/`).
+- Fonte canônica de conteúdo: `collie-opsmesh/docs/install/`.
+- Fonte dos diagramas: `collie-opsmesh/docs/img/public/` (tier sanitizado) → espelho byte-idêntico em `img/docs/`. O tier `docs/img/install/` é detalhado e **não** é publicado.
+- Nada de nome de tecnologia de terceiros (banco, mensageria, framework), rota de API, variável de ambiente ou porta no que for publicado.
 - Não publicar aqui arquitetura, API contracts nem runbooks de desenvolvimento (Google Workspace).
 
 ## Não fazer

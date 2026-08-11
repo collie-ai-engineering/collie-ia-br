@@ -1,6 +1,6 @@
 # Collie
 
-> Collie OpsMesh governa o que Cursor, Claude Code, Antigravity e outros clientes de IA podem pedir na sua infra: identidade, política, aprovação e auditoria — antes da execução. MeshAgents executam só ações tipadas, outbound-only, com audit trail.
+> Collie OpsMesh governa o que pode ser pedido à sua infraestrutura: identidade, política, aprovação e auditoria — antes da execução. Hoje a solicitação entra pelo Cockpit; a conexão de clientes MCP (Cursor, Claude Code, Antigravity) faz parte da evolução do produto. MeshAgents executam só ações tipadas, iniciam a comunicação de dentro para fora e deixam trilha de auditoria.
 
 Collie AI Engineering. Site institucional em português do Brasil.
 
@@ -8,9 +8,9 @@ Collie AI Engineering. Site institucional em português do Brasil.
 
 - [Home](https://www.collie.ia.br/): landing do Collie OpsMesh
 - [OpsMesh](https://www.collie.ia.br/#opsmesh): o que o mesh governa (identidade, política, aprovação, auditoria)
-- [Plataforma](https://www.collie.ia.br/#platform): Control Plane, bridge MCP e perímetro dos agents
-- [Workflow](https://www.collie.ia.br/#workflow): pedido da IA → decisão → execução tipada
-- [Integrações](https://www.collie.ia.br/#integrations): clientes de IA e superfície de pedido
+- [Plataforma](https://www.collie.ia.br/#platform): Control Plane, governança e perímetro dos MeshAgents
+- [Workflow](https://www.collie.ia.br/#workflow): solicitar → governar → transportar → executar
+- [Integrações](https://www.collie.ia.br/#integrations): onde a execução acontece (Kubernetes, hosts Linux) e como o OpsMesh é implantado
 
 ## Documentação de uso
 

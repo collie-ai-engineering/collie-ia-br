@@ -1,6 +1,6 @@
 <svg width="1300" height="560" viewBox="0 0 1300 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
 <title id="title">Fluxo do Collie OpsMesh em quatro etapas</title>
-<desc id="desc">Observar, Diagnosticar, Recomendar e Executar — fluxo operacional com aprovação humana.</desc>
+<desc id="desc">Solicitar, Governar, Transportar e Executar — fluxo operacional com aprovação humana quando necessário.</desc>
 
 <defs>
   <linearGradient id="flowBg" x1="0" y1="0" x2="1300" y2="560" gradientUnits="userSpaceOnUse">
@@ -28,15 +28,15 @@
   <rect width="270" height="280" rx="18" fill="white" stroke="#E2E8F0"/>
   <rect x="0" y="0" width="270" height="6" rx="3" fill="#2563EB"/>
   <text x="24" y="52" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#94A3B8">01</text>
-  <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Observar</text>
+  <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Solicitar</text>
   <text font-family="Inter,Arial,sans-serif" font-size="14" fill="#64748B">
-    <tspan x="24" y="136">Coleta sinais e telemetria de</tspan>
-    <tspan x="24" y="156">Kubernetes, infraestrutura,</tspan>
-    <tspan x="24" y="176">integração e ferramentas de</tspan>
-    <tspan x="24" y="196">observabilidade existentes.</tspan>
+    <tspan x="24" y="136">O operador abre a solicitação</tspan>
+    <tspan x="24" y="156">no Cockpit. Clientes MCP</tspan>
+    <tspan x="24" y="176">entram na evolução do</tspan>
+    <tspan x="24" y="196">produto.</tspan>
   </text>
   <rect x="24" y="224" width="128" height="28" rx="8" fill="#EFF6FF"/>
-  <text x="88" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">Coleta de sinais</text>
+  <text x="88" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">Pedido no Cockpit</text>
 </g>
 
 <path d="M318 206h32" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
@@ -47,15 +47,15 @@
   <rect width="270" height="280" rx="18" fill="white" stroke="#E2E8F0"/>
   <rect x="0" y="0" width="270" height="6" rx="3" fill="#22C55E"/>
   <text x="24" y="52" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#94A3B8">02</text>
-  <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Diagnosticar</text>
+  <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Governar</text>
   <text font-family="Inter,Arial,sans-serif" font-size="14" fill="#64748B">
-    <tspan x="24" y="136">Correlaciona eventos, registros,</tspan>
-    <tspan x="24" y="156">métricas e padrões para</tspan>
-    <tspan x="24" y="176">identificar a causa raiz com</tspan>
-    <tspan x="24" y="196">Inteligência Artificial híbrida.</tspan>
+    <tspan x="24" y="136">O Control Plane verifica</tspan>
+    <tspan x="24" y="156">identidade, controle de acesso</tspan>
+    <tspan x="24" y="176">e políticas. Tarefas sensíveis</tspan>
+    <tspan x="24" y="196">passam por aprovação.</tspan>
   </text>
   <rect x="24" y="224" width="146" height="28" rx="8" fill="#F0FDF4"/>
-  <text x="97" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#16A34A" text-anchor="middle">Análise contextual</text>
+  <text x="97" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#16A34A" text-anchor="middle">Regras antes da ação</text>
 </g>
 
 <path d="M674 206h32" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
@@ -66,15 +66,15 @@
   <rect width="270" height="280" rx="18" fill="white" stroke="#E2E8F0"/>
   <rect x="0" y="0" width="270" height="6" rx="3" fill="#2563EB"/>
   <text x="24" y="52" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#94A3B8">03</text>
-  <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Recomendar</text>
+  <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Transportar</text>
   <text font-family="Inter,Arial,sans-serif" font-size="14" fill="#64748B">
-    <tspan x="24" y="136">Propõe ações de correção</tspan>
-    <tspan x="24" y="156">seguras e explicáveis, com</tspan>
-    <tspan x="24" y="176">o contexto necessário para</tspan>
-    <tspan x="24" y="196">revisão pela engenharia.</tspan>
+    <tspan x="24" y="136">A tarefa segue cifrada até o</tspan>
+    <tspan x="24" y="156">ambiente do cliente. Quem</tspan>
+    <tspan x="24" y="176">transporta não lê o conteúdo</tspan>
+    <tspan x="24" y="196">da solicitação.</tspan>
   </text>
   <rect x="24" y="224" width="140" height="28" rx="8" fill="#EFF6FF"/>
-  <text x="94" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">Ação explicável</text>
+  <text x="94" y="243" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">Envelope cifrado</text>
 </g>
 
 <path d="M1030 206h32" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
@@ -87,10 +87,10 @@
   <text x="24" y="52" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#94A3B8">04</text>
   <text x="24" y="100" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#0B1220">Executar</text>
   <text font-family="Inter,Arial,sans-serif" font-size="13" fill="#64748B">
-    <tspan x="24" y="136">Fluxos de trabalho</tspan>
-    <tspan x="24" y="154">com aprovação humana,</tspan>
-    <tspan x="24" y="172">auditoria rigorosa</tspan>
-    <tspan x="24" y="190">e reversão segura.</tspan>
+    <tspan x="24" y="136">O MeshAgent executa</tspan>
+    <tspan x="24" y="154">apenas o que foi</tspan>
+    <tspan x="24" y="172">autorizado, com</tspan>
+    <tspan x="24" y="190">auditoria e reversão.</tspan>
   </text>
 </g>
 
