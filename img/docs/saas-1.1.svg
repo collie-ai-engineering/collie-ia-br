@@ -47,7 +47,7 @@
   
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="64" y="170" width="436" height="64" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
-      <text x="282.0" y="207.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">Cockpit · CP · RMQ · Postgres</text>
+      <text x="282.0" y="207.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">Cockpit · Control Plane · Dados · Filas</text>
       
     </g>
 
@@ -72,7 +72,7 @@
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="584" y="200" width="446" height="100" rx="14" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
       <text x="807.0" y="246.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">MeshAgent + Edge Redactor</text>
-      <text x="807.0" y="286" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">HTTPS → CP · tarefas e resultados → Gateway</text>
+      <text x="807.0" y="286" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">HTTPS → plano de controle · tarefas e resultados → Gateway</text>
     </g>
 
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">

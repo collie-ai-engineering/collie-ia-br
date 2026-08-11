@@ -96,7 +96,7 @@
     <div class="docs-content">
       <section aria-labelledby="what-title">
         <h2 id="what-title">O que o OpsMesh é — e o que resolve</h2>
-        <p>O OpsMesh separa a solicitação da execução. Ferramentas de Inteligência Artificial e operadores pedem ações; a plataforma verifica identidade, política e aprovação antes que um MeshAgent atue na infraestrutura.</p>
+        <p>O OpsMesh separa a solicitação da execução. Operadores pedem ações pelo Cockpit — clientes MCP entram na evolução do produto — e a plataforma verifica identidade, política e aprovação antes que um MeshAgent atue na infraestrutura.</p>
         <div class="docs-cards">
           <article class="docs-card">
             <span class="card-kicker">Resolve</span>
@@ -125,7 +125,7 @@
         <h2 id="arch-title">Como encaixa</h2>
         <p>O caminho é direto: solicitação → <em>Control Plane</em> → Gateway opaco → MeshAgent no ambiente do cliente. Consulte <a href="/docs/como-funciona.html">como funciona</a> para entender cada camada.</p>
         <figure class="docs-figure">
-          <img src="/img/docs/opsmesh-architecture.svg" width="1100" height="640" loading="eager" alt="Arquitetura do Collie OpsMesh: o Cockpit e ferramentas de Inteligência Artificial solicitam ações; o plano de controle aplica identidade, aprovação, AI Policy e auditoria; o Gateway transporta o envelope cifrado; o MeshAgent executa no ambiente do cliente e o Edge Redactor trata a evidência na borda." />
+          <img src="/img/docs/opsmesh-architecture.svg" width="1100" height="640" loading="eager" alt="Arquitetura do Collie OpsMesh: o Cockpit solicita ações hoje e os clientes MCP entram na evolução do produto; o plano de controle aplica identidade, aprovação, AI Policy e auditoria; o Gateway transporta o envelope cifrado; o MeshAgent executa no ambiente do cliente e o Edge Redactor trata a evidência na borda." />
           <figcaption>Pedido → governança → transporte → execução no perímetro do cliente.</figcaption>
         </figure>
         <div class="docs-callouts-row" aria-label="Alertas e facilidades">
@@ -139,7 +139,7 @@
           </p>
           <p class="docs-mini-callout docs-mini-callout--alert">
             <strong>Alerta</strong>
-            A AI Policy opera em modo <em>fail-closed</em>: uma política <code>blocked</code> ou um provedor não autorizado impede a inferência.
+            A AI Policy opera em modo <em>fail-closed</em>: uma política sem inferência ou um provedor não autorizado impede a chamada ao modelo.
           </p>
         </div>
       </section>
@@ -188,7 +188,7 @@
           <a class="docs-card" href="/docs/cenarios.html#full-title">
             <span class="card-kicker">Full</span>
             <h3>Instalação completa no cliente</h3>
-            <p>Cockpit, <em>Control Plane</em>, Postgres, RabbitMQ, Gateway e MeshAgents são executados no seu ambiente. A LLM depende do cenário 2, 3 ou 4.</p>
+            <p>Cockpit, <em>Control Plane</em>, banco de dados, mensageria, Gateway e MeshAgents são executados no seu ambiente. A LLM depende do cenário 2, 3 ou 4.</p>
             <span class="card-cta">Ver cenários Full →</span>
           </a>
         </div>
@@ -215,8 +215,8 @@
       <section aria-labelledby="out-of-scope-title">
         <h2 id="out-of-scope-title">Este guia não cobre</h2>
         <ul>
-          <li>Arquitetura interna, contratos de API e histórico do produto, disponíveis no Google Workspace</li>
-          <li>Listagem completa de variáveis de ambiente, Terraform e roteiros operacionais de laboratório</li>
+          <li>Arquitetura interna, contratos de API e histórico do produto, mantidos na documentação interna da Collie</li>
+          <li>Listagem completa de variáveis de ambiente, arquivos de provisionamento e roteiros operacionais de laboratório</li>
           <li>Implantação do ambiente de demonstração da Collie</li>
         </ul>
         <p>Para planejar uma implantação, <a class="text-link" href="/#demo">agende uma conversa técnica</a>.</p>

@@ -118,17 +118,17 @@
         <h3>SaaS (1.x)</h3>
         <ul>
           <li>Organização Collie provisionada, com usuários do Cockpit e papéis de aprovação</li>
-          <li>URLs <code>CONTROL_PLANE_URL</code> / <code>GATEWAY_URL</code> (1.1 e 1.3) ou plano de Gateway local (1.2 e 1.4)</li>
+          <li>Endereços do <em>Control Plane</em> e do Gateway Collie (1.1 e 1.3) ou plano de Gateway local (1.2 e 1.4)</li>
           <li>Saída HTTPS liberada a partir do ambiente do MeshAgent</li>
           <li>Token inicial e processo de cadastro definidos</li>
           <li>No cenário 1.4: endereço da LLM, GPU e VPC definidos</li>
-          <li>No cenário 1.3: AI Policy <code>blocked</code> prevista no contrato</li>
+          <li>No cenário 1.3: inferência desligada por política, prevista no contrato</li>
         </ul>
 
         <h3>Full (2–4)</h3>
         <ul>
-          <li>Processamento e armazenamento para <em>Control Plane</em>, RabbitMQ e Gateway, além de GPU quando o cenário 4 usar modelo local</li>
-          <li>Postgres em contêiner, no cluster ou em instância externa com cópia de segurança</li>
+          <li>Processamento e armazenamento para <em>Control Plane</em>, mensageria e Gateway, além de GPU quando o cenário 4 usar modelo local</li>
+          <li>Banco de dados em contêiner, no cluster ou em instância externa com cópia de segurança</li>
           <li>Estratégia de TLS/DNS para UI, API e Gateway</li>
           <li>Cenário 2: credencial e endereço da LLM Collie, com saída de rede autorizada</li>
           <li>Cenário 3: confirmação explícita de instalação sem recursos de Inteligência Artificial</li>
@@ -140,8 +140,8 @@
       <section aria-labelledby="security-title">
         <h2 id="security-title">Segurança na instalação</h2>
         <ul class="docs-principles">
-          <li>Sem exposição pública do RabbitMQ.</li>
-          <li>Segredos fora do Git, fornecidos por variáveis de ambiente ou por um gerenciador de segredos.</li>
+          <li>Sem exposição pública da mensageria.</li>
+          <li>Segredos fora do repositório de código, fornecidos por variáveis de ambiente ou por um gerenciador de segredos.</li>
           <li>Edge Redactor habilitado no MeshAgent.</li>
           <li>Evidências brutas não seguem para o SaaS nem para o Gateway.</li>
         </ul>
@@ -167,7 +167,7 @@
         <h3>Saúde</h3>
         <ul>
           <li>API e Cockpit respondem, inclusive no acesso autenticado</li>
-          <li>Gateway responde; no modelo Full, Postgres e RabbitMQ também estão saudáveis</li>
+          <li>Gateway responde; no modelo Full, banco de dados e mensageria também estão saudáveis</li>
           <li>Com Inteligência Artificial: AI Policy e AI Router estão saudáveis, e a LLM está acessível quando aplicável</li>
         </ul>
         <h3>MeshAgent</h3>
@@ -184,16 +184,16 @@
         <h3>Inteligência Artificial</h3>
         <ul>
           <li>Nos cenários 1.1, 1.2, 1.4, 2 e 4: Privacy Gate → aprovação → AI Policy → AI Router → resposta</li>
-          <li>Rejeição ou política <code>blocked</code>: nenhuma chamada ao modelo</li>
+          <li>Rejeição ou política sem inferência: nenhuma chamada ao modelo</li>
           <li>Nos cenários 1.3 e 3: coleta e remediação com aprovação humana, sem inferência nos registros</li>
         </ul>
         <h3>Perímetro</h3>
         <ul>
           <li>Sem evidências brutas no SaaS nem no Gateway</li>
-          <li>RabbitMQ sem exposição pública</li>
+          <li>Mensageria sem exposição pública</li>
         </ul>
         <div class="docs-callout">
-          <p>Este guia cobre o <em>quê</em> e o <em>quando</em>. Variáveis de ambiente, <em>manifests</em> e Terraform fazem parte da ativação com a Collie. <a href="/#demo">Agende uma conversa técnica</a> se estiver planejando a implantação.</p>
+          <p>Este guia cobre o <em>quê</em> e o <em>quando</em>. Variáveis de ambiente, <em>manifests</em> e provisionamento da infraestrutura fazem parte da ativação com a Collie. <a href="/#demo">Agende uma conversa técnica</a> se estiver planejando a implantação.</p>
         </div>
       </section>
 

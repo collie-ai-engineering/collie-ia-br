@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1100" height="640" viewBox="0 0 1100 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
   <title id="t">Arquitetura Collie OpsMesh</title>
-  <desc id="d">Uma solicitação do Cockpit ou de uma ferramenta de Inteligência Artificial passa pelo plano de controle, atravessa o Gateway opaco e chega ao MeshAgent, que executa ações tipadas na infraestrutura com o Edge Redactor.</desc>
+  <desc id="d">Uma solicitação do Cockpit passa pelo plano de controle, atravessa o Gateway opaco e chega ao MeshAgent, que executa ações tipadas na infraestrutura com o Edge Redactor. Cursor, Claude Code, Antigravity e outros clientes MCP aparecem tracejados porque entram na evolução do produto.</desc>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1100" y2="640" gradientUnits="userSpaceOnUse">
@@ -44,31 +44,32 @@
   <!-- PEDIDO -->
   <rect x="40" y="100" width="1020" height="110" rx="18" fill="url(#zoneAsk)"/>
   <text x="64" y="124" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#2563EB" letter-spacing="1.6">PEDIDO</text>
+  <text x="124" y="124" font-family="Inter,Arial,sans-serif" font-size="10" fill="#94A3B8" letter-spacing="0.4">Cockpit hoje · tracejado = evolução do produto</text>
   <text x="920" y="124" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#B45309" letter-spacing="0.4">sem acesso direto ao cluster</text>
 
-  <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
-    <rect x="64" y="138" width="172" height="52" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5"/>
+  <g filter="url(#sh)" font-family="Inter,Arial,sans-serif" opacity="0.75">
+    <rect x="64" y="138" width="172" height="52" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5" stroke-dasharray="6 5"/>
     <text x="150" y="170" font-size="13" font-weight="700" fill="#0B1220" text-anchor="middle">Cursor</text>
   </g>
-  <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
-    <rect x="252" y="138" width="172" height="52" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5"/>
+  <g filter="url(#sh)" font-family="Inter,Arial,sans-serif" opacity="0.75">
+    <rect x="252" y="138" width="172" height="52" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5" stroke-dasharray="6 5"/>
     <text x="338" y="170" font-size="13" font-weight="700" fill="#0B1220" text-anchor="middle">Claude Code</text>
   </g>
-  <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
-    <rect x="440" y="138" width="172" height="52" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5"/>
+  <g filter="url(#sh)" font-family="Inter,Arial,sans-serif" opacity="0.75">
+    <rect x="440" y="138" width="172" height="52" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5" stroke-dasharray="6 5"/>
     <text x="526" y="170" font-size="13" font-weight="700" fill="#0B1220" text-anchor="middle">Antigravity</text>
   </g>
   <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
     <rect x="628" y="138" width="172" height="52" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
     <text x="714" y="170" font-size="13" font-weight="700" fill="#0B1220" text-anchor="middle">Cockpit</text>
   </g>
-  <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
-    <rect x="816" y="138" width="220" height="52" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5"/>
+  <g filter="url(#sh)" font-family="Inter,Arial,sans-serif" opacity="0.75">
+    <rect x="816" y="138" width="220" height="52" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5" stroke-dasharray="6 5"/>
     <text x="926" y="170" font-size="13" font-weight="700" fill="#0B1220" text-anchor="middle">Clientes MCP</text>
   </g>
 
-  <path d="M550 210v24" stroke="#2563EB" stroke-width="2" marker-end="url(#arrB)"/>
-  <text x="568" y="228" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="600" fill="#64748B">ação tipada</text>
+  <path d="M714 210v24" stroke="#2563EB" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="732" y="228" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="600" fill="#64748B">ação tipada</text>
 
   <!-- CONTROL PLANE -->
   <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
@@ -78,7 +79,7 @@
 
     <rect x="144" y="314" width="185" height="52" rx="10" fill="#1E293B" stroke="#334155"/>
     <text x="236.5" y="336" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Identidade</text>
-    <text x="236.5" y="352" font-size="10" fill="#94A3B8" text-anchor="middle">FGAC / cadastro</text>
+    <text x="236.5" y="352" font-size="10" fill="#94A3B8" text-anchor="middle">acesso granular / cadastro</text>
 
     <rect x="345" y="314" width="185" height="52" rx="10" fill="#1E293B" stroke="#334155"/>
     <text x="437.5" y="336" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Aprovação</text>
@@ -93,7 +94,7 @@
     <text x="851.5" y="352" font-size="10" fill="#94A3B8" text-anchor="middle">trilha completa</text>
 
     <rect x="144" y="380" width="812" height="24" rx="8" fill="#EFF6FF"/>
-    <text x="550" y="397" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Postgres / RabbitMQ / Evidence Processor / AI Router</text>
+    <text x="550" y="397" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Banco de dados / Mensageria / Evidence Processor / AI Router</text>
   </g>
 
   <path d="M550 420v22" stroke="#2563EB" stroke-width="2" marker-end="url(#arrB)"/>
@@ -124,6 +125,6 @@
 
   <g font-family="Inter,Arial,sans-serif">
     <rect x="120" y="580" width="860" height="36" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
-    <text x="550" y="603" font-size="12" font-weight="600" fill="#64748B" text-anchor="middle">Infraestrutura: Kubernetes / máquinas virtuais / integração / observabilidade existente</text>
+    <text x="550" y="603" font-size="12" font-weight="600" fill="#64748B" text-anchor="middle">Infraestrutura: Kubernetes / máquinas virtuais</text>
   </g>
 </svg>

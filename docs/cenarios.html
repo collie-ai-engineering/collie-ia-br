@@ -102,7 +102,7 @@
           <a class="docs-card" href="#s13">
             <span class="card-kicker">SaaS 1.3</span>
             <h3>MeshAgent sem LLM</h3>
-            <p>Operação pelo Cockpit, com aprovação humana e AI Policy <code>blocked</code>. Não há inferência por LLM.</p>
+            <p>Operação pelo Cockpit, com aprovação humana e inferência desligada por política. Não há uso de LLM.</p>
             <span class="card-cta">Ver detalhes →</span>
           </a>
           <a class="docs-card" href="#s14">
@@ -120,7 +120,7 @@
           <a class="docs-card" href="#f3">
             <span class="card-kicker">Full 3</span>
             <h3>Full sem LLM</h3>
-            <p>Governança local sem inferência por modelo. A AI Policy permanece <code>blocked</code>.</p>
+            <p>Governança local sem inferência por modelo. A AI Policy permanece desligada.</p>
             <span class="card-cta">Ver detalhes →</span>
           </a>
           <a class="docs-card" href="#f4">
@@ -203,7 +203,7 @@
 
       <section aria-labelledby="saas-title">
         <h2 id="saas-title">SaaS — <em>Control Plane</em> na Collie</h2>
-        <p>A Collie opera Cockpit, <em>Control Plane</em>, Postgres, RabbitMQ, Evidence Processor e os recursos de Inteligência Artificial contratados. No seu ambiente ficam o MeshAgent e, nos cenários 1.2 e 1.4, o Gateway.</p>
+        <p>A Collie opera Cockpit, <em>Control Plane</em>, banco de dados, mensageria, Evidence Processor e os recursos de Inteligência Artificial contratados. No seu ambiente ficam o MeshAgent e, nos cenários 1.2 e 1.4, o Gateway.</p>
         <figure class="docs-figure">
           <img src="/img/docs/saas-overview.svg" width="1100" height="520" loading="lazy" alt="Visão geral SaaS: plano de controle na Collie e MeshAgents no cliente." />
           <figcaption>SaaS — a Collie opera o plano de controle; o cliente opera a borda.</figcaption>
@@ -252,7 +252,7 @@
           <div class="scenario-meta">
             <span>No cliente: MeshAgent</span>
             <span>LLM: nenhuma</span>
-            <span>Política: blocked</span>
+            <span>Política: sem inferência</span>
           </div>
           <p><strong>Quando escolher:</strong> a equipe usa o Cockpit para incidentes, coleta de dados e remediação com aprovação humana, mas não quer ou não pode usar uma LLM. É o cenário SaaS sem inferência.</p>
           <figure class="docs-figure">
@@ -282,7 +282,7 @@
 
       <section aria-labelledby="full-title">
         <h2 id="full-title">Full — todos os componentes no ambiente do cliente</h2>
-        <p>No modelo Full, Cockpit, <em>Control Plane</em>, Postgres, RabbitMQ, Gateway, MeshAgents e, conforme o cenário, AI Policy, AI Router e LLM são executados no ambiente do cliente.</p>
+        <p>No modelo Full, Cockpit, <em>Control Plane</em>, banco de dados, mensageria, Gateway, MeshAgents e, conforme o cenário, AI Policy, AI Router e LLM são executados no ambiente do cliente.</p>
         <figure class="docs-figure">
           <img src="/img/docs/full-overview.svg" width="1100" height="520" loading="lazy" alt="Visão geral Full: todos os componentes do OpsMesh no ambiente do cliente." />
           <figcaption>Full — governança e execução no ambiente do cliente.</figcaption>
@@ -311,7 +311,7 @@
           <div class="scenario-meta">
             <span>Componentes: no cliente</span>
             <span>LLM: nenhuma</span>
-            <span>Política: blocked</span>
+            <span>Política: sem inferência</span>
           </div>
           <p><strong>Quando escolher:</strong> sua equipe precisa do OpsMesh completo no ambiente local, com Cockpit, MeshAgents e remediação aprovada por uma pessoa, mas sem conversas ou recomendações geradas por LLM. Não há Ollama nem adaptadores de nuvem.</p>
           <figure class="docs-figure">
@@ -328,7 +328,7 @@
             <span>Componentes: no cliente</span>
             <span>LLM: Ollama / vLLM / BYO</span>
           </div>
-          <p><strong>Quando escolher:</strong> sua organização quer a instalação Full e o modelo sob o próprio controle. A política pode usar <code>local_only</code> ou provedores externos autorizados por <code>cloud_*</code>.</p>
+          <p><strong>Quando escolher:</strong> sua organização quer a instalação Full e o modelo sob o próprio controle. A política pode restringir a inferência ao ambiente local ou autorizar provedores externos específicos.</p>
           <figure class="docs-figure">
             <img src="/img/docs/full-4.svg" width="1100" height="480" loading="lazy" alt="Cenário 4: Full com LLM local ou de terceiro." />
           </figure>

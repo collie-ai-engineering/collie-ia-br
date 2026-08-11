@@ -87,7 +87,7 @@
         <h2 id="flow-title">Fluxo operacional</h2>
         <p>Toda solicitação percorre quatro etapas. O controle começa antes da execução e permanece registrado até o resultado.</p>
         <figure class="docs-figure">
-          <img src="/img/opsmesh-flow.svg" width="1300" height="560" loading="lazy" alt="Fluxo de quatro etapas do Collie OpsMesh: pedir, governar, entregar e executar com aprovação humana." />
+          <img src="/img/opsmesh-flow.svg" width="1300" height="560" loading="lazy" alt="Fluxo de quatro etapas do Collie OpsMesh: solicitar, governar, transportar e executar, com aprovação humana quando necessário." />
           <figcaption>Solicitar → governar → transportar → executar, com aprovação humana quando necessário.</figcaption>
         </figure>
         <ol class="docs-steps">
@@ -101,7 +101,7 @@
           </li>
           <li>
             <strong>O conteúdo segue protegido</strong>
-            RabbitMQ e Gateway transportam um envelope cifrado. O Gateway não lê o conteúdo da tarefa.
+            A mensageria e o Gateway transportam um envelope cifrado. O Gateway não lê o conteúdo da tarefa.
           </li>
           <li>
             <strong>A execução acontece no ambiente do cliente</strong>
@@ -129,12 +129,12 @@
               </tr>
               <tr>
                 <td>Governança</td>
-                <td><em>Control Plane</em>, Postgres</td>
+                <td><em>Control Plane</em>, banco de dados</td>
                 <td>Controle de acesso, tarefas, aprovação, auditoria e cadastro</td>
               </tr>
               <tr>
                 <td>Transporte</td>
-                <td>RabbitMQ, Gateway</td>
+                <td>Mensageria, Gateway</td>
                 <td>Envelope cifrado; HTTPS opaco</td>
               </tr>
               <tr>
@@ -144,7 +144,7 @@
               </tr>
               <tr>
                 <td>Pós-resultado</td>
-                <td><code>result-worker</code>, Evidence Processor, Privacy Gate, AI Policy, AI Router</td>
+                <td>Processamento de resultados, Evidence Processor, Privacy Gate, AI Policy, AI Router</td>
                 <td>Proteção central de dados → aprovação humana → decisão → inferência</td>
               </tr>
               <tr>
@@ -176,11 +176,11 @@
               </tr>
               <tr>
                 <td><strong><em>Control Plane</em></strong></td>
-                <td>Organizações, tarefas, JWKS, criptografia e auditoria</td>
+                <td>Organizações, tarefas, chaves de assinatura, criptografia e auditoria</td>
                 <td>Acessar o cluster diretamente</td>
               </tr>
               <tr>
-                <td><strong><code>result-worker</code></strong></td>
+                <td><strong>Processamento de resultados</strong></td>
                 <td>Processar resultados e evidências; acionar o caminho de Inteligência Artificial quando permitido</td>
                 <td>Descriptografar conteúdo no Gateway</td>
               </tr>
@@ -206,7 +206,7 @@
               </tr>
               <tr>
                 <td><strong>AI Policy</strong></td>
-                <td>Decide <code>blocked</code>, <code>local_only</code>, <code>cloud_private</code> ou <code>cloud_sanitized</code></td>
+                <td>Decide o nível permitido: sem inferência, somente local, nuvem privada ou nuvem com evidência tratada</td>
                 <td>Executar o modelo</td>
               </tr>
               <tr>
@@ -237,7 +237,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>Cockpit / CP / Postgres / RMQ</td>
+                <td>Cockpit / CP / banco de dados / mensageria</td>
                 <td>—</td>
                 <td>Sim</td>
                 <td>Sim</td>

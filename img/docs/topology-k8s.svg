@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1100" height="480" viewBox="0 0 1100 480" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
   <title id="t">Topologia Kubernetes</title>
-  <desc id="d">Namespaces collie-system, para plano de controle e Gateway, e collie-agent, para MeshAgent</desc>
+  <desc id="d">Namespaces separados para o plano de controle, com Gateway, e para o MeshAgent</desc>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1100" y2="520" gradientUnits="userSpaceOnUse">
@@ -38,40 +38,40 @@
   <rect width="1100" height="480" rx="28" fill="url(#dots)"/>
   <text x="550.0" y="36" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#64748B" text-anchor="middle" letter-spacing="2.4">COLLIE OPSMESH</text>
   <text x="550.0" y="64" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#0B1220" text-anchor="middle">Topologia Kubernetes</text>
-  <text x="550.0" y="88" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle"><tspan font-style="italic">Namespaces</tspan> collie-system (CP+GW) e collie-agent (MeshAgent)</text>
+  <text x="550.0" y="88" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle"><tspan font-style="italic">Namespaces</tspan> separados: plano de controle com Gateway · MeshAgent</text>
 
   <rect x="40" y="110" width="500" height="300" rx="20" fill="url(#zoneCollie)"/>
   <rect x="560" y="110" width="500" height="300" rx="20" fill="url(#zoneClient)"/>
-  <text x="64" y="140" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#2563EB" letter-spacing="1.4">collie-system</text>
-  <text x="584" y="140" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#16A34A" letter-spacing="1.4">collie-agent</text>
+  <text x="64" y="140" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#2563EB" letter-spacing="1.4">NAMESPACE DO PLANO DE CONTROLE</text>
+  <text x="584" y="140" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" fill="#16A34A" letter-spacing="1.4">NAMESPACE DO MESHAGENT</text>
   
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="64" y="160" width="210" height="70" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
-      <text x="169.0" y="191.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">django-api</text>
-      <text x="169.0" y="216" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">+ result-worker</text>
+      <text x="169.0" y="191.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">API</text>
+      <text x="169.0" y="216" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">+ processamento de resultados</text>
     </g>
   
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="290" y="160" width="210" height="70" rx="14" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
-      <text x="395.0" y="191.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">gateway</text>
-      <text x="395.0" y="216" font-size="11" font-weight="600" fill="#2563EB" text-anchor="middle">Service ClusterIP/LB</text>
+      <text x="395.0" y="191.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Gateway</text>
+      <text x="395.0" y="216" font-size="11" font-weight="600" fill="#2563EB" text-anchor="middle">publicação no cluster</text>
     </g>
   
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="64" y="250" width="210" height="70" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
-      <text x="169.0" y="281.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">postgres</text>
+      <text x="169.0" y="281.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Banco de dados</text>
       <text x="169.0" y="306" font-size="11" font-weight="600" fill="#64748B" text-anchor="middle">no cluster ou externo</text>
     </g>
   
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="290" y="250" width="210" height="70" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
-      <text x="395.0" y="281.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">rabbitmq</text>
-      <text x="395.0" y="306" font-size="11" font-weight="600" fill="#64748B" text-anchor="middle">filas de quórum</text>
+      <text x="395.0" y="281.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Mensageria</text>
+      <text x="395.0" y="306" font-size="11" font-weight="600" fill="#64748B" text-anchor="middle">filas duráveis</text>
     </g>
   
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="64" y="340" width="436" height="50" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
-      <text x="282.0" y="370.0" font-size="13" font-weight="800" fill="#64748B" text-anchor="middle">EP / Inteligência Artificial — <tspan font-style="italic">manifests</tspan> K8s em evolução</text>
+      <text x="282.0" y="370.0" font-size="13" font-weight="800" fill="#64748B" text-anchor="middle">Evidence Processor · Inteligência Artificial — em evolução</text>
       
     </g>
   

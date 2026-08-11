@@ -47,7 +47,7 @@
   
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="64" y="170" width="436" height="70" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
-      <text x="282.0" y="201.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">Cockpit · CP · Gateway Collie</text>
+      <text x="282.0" y="201.0" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">Cockpit · Control Plane · Gateway Collie</text>
       <text x="282.0" y="226" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle">tarefas tipadas · aprovação</text>
     </g>
 
@@ -66,12 +66,12 @@
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="584" y="200" width="446" height="110" rx="14" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
       <text x="807.0" y="251.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">MeshAgent</text>
-      <text x="807.0" y="296" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">somente leitura ou escrita aprovada · sem ai_local</text>
+      <text x="807.0" y="296" font-size="11" font-weight="600" fill="#16A34A" text-anchor="middle">somente leitura ou escrita aprovada · sem IA local</text>
     </g>
 
     <g filter="url(#sh)" font-family="Inter,Arial,sans-serif">
       <rect x="584" y="340" width="446" height="70" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
-      <text x="807.0" y="380.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Infraestrutura · registros · kubectl por módulo</text>
+      <text x="807.0" y="380.0" font-size="13" font-weight="800" fill="#0B1220" text-anchor="middle">Infraestrutura · registros · ações por módulo</text>
       
     </g>
   <text x="550" y="500" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748B" text-anchor="middle">A equipe usa o Cockpit; o MeshAgent executa e coleta — sem inferência por LLM.</text>
