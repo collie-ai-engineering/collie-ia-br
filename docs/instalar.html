@@ -3,29 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Como instalar o OpsMesh | Collie</title>
-  <meta name="description" content="Planeje a instalação do Collie OpsMesh: escolha o modelo, o cenário, a topologia e os controles necessários antes da produção." />
+  <title>Como instalar o Collie OpsMesh | Collie AI Engineering</title>
+  <meta name="description" content="Instalação do Collie OpsMesh: modelo SaaS ou Full, cenário, topologia, pré-requisitos, rede e validação antes da produção." />
   <meta name="theme-color" content="#0B1220" />
   <link rel="canonical" href="https://www.collie.ia.br/docs/instalar.html" />
-  <meta property="og:title" content="Como instalar o OpsMesh — Collie" />
-  <meta property="og:description" content="Fluxo de instalação SaaS ou Full: cenário, topologia, pré-requisitos e validação." />
+  <meta property="og:title" content="Como instalar o Collie OpsMesh — Collie AI Engineering" />
+  <meta property="og:description" content="Fluxo de instalação do Collie OpsMesh: SaaS ou Full, cenário, topologia e validação." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.collie.ia.br/docs/instalar.html" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:image" content="https://www.collie.ia.br/img/collie-lockup.png" />
+  <meta property="og:site_name" content="Collie AI Engineering" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Como instalar o OpsMesh — Collie" />
-  <meta name="twitter:description" content="Fluxo de instalação SaaS ou Full: cenário, topologia, pré-requisitos e validação." />
+  <meta name="twitter:title" content="Como instalar o Collie OpsMesh — Collie AI Engineering" />
+  <meta name="twitter:description" content="Fluxo de instalação do Collie OpsMesh: SaaS ou Full, cenário, topologia e validação." />
   <meta name="twitter:image" content="https://www.collie.ia.br/img/collie-lockup.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Como instalar o OpsMesh",
-    "url": "https://www.collie.ia.br/docs/instalar.html",
-    "description": "Fluxo de instalação do Collie OpsMesh.",
-    "inLanguage": "pt-BR",
-    "isPartOf": { "@type": "WebSite", "name": "Collie OpsMesh", "url": "https://www.collie.ia.br/" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.collie.ia.br/#organization",
+        "name": "Collie AI Engineering",
+        "url": "https://www.collie.ia.br/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://www.collie.ia.br/#opsmesh",
+        "name": "Collie OpsMesh",
+        "alternateName": "OpsMesh",
+        "provider": { "@id": "https://www.collie.ia.br/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "name": "Como instalar o Collie OpsMesh",
+        "url": "https://www.collie.ia.br/docs/instalar.html",
+        "description": "Fluxo de instalação do Collie OpsMesh: SaaS ou Full, cenário, topologia e validação.",
+        "inLanguage": "pt-BR",
+        "isPartOf": { "@type": "WebSite", "name": "Collie AI Engineering", "url": "https://www.collie.ia.br/" },
+        "about": { "@id": "https://www.collie.ia.br/#opsmesh" },
+        "publisher": { "@id": "https://www.collie.ia.br/#organization" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Collie", "item": "https://www.collie.ia.br/" },
+            { "@type": "ListItem", "position": 2, "name": "Documentação", "item": "https://www.collie.ia.br/docs/" },
+            { "@type": "ListItem", "position": 3, "name": "Como instalar", "item": "https://www.collie.ia.br/docs/instalar.html" }
+          ]
+        }
+      }
+    ]
   }
   </script>
   <script defer data-domain="www.collie.ia.br" src="https://plausible.io/js/script.js"></script>
@@ -177,7 +205,7 @@
         </ul>
         <h3>Fluxo operacional</h3>
         <ul>
-          <li>Uma tarefa tipada de teste, como <code>echo</code> ou <code>collect</code>, é concluída</li>
+          <li>Uma tarefa definida de teste, como <code>echo</code> ou <code>collect</code>, é concluída</li>
           <li>O resultado aparece no histórico do incidente e na auditoria</li>
           <li>Edge Redactor ativo, com campos sensíveis protegidos antes do envio</li>
         </ul>

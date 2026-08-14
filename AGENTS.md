@@ -4,6 +4,8 @@ Site institucional Collie (`www.collie.ia.br`).
 
 ## Regras
 
+As regras e skills do Cursor ficam em `.cursor/`, **fora do versionamento** (repo público). Peça o pacote a quem já tem o clone configurado.
+
 - Copy **PT-BR**: `.cursor/rules/portal-copywriting.mdc`
 - Validar após mudanças: `.cursor/skills/validate-collie-site/`
 - Copy executiva / GEO: `.cursor/skills/copywriting-clevel-geo/`

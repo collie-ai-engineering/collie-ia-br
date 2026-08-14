@@ -1,6 +1,6 @@
 <svg width="920" height="740" viewBox="0 0 920 740" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hero-arch-title hero-arch-desc">
   <title id="hero-arch-title">Arquitetura Collie OpsMesh — malha entre Inteligência Artificial e infraestrutura</title>
-  <desc id="hero-arch-desc">O Cockpit envia as solicitações ao OpsMesh hoje; a conexão de Cursor, Claude Code, Antigravity e outros clientes MCP aparece tracejada porque faz parte da evolução do produto. O plano de controle governa identidade, política, aprovação e auditoria, e os MeshAgents executam em Kubernetes e Linux sem acesso direto ao ambiente do cliente.</desc>
+  <desc id="hero-arch-desc">O Cockpit envia as solicitações ao OpsMesh hoje; a conexão de Cursor, Codex, Claude Code, Antigravity e outros clientes MCP aparece tracejada porque faz parte da evolução do produto. O plano de controle governa identidade, política, aprovação e auditoria, e os MeshAgents executam em Kubernetes e Linux sem acesso direto ao ambiente do cliente.</desc>
 
   <defs>
     <linearGradient id="canvasGrad" x1="0" y1="0" x2="920" y2="740" gradientUnits="userSpaceOnUse">
@@ -71,9 +71,14 @@
 
   <!-- AI tool nodes — tracejados: entram na evolução do produto -->
   <g filter="url(#cardShadow)" opacity="0.75">
-    <rect x="378" y="36" width="164" height="48" rx="14" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5" stroke-dasharray="6 5"/>
-    <circle cx="402" cy="60" r="7" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <text x="418" y="65" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#0B1220">Cursor</text>
+    <rect x="296" y="36" width="148" height="48" rx="14" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <circle cx="320" cy="60" r="7" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <text x="336" y="65" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#0B1220">Cursor</text>
+  </g>
+  <g filter="url(#cardShadow)" opacity="0.75">
+    <rect x="476" y="36" width="148" height="48" rx="14" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <circle cx="500" cy="60" r="7" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <text x="516" y="65" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#0B1220">Codex</text>
   </g>
   <g filter="url(#cardShadow)" opacity="0.75">
     <rect x="668" y="148" width="176" height="48" rx="14" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.5" stroke-dasharray="6 5"/>
@@ -100,7 +105,8 @@
 
   <!-- Inbound paths to core — tracejadas seguem a evolução do produto -->
   <g stroke="#94A3B8" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round" stroke-dasharray="6 6">
-    <path d="M460 84v52"/>
+    <path d="M370 84c0 30 10 44 30 60"/>
+    <path d="M550 84c0 30-10 44-30 60"/>
     <path d="M668 172c-36 20-88 48-140 68"/>
     <path d="M252 172c36 20 88 48 140 68"/>
     <path d="M700 396c-48-10-110-36-160-62"/>
@@ -191,5 +197,5 @@
     </g>
   </g>
 
-  <text x="460" y="716" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Sem acesso direto ao ambiente — somente ações tipadas após a governança</text>
+  <text x="460" y="716" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Sem acesso direto ao ambiente — somente ações definidas após a governança</text>
 </svg>
