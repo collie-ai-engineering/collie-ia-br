@@ -4,18 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Collie | Inteligência Artificial com governança</title>
-  <meta name="description" content="A Collie combina consultoria em Inteligência Artificial e o OpsMesh para colocar IA em operação com governança e controle antes da execução." />
+  <meta name="description" content="Collie AI Engineering: consultoria em Inteligência Artificial e Collie OpsMesh — governança e controle antes que agentes de IA executem ações na infraestrutura." />
   <meta name="theme-color" content="#0B1220" />
   <link rel="canonical" href="https://www.collie.ia.br/" />
   <meta property="og:title" content="Collie — Inteligência Artificial com governança" />
-  <meta property="og:description" content="Consultoria e OpsMesh: Inteligência Artificial em operação com estratégia, governança e controle." />
+  <meta property="og:description" content="Consultoria e Collie OpsMesh: estratégia, governança e controle antes da execução." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.collie.ia.br/" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:image" content="https://www.collie.ia.br/img/collie-lockup.png" />
+  <meta property="og:site_name" content="Collie AI Engineering" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Collie — Inteligência Artificial com governança" />
-  <meta name="twitter:description" content="Consultoria e OpsMesh: Inteligência Artificial em operação com estratégia, governança e controle." />
+  <meta name="twitter:description" content="Consultoria e Collie OpsMesh: estratégia, governança e controle antes da execução." />
   <meta name="twitter:image" content="https://www.collie.ia.br/img/collie-lockup.png" />
   <script type="application/ld+json">
   {
@@ -23,23 +24,50 @@
     "@graph": [
       {
         "@type": "Organization",
+        "@id": "https://www.collie.ia.br/#organization",
         "name": "Collie AI Engineering",
+        "alternateName": ["Collie", "Collie AI"],
         "url": "https://www.collie.ia.br/",
         "logo": "https://www.collie.ia.br/img/collie-lockup.png",
         "email": "contato@collie.ia.br",
-        "description": "A Collie oferece consultoria em Inteligência Artificial e desenvolve o OpsMesh, uma plataforma de governança para operações críticas."
+        "description": "A Collie AI Engineering oferece consultoria em Inteligência Artificial e o Collie OpsMesh, plataforma de governança para a execução de ações por agentes de IA.",
+        "knowsAbout": [
+          "Inteligência Artificial",
+          "governança de agentes de IA",
+          "OpsMesh",
+          "automação operacional",
+          "segurança em infraestrutura"
+        ]
       },
       {
         "@type": "WebSite",
+        "@id": "https://www.collie.ia.br/#website",
         "name": "Collie AI Engineering",
         "url": "https://www.collie.ia.br/",
-        "description": "Consultoria e OpsMesh: Inteligência Artificial em operação com estratégia, governança e controle.",
+        "description": "Consultoria e Collie OpsMesh: Inteligência Artificial em operação com estratégia, governança e controle.",
         "inLanguage": "pt-BR",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Collie AI Engineering",
-          "url": "https://www.collie.ia.br/"
-        }
+        "publisher": { "@id": "https://www.collie.ia.br/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://www.collie.ia.br/#opsmesh",
+        "name": "Collie OpsMesh",
+        "alternateName": ["OpsMesh", "Collie Ops Mesh"],
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Kubernetes, Linux",
+        "url": "https://www.collie.ia.br/#opsmesh",
+        "description": "Plataforma de governança entre ferramentas de Inteligência Artificial e a infraestrutura: identidade, permissões específicas (FGAC/IAM), política, aprovação e auditoria antes da execução por MeshAgents.",
+        "provider": { "@id": "https://www.collie.ia.br/#organization" },
+        "isPartOf": { "@id": "https://www.collie.ia.br/#website" }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.collie.ia.br/#consulting",
+        "name": "Consultoria em Inteligência Artificial",
+        "url": "https://www.collie.ia.br/#consulting",
+        "description": "Consultoria da Collie para estratégia, arquitetura, governança e implantação de iniciativas de Inteligência Artificial.",
+        "provider": { "@id": "https://www.collie.ia.br/#organization" },
+        "areaServed": "BR"
       }
     ]
   }
@@ -88,9 +116,9 @@
       </div>
       <div class="container hero-grid">
         <div class="hero-content fade-in-up">
-          <p class="eyebrow">Produto e consultoria em Inteligência Artificial</p>
+          <p class="eyebrow">Consultoria e plataforma de Inteligência Artificial</p>
           <h1 id="hero-title">Inteligência Artificial na operação.<br /><span>Controle antes da execução.</span></h1>
-          <p class="hero-subtitle">A Collie ajuda empresas a levar casos de uso à produção com segurança. A consultoria define estratégia e governança. O OpsMesh controla cada solicitação sem expor a infraestrutura.</p>
+          <p class="hero-subtitle">A Collie combina consultoria e tecnologia para colocar Inteligência Artificial em operação com estratégia, governança e segurança. A consultoria define onde a IA gera valor. O OpsMesh verifica cada solicitação antes da execução, sem expor a infraestrutura.</p>
           <div class="hero-actions">
             <a href="#demo" class="btn btn-primary btn-lg">Conversar com um especialista</a>
             <a href="#opsmesh" class="btn btn-outline btn-lg">Conhecer o OpsMesh</a>
@@ -112,8 +140,8 @@
     <section class="trust-strip" aria-label="Sinais de confiança">
       <div class="container trust-grid">
         <span>Inteligência Artificial com governança</span>
-        <span>Sem conexão de entrada no ambiente do cliente</span>
-        <span>Ações tipadas — sem <em>shell</em> livre</span>
+        <span>Sem conexão de entrada (<em>inbound</em>) no ambiente do cliente</span>
+        <span>Ações definidas — sem comando livre (<em>shell</em>)</span>
         <span>Auditoria em cada operação</span>
       </div>
     </section>
@@ -124,16 +152,16 @@
         <div class="section-header fade-in-up">
           <p class="section-kicker">O desafio executivo</p>
           <h2 id="problem-title">Adotar Inteligência Artificial é simples. Colocá-la para agir exige governança.</h2>
-          <p>Assistentes já analisam código, alertas e métricas. O risco começa quando uma recomendação se transforma em ação sobre a infraestrutura sem identidade, política, aprovação e auditoria.</p>
+          <p>Ferramentas de Inteligência Artificial já analisam sistemas e recomendam ações. O risco começa quando a recomendação vira execução sobre a infraestrutura — sem identidade, política, aprovação e auditoria.</p>
         </div>
         <div class="comparison-grid">
           <article class="comparison-card fade-in-up">
             <span class="card-tag danger">O risco sem governança</span>
             <h3>Acesso direto transforma agilidade em exposição.</h3>
-            <p>Conectar Cursor ou Claude Code diretamente ao <em>kubectl</em>, ao SSH ou a APIs internas aumenta o risco de credenciais expostas, comandos indevidos e operações sem rastreabilidade.</p>
+            <p>Dar acesso ao Cursor, Claude Code ou Codex ao <em>kubectl</em>, ao SSH ou a APIs internas aumenta o risco de credenciais expostas, comandos indevidos e operações sem rastreabilidade.</p>
             <ul>
-              <li>Conexões de entrada improvisadas</li>
-              <li>Comandos livres e automações genéricas</li>
+              <li>Conexões de entrada (<em>inbound</em>) improvisadas</li>
+              <li>Comando livre (<em>shell</em>) e automações genéricas</li>
               <li>Decisões sem aprovação ou responsabilização</li>
             </ul>
           </article>
@@ -142,7 +170,7 @@
             <h3>Estratégia, controle e execução em camadas separadas.</h3>
             <p>A consultoria define prioridades, riscos e regras. O OpsMesh aplica esses controles. Os MeshAgents executam somente as ações permitidas no ambiente do cliente.</p>
             <ul>
-              <li>Casos de uso ligados a objetivos de negócio</li>
+              <li>Iniciativas ligadas a objetivos de negócio</li>
               <li>Integração MCP governada pelo <em>Control Plane</em>, na evolução do produto</li>
               <li>Identidade, política, aprovação e auditoria</li>
             </ul>
@@ -157,11 +185,11 @@
         <div class="section-header align-left fade-in-up">
           <p class="section-kicker">Collie OpsMesh</p>
           <h2 id="opsmesh-title">Governança entre a Inteligência Artificial e a infraestrutura.</h2>
-          <p>O OpsMesh recebe solicitações de ferramentas de engenharia, verifica identidade e política, exige aprovação quando necessário e envia apenas ações permitidas aos MeshAgents no ambiente do cliente.</p>
+          <p>O OpsMesh governa o caminho entre a solicitação da Inteligência Artificial e a execução no ambiente da empresa. Verifica identidade e política, exige aprovação quando necessário e envia apenas ações permitidas aos MeshAgents no ambiente do cliente.</p>
           <ul class="opsmesh-pillars">
             <li><strong>Solicitação</strong> — Cockpit hoje; clientes MCP na evolução do produto</li>
-            <li><strong>Governança</strong> — controle de acesso refinado, políticas e aprovação</li>
-            <li><strong>Execução</strong> — ações tipadas por meio do MeshAgent</li>
+            <li><strong>Governança</strong> — permissões específicas (FGAC/IAM), políticas e aprovação</li>
+            <li><strong>Execução</strong> — ações definidas por meio do MeshAgent</li>
           </ul>
           <a href="docs/como-funciona.html" class="text-link">Como o OpsMesh funciona</a>
         </div>
@@ -176,7 +204,7 @@
       <div class="container">
         <div class="section-header fade-in-up">
           <p class="section-kicker">Segurança operacional</p>
-          <h2 id="platform-title">Controle preciso onde a operação não tolera erro.</h2>
+          <h2 id="platform-title">Controle antes da execução, onde a operação não pode falhar.</h2>
           <p>Toda solicitação passa por identidade, política, aprovação e auditoria antes de qualquer execução.</p>
         </div>
         <div class="features-grid">
@@ -184,14 +212,14 @@
             <div class="feature-icon blue" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M4.93 19.07l1.41-1.41"/><path d="M17.66 6.34l1.41-1.41"/></svg>
             </div>
-            <h3>Conexão governada com ferramentas de Inteligência Artificial — na evolução do produto</h3>
-            <p>O Cockpit opera hoje. A arquitetura prepara a conexão de Cursor, Claude Code, Antigravity e outros clientes MCP sem acesso direto à infraestrutura.</p>
+            <h3>Ferramentas de Inteligência Artificial sem acesso direto — na evolução do produto</h3>
+            <p>O Cockpit opera hoje. A arquitetura prepara a conexão de Cursor, Claude Code, Codex, Antigravity e outros clientes MCP sem acesso direto à infraestrutura.</p>
           </article>
           <article class="feature-card fade-in-up">
             <div class="feature-icon green" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
-            <h3>Decisão humana nas ações sensíveis</h3>
+            <h3>Aprovação humana nas ações sensíveis</h3>
             <p>Políticas definem limites por função. Ações sensíveis exigem aprovação e deixam um registro completo, inclusive para reversão.</p>
           </article>
           <article class="feature-card card-wide fade-in-up">
@@ -199,8 +227,8 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
             </div>
             <div>
-              <h3>Execução segura no ambiente do cliente</h3>
-              <p>Os MeshAgents executam apenas ações autorizadas dentro do ambiente do cliente. A comunicação parte de dentro para fora, por canais TLS, sem expor a infraestrutura a acessos externos. Antes de deixar o ambiente, os resultados passam por tratamento na borda.</p>
+              <h3>Execução no ambiente do cliente</h3>
+              <p>Os MeshAgents executam apenas ações autorizadas dentro do ambiente do cliente. A comunicação parte de dentro para fora, por canais criptografados (TLS), sem expor a infraestrutura a acessos externos. Antes de deixar o ambiente, os resultados passam por tratamento na borda.</p>
             </div>
           </article>
         </div>
@@ -212,23 +240,23 @@
       <div class="container">
         <div class="section-header fade-in-up">
           <p class="section-kicker">Consultoria em Inteligência Artificial</p>
-          <h2 id="consulting-title">Da prioridade executiva à implantação segura.</h2>
-          <p>A Collie conecta objetivos de negócio, arquitetura e governança para tirar iniciativas do laboratório com critérios claros de valor, risco e responsabilidade.</p>
+          <h2 id="consulting-title">Da prioridade do negócio à implantação com controle.</h2>
+          <p>A Collie conecta objetivos de negócio, arquitetura e governança. A iniciativa sai do piloto com critérios claros de valor, risco e responsabilidade.</p>
         </div>
         <div class="features-grid">
           <article class="feature-card fade-in-up">
             <div class="feature-icon blue" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M2 12h20"/><circle cx="12" cy="12" r="7"/></svg>
             </div>
-            <h3>Estratégia e portfólio de casos de uso</h3>
-            <p>Priorizamos iniciativas pelo impacto esperado, pela viabilidade técnica e pelo risco. Cada caso de uso nasce com responsável, indicador e critério de continuidade.</p>
+            <h3>Estratégia e portfólio de iniciativas</h3>
+            <p>Priorizamos pelo impacto esperado, pela viabilidade técnica e pelo risco. Cada iniciativa nasce com responsável, indicador e critério de continuidade.</p>
           </article>
           <article class="feature-card fade-in-up">
             <div class="feature-icon green" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
             </div>
             <h3>Arquitetura e governança</h3>
-            <p>Definimos integrações, controles de acesso, proteção de dados, aprovação humana e auditoria antes que a solução chegue à operação.</p>
+            <p>Definimos integrações, permissões específicas (FGAC/IAM), proteção de dados, aprovação humana e auditoria antes que a solução chegue à operação.</p>
           </article>
           <article class="feature-card card-wide fade-in-up">
             <div class="feature-icon blue" aria-hidden="true">
@@ -248,7 +276,7 @@
       <div class="container">
         <div class="section-header fade-in-up">
           <p class="section-kicker">Valor para a organização</p>
-          <h2 id="personas-title">Uma decisão técnica que também protege o negócio.</h2>
+          <h2 id="personas-title">Controle para quem decide. Precisão para quem opera.</h2>
         </div>
         <div class="personas-grid">
           <article class="persona-card fade-in-up">
@@ -263,14 +291,14 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             </div>
             <h3>Confiabilidade e operações</h3>
-            <p>Acelere o diagnóstico e a resposta a incidentes com ações tipadas, aprovação humana e histórico completo de cada decisão.</p>
+            <p>Acelere o diagnóstico e a resposta a incidentes com ações definidas, aprovação humana e histórico completo de cada decisão.</p>
           </article>
           <article class="persona-card card-wide fade-in-up">
             <div class="persona-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <h3>Engenharia de plataforma e segurança</h3>
-            <p>Automatize operações em múltiplos ambientes com permissões refinadas, auditoria e execução assíncrona, sem expor a infraestrutura.</p>
+            <p>Automatize operações em múltiplos ambientes com permissões específicas (FGAC/IAM), auditoria e execução assíncrona, sem expor a infraestrutura.</p>
           </article>
         </div>
       </div>
@@ -281,8 +309,8 @@
       <div class="container showcase-grid">
         <div class="showcase-copy fade-in-up">
           <p class="section-kicker">Como funciona</p>
-          <h2 id="workflow-title">Da intenção à execução, sem abrir mão do controle.</h2>
-          <p>Seja iniciada por uma pessoa ou por uma ferramenta de Inteligência Artificial, toda solicitação percorre o mesmo caminho: regras claras antes da ação e rastreabilidade do início ao fim.</p>
+          <h2 id="workflow-title">Da solicitação à execução, cada etapa permanece sob controle.</h2>
+          <p>Seja uma pessoa ou uma ferramenta de Inteligência Artificial, todo pedido percorre o mesmo caminho: regras antes da ação e registro do início ao fim.</p>
           <ul class="check-list">
             <li><strong>O pedido entra pelo Cockpit.</strong> A integração com clientes MCP faz parte da evolução do produto.</li>
             <li><strong>As regras vêm antes da ação.</strong> O <em>Control Plane</em> confirma a identidade, aplica as políticas e solicita aprovação quando necessário.</li>
@@ -332,6 +360,7 @@
             <div class="integration-group-badges">
               <span>Cursor</span>
               <span>Claude Code</span>
+              <span>Codex</span>
               <span>Antigravity</span>
               <span>Clientes MCP</span>
             </div>
@@ -347,13 +376,12 @@
           <div class="cta-content">
             <p class="section-kicker">Conversa inicial</p>
             <h2 id="cta-title">Onde a Inteligência Artificial pode gerar valor sem ampliar o risco?</h2>
-            <p>Em 30 minutos, entendemos suas prioridades, avaliamos o contexto técnico e indicamos o próximo passo — pela consultoria, pelo OpsMesh ou por ambos.</p>
+            <p>Cada organização chega com um contexto diferente. Agendamos 30 minutos para uma conversa inicial ou para apresentar a demonstração e alinhar o próximo passo — consultoria, OpsMesh ou ambos.</p>
           </div>
           <div class="cta-actions-col">
             <a href="mailto:contato@collie.ia.br?subject=Conversa%20sobre%20Intelig%C3%AAncia%20Artificial%20e%20OpsMesh" class="btn btn-primary btn-lg">Falar com um especialista</a>
             <a href="https://wa.me/5561982505951?text=Ol%C3%A1%2C%20quero%20conversar%20sobre%20Intelig%C3%AAncia%20Artificial%20e%20o%20Collie%20OpsMesh." class="btn btn-outline btn-lg" target="_blank" rel="noopener">Chamar no WhatsApp</a>
             <a href="docs/" class="btn btn-outline btn-lg">Ver documentação</a>
-            <p class="cta-note">Sem compromisso. Conversa de 30 minutos.</p>
           </div>
         </div>
       </div>
@@ -381,7 +409,6 @@
         <a href="#demo">Agendar conversa</a>
         <a href="mailto:contato@collie.ia.br">Contato</a>
         <a href="https://wa.me/5561982505951" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="tel:+5561982505951">+55 61 98250-5951</a>
       </nav>
       <nav aria-label="Links de recursos no rodapé">
         <h3>Recursos</h3>

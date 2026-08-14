@@ -26,11 +26,15 @@ serve.sh      servidor local de desenvolvimento
 ## Rodar localmente
 
 ```bash
-./serve.sh
+./serve.sh          # start (foreground)
+./serve.sh stop     # encerra o processo na porta 8000
+./serve.sh restart  # para e sobe em background
+./serve.sh status   # mostra se está ativo
 # abre em http://localhost:8000
 ```
 
 Precisa apenas de Python 3 (`python3 -m http.server`).
+Para liberar a porta quando o terminal antigo morreu: `./serve.sh stop`.
 
 ## Branches
 

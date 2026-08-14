@@ -12,6 +12,8 @@ Thumbs.db
 
 # Logs
 *.log
+.serve.pid
+.serve.log
 
 # Skills locais do Cursor (não versionar)
 .agents/
