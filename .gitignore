@@ -15,6 +15,7 @@ Thumbs.db
 .serve.pid
 .serve.log
 
-# Skills locais do Cursor (não versionar)
+# Skills e regras locais do Cursor (não versionar — playbook interno)
+.cursor/
 .agents/
 skills-lock.json
