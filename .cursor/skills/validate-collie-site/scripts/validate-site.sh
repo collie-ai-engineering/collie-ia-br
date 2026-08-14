@@ -3,16 +3,18 @@
 # Usage:
 #   ./validate-site.sh
 #   BASE_URL=https://www.collie.ia.br ./validate-site.sh
-#   SITE_ROOT=/Users/mvasconcelos/code/mvs-eng/collie-code/collie-ia-br ./validate-site.sh --local-only
+#   SITE_ROOT=/caminho/para/outro/clone ./validate-site.sh --local-only
 #   SITE_ROOT= ./validate-site.sh   # pular check local
 #
-# Default SITE_ROOT = clone Pages oficial (pode mudar; manter alinhado com SKILL.md).
+# Sem SITE_ROOT, valida o clone onde este script está — nunca um caminho fixo de máquina.
 set -euo pipefail
 
 BASE_URL="${BASE_URL:-https://www.collie.ia.br}"
 APEX_URL="${APEX_URL:-https://collie.ia.br}"
-# Path oficial documentado na skill; sobrescreva ou use SITE_ROOT= para desligar.
-DEFAULT_SITE_ROOT="/Users/mvasconcelos/code/mvs-eng/collie-code/collie-ia-br"
+# Raiz derivada do próprio script (.cursor/skills/validate-collie-site/scripts → raiz do repo),
+# para o validate sempre bater no checkout em uso e nunca vazar path local no versionado.
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DEFAULT_SITE_ROOT="$(git -C "$SCRIPT_DIR" rev-parse --show-toplevel 2>/dev/null || (cd "$SCRIPT_DIR/../../../.." && pwd))"
 SITE_ROOT="${SITE_ROOT-$DEFAULT_SITE_ROOT}"
 LOCAL_ONLY=0
 UA="${UA:-Mozilla/5.0 (compatible; CollieSiteValidate/1.0)}"

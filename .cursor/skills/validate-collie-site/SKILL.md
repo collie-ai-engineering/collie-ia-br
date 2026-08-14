@@ -16,7 +16,7 @@ Rode esta skill **sempre que o site mudar** — antes de considerar a alteraçã
 | Papel | Path / URL |
 |-------|------------|
 | Fonte (este repo) | `./` (raiz de collie-ia-br) |
-| Publicado (GitHub Pages) — path local oficial | `/Users/mvasconcelos/code/mvs-eng/collie-code/collie-ia-br` |
+| Publicado (GitHub Pages) — clone local | o próprio checkout em uso (o script deriva a raiz sozinho) |
 | Publicado — remoto | `git@github.com:collie-ai-engineering/collie-ia-br.git` |
 | Canônico | `https://www.collie.ia.br/` |
 | Apex | `https://collie.ia.br/` → deve redirecionar para www |
@@ -57,8 +57,10 @@ Validação Collie Site
 bash .cursor/skills/validate-collie-site/scripts/validate-site.sh
 # opcional:
 BASE_URL=https://www.collie.ia.br bash .cursor/skills/validate-collie-site/scripts/validate-site.sh
-# path oficial do clone Pages (atualizar na skill se mudar):
-SITE_ROOT=/Users/mvasconcelos/code/mvs-eng/collie-code/collie-ia-br bash .cursor/skills/validate-collie-site/scripts/validate-site.sh --local-only
+# só o check local do checkout atual:
+bash .cursor/skills/validate-collie-site/scripts/validate-site.sh --local-only
+# validar outro clone (caminho local, nunca versionado):
+SITE_ROOT=/caminho/para/outro/clone bash .cursor/skills/validate-collie-site/scripts/validate-site.sh --local-only
 ```
 
 O script falha (exit ≠ 0) se houver Critical. Interprete a saída; não invente status HTTP.

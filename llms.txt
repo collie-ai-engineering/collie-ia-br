@@ -26,7 +26,7 @@ Idioma do site: português do Brasil (PT-BR). Domínio canônico: https://www.co
 - [Documentação OpsMesh](https://www.collie.ia.br/docs/): o que resolve, arquitetura de uso, instalação e cenários
 - [Como funciona o OpsMesh](https://www.collie.ia.br/docs/como-funciona.html): camadas e componentes
 - [Como instalar o OpsMesh](https://www.collie.ia.br/docs/instalar.html): fluxo, pré-requisitos e validação
-- [Cenários de instalação](https://www.collie.ia.br/docs/cenarios.html): SaaS 1.1–1.4 e Full 2–4
+- [Cenários de instalação](https://www.collie.ia.br/docs/cenarios.html): SaaS 1.1–1.4 e Full 2–4. Os cenários 1.2 e 1.4 (Gateway no ambiente do cliente) são desenho previsto; para prova de conceito imediata, o cenário suportado é o 1.1
 - [Topologias](https://www.collie.ia.br/docs/topologias.html): Docker Compose, Kubernetes e VMs
 
 ## Contato

@@ -26,84 +26,95 @@ is_running() {
   [[ -n "$pid" ]] && kill -0 "$pid" 2>/dev/null
 }
 
-cmd_status() {
+# Só encerramos processo iniciado por este script: PID vindo do .serve.pid,
+# vivo e reconhecido como python -m http.server. Nunca matamos por porta —
+# a 8000 é disputada e derrubar o servidor de outra pessoa não é opção.
+is_our_server() {
+  local pid="$1" cmd
+  is_running "$pid" || return 1
+  cmd="$(ps -p "$pid" -o command= 2>/dev/null || true)"
+  [[ "$cmd" == *"http.server"* ]]
+}
+
+owned_pid() {
+  local pid
+  [[ -f "$PID_FILE" ]] || return 1
+  pid="$(cat "$PID_FILE" 2>/dev/null || true)"
+  pid="${pid//[[:space:]]/}"
+  is_our_server "$pid" || return 1
+  printf '%s\n' "$pid"
+}
+
+# Imprime aviso e retorna 0 quando a porta está ocupada por processo alheio.
+warn_foreign_port() {
   local pids
   pids="$(pids_on_port)"
-  if [[ -n "$pids" ]]; then
-    echo "Servidor ativo em ${URL}"
-    echo "PID(s): ${pids//$'\n'/ }"
+  [[ -n "$pids" ]] || return 1
+  echo "Porta ${PORT} em uso por processo que não é deste script (PID: ${pids//$'\n'/ })." >&2
+  echo "Encerre esse processo você mesmo ou use outra porta: PORT=8080 ./serve.sh start" >&2
+  return 0
+}
+
+cmd_status() {
+  local pid
+  if pid="$(owned_pid)"; then
+    echo "Servidor ativo em ${URL} (PID: ${pid})"
     return 0
   fi
   if [[ -f "$PID_FILE" ]]; then
-    local stale
-    stale="$(cat "$PID_FILE" 2>/dev/null || true)"
-    echo "Servidor parado (PID antigo em .serve.pid: ${stale:-vazio})."
+    echo "Servidor parado (PID antigo em .serve.pid removido)."
     rm -f "$PID_FILE"
   else
     echo "Servidor parado."
   fi
+  warn_foreign_port || true
   return 1
 }
 
 cmd_stop() {
-  local pids killed=()
-  pids="$(pids_on_port)"
-
-  if [[ -z "$pids" && -f "$PID_FILE" ]]; then
-    pids="$(cat "$PID_FILE" 2>/dev/null || true)"
-  fi
-
-  if [[ -z "${pids//[[:space:]]/}" ]]; then
-    echo "Nada escutando na porta ${PORT}."
+  local pid
+  if ! pid="$(owned_pid)"; then
     rm -f "$PID_FILE"
+    if warn_foreign_port; then
+      return 1
+    fi
+    echo "Nenhum servidor deste script em execução."
     return 0
   fi
 
-  for pid in $pids; do
-    if is_running "$pid"; then
-      kill "$pid" 2>/dev/null || true
-      killed+=("$pid")
-    fi
-  done
+  kill "$pid" 2>/dev/null || true
 
-  # Aguarda liberar a porta; se não sair, força.
   local i
   for i in 1 2 3 4 5; do
-    pids="$(pids_on_port)"
-    [[ -z "$pids" ]] && break
+    is_running "$pid" || break
     sleep 0.2
   done
 
-  pids="$(pids_on_port)"
-  if [[ -n "$pids" ]]; then
-    for pid in $pids; do
-      kill -9 "$pid" 2>/dev/null || true
-      killed+=("$pid")
-    done
+  if is_running "$pid"; then
+    kill -9 "$pid" 2>/dev/null || true
     sleep 0.2
   fi
 
   rm -f "$PID_FILE"
 
-  if [[ -z "$(pids_on_port)" ]]; then
-    if ((${#killed[@]})); then
-      echo "Servidor parado. Encerrado PID(s): ${killed[*]}"
-    else
-      echo "Servidor parado."
-    fi
-  else
-    echo "Falha ao liberar a porta ${PORT}. Ainda em uso por: $(pids_on_port | tr '\n' ' ')" >&2
+  if is_running "$pid"; then
+    echo "Falha ao encerrar o servidor (PID ${pid})." >&2
     return 1
   fi
+  echo "Servidor parado. Encerrado PID: ${pid}"
 }
 
 cmd_start() {
-  local existing
-  existing="$(pids_on_port)"
-  if [[ -n "$existing" ]]; then
-    echo "Já está rodando em ${URL} (PID: ${existing//$'\n'/ })."
+  local pid
+  if pid="$(owned_pid)"; then
+    echo "Já está rodando em ${URL} (PID: ${pid})."
     echo "Use: ./serve.sh stop   ou   ./serve.sh restart"
     return 0
+  fi
+  rm -f "$PID_FILE"
+
+  if warn_foreign_port; then
+    return 1
   fi
 
   if ! command -v python3 >/dev/null 2>&1; then
@@ -129,19 +140,18 @@ cmd_start() {
       return 1
     fi
   else
-    # Grava PID do processo atual do server após o exec não seria possível;
-    # roda em subshell rastreável e limpa no exit.
+    # Sobe como filho rastreável para registrar o PID e limpar no Ctrl+C.
     python3 -m http.server "$PORT" &
-    local pid=$!
+    pid=$!
     echo "$pid" >"$PID_FILE"
     trap 'kill "$pid" 2>/dev/null || true; rm -f "$PID_FILE"; exit 0' INT TERM
-    wait "$pid"
+    wait "$pid" || true
     rm -f "$PID_FILE"
   fi
 }
 
 cmd_restart() {
-  cmd_stop || true
+  cmd_stop || return 1
   SERVE_BG="${SERVE_BG:-1}" cmd_start
 }
 
